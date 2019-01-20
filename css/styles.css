@@ -1,0 +1,21 @@
+body {
+	background-color: black; 
+	color: white; 
+	font-family: "Courier"; 
+}
+
+nav {
+  float: right; 
+}
+
+.navbar-nav > li{
+  padding-left:15px;
+  padding-right:15px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
