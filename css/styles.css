@@ -4,13 +4,15 @@ body {
   font-family: "Courier"; 
 }
 
+/*
 nav {
   float: right; 
   font-size: 1vw; 
 }
+*/
 
 #wrap {
-  min-height: 90%; 
+  min-height: 86%; 
   position: relative !important; 
 }
 
