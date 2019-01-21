@@ -6,11 +6,16 @@ body {
 
 nav {
   float: right; 
+  font-size: 1vw; 
 }
 
 #wrap {
   min-height: 90%; 
   position: relative !important; 
+}
+
+td {
+  padding-right: 45px; 
 }
 
 .navbar-nav > li{
