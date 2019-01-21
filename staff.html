@@ -61,16 +61,17 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <table>
+        <div class="container table-responsive-sm">
+            <table class="table">
+                <tbody>
                 <tr>
                     <td> Matthew Milano </td>
                     <td> <span style="color:#32CD32"> milano</span>@<span class="text-primary">gates:406</span></td>
                     <td> Tuesday 3:00PM-4:00PM </td>
                 </tr>
-                <tr> 
-                    <td> </td> 
-                    <td> </td> 
+                <tr>
+                    <td> </td>
+                    <td> </td>
                     <td> Wednesday 2:30PM-3:30PM </td>
                 </tr>
                 <tr>
@@ -96,7 +97,7 @@
                 <tr>
                     <td> Ashneel Das </td>
                     <td> <span style="color:#32CD32"> ad665</span>@<span class="text-primary">rhodes:405</span> </td>
-                    <td> Tuesday 4:00PM-6:00PM </td> 
+                    <td> Tuesday 4:00PM-6:00PM </td>
                 </tr>
                 <tr>
                     <td> Christopher Roman </td>
@@ -117,7 +118,7 @@
                 <tr>
                     <td> Henry Zheng </td>
                     <td> <span style="color:#32CD32"> hz265</span>@<span class="text-primary">rhodes:400</span> </td>
-                    <td> Friday 7:30PM-9:30PM </td> 
+                    <td> Friday 7:30PM-9:30PM </td>
                 </tr>
                 <tr>
                     <td> Callie Aboaf </td>
@@ -132,9 +133,11 @@
                     <td> Alex Katz </td>
                     <td> <span style="color:#32CD32"> aik49</span> </td>
                 </tr>
+                </tbody>
             </table>
-            <br> 
-            <span style="color: red"> Note: Office hours may change location based on occasion. Check the calendar for the most up-to-date information! </span>
+            <br>
+            <span style="color: red"> Note: Office hours may change location based on occasion. Check the calendar for
+                the most up-to-date information! </span>
         </div>
     </div>
     <div id="footer">
@@ -148,6 +151,27 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+        let x = document.getElementById("wrap"); 
+        x.style.fontSize = "15px"; 
+
+        function checkOverflow(el) {
+            var curOverflow = el.style.overflow;
+            if (!curOverflow || curOverflow === "visible")
+                el.style.overflow = "hidden";
+            var isOverflowing = el.clientWidth < el.scrollWidth
+                || el.clientHeight < el.scrollHeight;
+            el.style.overflow = curOverflow;
+            return isOverflowing; 
+        }
+
+        function adjustSize(el) {
+            while (checkOverflow(el)) {
+                
+            }
+        }
+    </script>
 </body>
 
 </html>
