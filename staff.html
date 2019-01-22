@@ -54,7 +54,7 @@
             <div class="page-header">
                 <div class="row">
                     <div class="col-md-9">
-                        <h1>Staff and Office Hours</h1>
+                        <h1 id="header">Staff and Office Hours</h1>
                         <br>
                     </div>
                     <br>
@@ -151,27 +151,41 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <script type="text/javascript">
-
-        let x = document.getElementById("wrap"); 
-        x.style.fontSize = "15px"; 
-
-        function checkOverflow(el) {
-            var curOverflow = el.style.overflow;
-            if (!curOverflow || curOverflow === "visible")
-                el.style.overflow = "hidden";
-            var isOverflowing = el.clientWidth < el.scrollWidth
-                || el.clientHeight < el.scrollHeight;
-            el.style.overflow = curOverflow;
-            return isOverflowing; 
-        }
-
-        function adjustSize(el) {
-            while (checkOverflow(el)) {
-                
+        <script type="text/javascript">
+            var i = 0;
+            var txt = 'Staff and Office Hours'; 
+            var speed = 60;
+            let hasBlinker = true; 
+            document.getElementById("header").innerHTML = "|";
+            function typeWriter() {
+              if (i < txt.length) {
+                let x = document.getElementById("header"); 
+                let len = x.innerHTML.length; 
+                x.innerHTML = x.innerHTML.substring(0, len-1) + txt.charAt(i) + "|";
+                i++;
+                setTimeout(typeWriter, speed);
+              }
+              let x = document.getElementById("header"); 
             }
-        }
-    </script>
+        
+            function blink() {
+              let x = document.getElementById("header"); 
+              let len = x.innerHTML.length; 
+              if (x.innerHTML.includes('Staff and Office Hours')) {
+              if (hasBlinker) {
+                x.innerHTML = x.innerHTML.substring(0, len-1); 
+                hasBlinker = false; 
+              }
+              else {
+                x.innerHTML += "|"; 
+                hasBlinker = true; 
+              }
+              }
+            }
+        
+            typeWriter(); 
+            setInterval(blink, 500); 
+          </script>
 </body>
 
 </html>
