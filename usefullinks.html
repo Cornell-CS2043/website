@@ -72,41 +72,41 @@
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-    <script type="text/javascript">
-      var i = 0;
-      var txt = 'Useful Links'; 
-      var speed = 60;
-      let hasBlinker = true; 
-      document.getElementById("header").innerHTML = "|";
-      function typeWriter() {
-        if (i < txt.length) {
-          let x = document.getElementById("header"); 
-          let len = x.innerHTML.length; 
-          x.innerHTML = x.innerHTML.substring(0, len-1) + txt.charAt(i) + "|";
-          i++;
-          setTimeout(typeWriter, speed);
-        }
-        let x = document.getElementById("header"); 
+  <script type="text/javascript">
+    var i = 0;
+    var txt = 'Useful Links';
+    var speed = 60;
+    let hasBlinker = true;
+    document.getElementById("header").innerHTML = "|";
+    function typeWriter() {
+      if (i < txt.length) {
+        let x = document.getElementById("header");
+        let len = x.innerHTML.length;
+        x.innerHTML = x.innerHTML.substring(0, len - 1) + txt.charAt(i) + "|";
+        i++;
+        setTimeout(typeWriter, speed);
       }
-  
-      function blink() {
-        let x = document.getElementById("header"); 
-        let len = x.innerHTML.length; 
-        if (x.innerHTML.includes('Useful Links')) {
+      let x = document.getElementById("header");
+    }
+
+    function blink() {
+      let x = document.getElementById("header");
+      let len = x.innerHTML.length;
+      if (x.innerHTML.includes('Useful Links')) {
         if (hasBlinker) {
-          x.innerHTML = x.innerHTML.substring(0, len-1); 
-          hasBlinker = false; 
+          x.innerHTML = x.innerHTML.substring(0, len - 1);
+          hasBlinker = false;
         }
         else {
-          x.innerHTML += "|"; 
-          hasBlinker = true; 
-        }
+          x.innerHTML += "|";
+          hasBlinker = true;
         }
       }
-  
-      typeWriter(); 
-      setInterval(blink, 500); 
-    </script>
+    }
+
+    typeWriter();
+    setInterval(blink, 500); 
+  </script>
 </body>
 
 </html>

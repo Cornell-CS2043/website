@@ -88,37 +88,37 @@
     crossorigin="anonymous"></script>
   <script type="text/javascript">
     var i = 0;
-    var txt = 'CS 2043: Unix Tools and Scripting'; 
+    var txt = 'CS 2043: Unix Tools and Scripting';
     var speed = 60;
-    let hasBlinker = true; 
+    let hasBlinker = true;
     document.getElementById("header").innerHTML = "|";
     function typeWriter() {
       if (i < txt.length) {
-        let x = document.getElementById("header"); 
-        let len = x.innerHTML.length; 
-        x.innerHTML = x.innerHTML.substring(0, len-1) + txt.charAt(i) + "|";
+        let x = document.getElementById("header");
+        let len = x.innerHTML.length;
+        x.innerHTML = x.innerHTML.substring(0, len - 1) + txt.charAt(i) + "|";
         i++;
         setTimeout(typeWriter, speed);
       }
-      let x = document.getElementById("header"); 
+      let x = document.getElementById("header");
     }
 
     function blink() {
-      let x = document.getElementById("header"); 
-      let len = x.innerHTML.length; 
+      let x = document.getElementById("header");
+      let len = x.innerHTML.length;
       if (x.innerHTML.includes('CS 2043: Unix Tools and Scripting')) {
-      if (hasBlinker) {
-        x.innerHTML = x.innerHTML.substring(0, len-1); 
-        hasBlinker = false; 
-      }
-      else {
-        x.innerHTML += "|"; 
-        hasBlinker = true; 
-      }
+        if (hasBlinker) {
+          x.innerHTML = x.innerHTML.substring(0, len - 1);
+          hasBlinker = false;
+        }
+        else {
+          x.innerHTML += "|";
+          hasBlinker = true;
+        }
       }
     }
 
-    typeWriter(); 
+    typeWriter();
     setInterval(blink, 500); 
   </script>
 </body>
