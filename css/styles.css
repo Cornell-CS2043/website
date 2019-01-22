@@ -45,7 +45,7 @@ table tr td {
   position: relative;
   overflow: auto; 
   padding-top: 35%;
-  max-width: 70%; 
+  width: 85%; 
 }
 
 iframe {
