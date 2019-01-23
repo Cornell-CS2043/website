@@ -54,7 +54,7 @@
       <div class="page-header">
         <div class="row">
           <div class="col-md-9">
-            <h1 id="header">Collaboration Policy</h1>
+            <h1 id="header">Lecture Notes</h1>
           </div>
           <br>
         </div>
@@ -62,10 +62,12 @@
     </div>
     <br>
     <div class="container">
-            In CS2043, we strive to foster an engaging and collaborative environment.  But this is made difficult by the nature of our subject matter; what is a struggle to understand for one student might be an imperceptible leap of intuition for another.  For this reason, we kindly ask students to refrain from discussing assignments with each other, especially at the beginning of the semester.  If you have been trained as a TA, or are otherwise experienced in how to help someone without revealing critical information to them, then you may ignore this restriction; but please be careful! This class is designed to help transform students who find themselves (more often than not) blindly following the advice on stackOverflow into students who feel comfortable with every line they type into a terminal.  An over-reliance on outside help will hinder this most important lesson. <br> <br> 
-            When assignments are released, unless otherwise noted, we expect the entirety of the assignment to be the work of a single student.  For non-programming assignments, this means you should complete them in isolation.  For programming-based assignments, the advice in the first paragraph still holds; if you decide to collaborate (perhaps you are a TA, or otherwise good at helping without providing the answer) you are restricted to "whiteboard-only" collaboration. You may discuss your ideas with your classmates at a whiteboard, but cannot take away any notes from this discussion. Students must be able to independently reconstruct everything they did in collaboration. <br> <br> 
-            If you are at all concerned about whether a certain behavior is allowed under this policy, please ask on Piazza.  One of our helpful members of the course staff will be sure to answer promptly! <br> <br> 
-            This policy may be updated during the semester; we will announce any changes via e-mail or piazza. <br> <br> 
+        <h7> January 23, 2019 </h7> <br> 
+        <a href="slides/01_Introduction.pdf">Introduction</a> <br> <br> 
+        <h7> January 25, 2019 </h7> <br> 
+        <a href="slides/01a_SSH.pdf">SSH</a> <br> 
+        <a href="slides/02_The_Unix_File_System.pdf">The Unix File System</a> <br> 
+        <a href="slides/02b_More_On_Commands.pdf">More on Commands</a> <br> <br> 
     </div>
   </div>
   <div id="footer">
@@ -81,7 +83,7 @@
     crossorigin="anonymous"></script>
   <script type="text/javascript">
     var i = 0;
-    var txt = 'Collaboration Policy';
+    var txt = 'Lecture Notes';
     var speed = 60;
     let hasBlinker = true;
     document.getElementById("header").innerHTML = "|";
@@ -99,7 +101,7 @@
     function blink() {
       let x = document.getElementById("header");
       let len = x.innerHTML.length;
-      if (x.innerHTML.includes('Collaboration Policy')) {
+      if (x.innerHTML.includes('Lecture Notes')) {
         if (hasBlinker) {
           x.innerHTML = x.innerHTML.substring(0, len - 1);
           hasBlinker = false;
