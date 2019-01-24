@@ -84,12 +84,12 @@
     var txt = 'Collaboration Policy';
     var speed = 60;
     let hasBlinker = true;
-    document.getElementById("header").innerHTML = "|";
+    document.getElementById("header").innerHTML = "\u258e";
     function typeWriter() {
       if (i < txt.length) {
         let x = document.getElementById("header");
         let len = x.innerHTML.length;
-        x.innerHTML = x.innerHTML.substring(0, len - 1) + txt.charAt(i) + "|";
+        x.innerHTML = x.innerHTML.substring(0, len - 1) + txt.charAt(i) + "\u258e";
         i++;
         setTimeout(typeWriter, speed);
       }
@@ -105,7 +105,7 @@
           hasBlinker = false;
         }
         else {
-          x.innerHTML += "|";
+          x.innerHTML += "\u258e";
           hasBlinker = true;
         }
       }

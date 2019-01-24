@@ -80,7 +80,8 @@
                     </tr>
                     <tr>
                         <td> Patrick LaFontaine </td>
-                        <td> <span style="color:#32CD32"> pwl45</span> </td>
+                        <td> <span style="color:#32CD32"> pwl45</span>@<span class="text-primary">rhodes:597</span> </td> 
+                        <td> Friday 3:00PM-5:00PM</td> 
                     </tr>
                     <tr>
                         <td> Theodore Bauer </td>
@@ -88,11 +89,20 @@
                     </tr>
                     <tr>
                         <td> Yijia Chen </td>
-                        <td> <span style="color:#32CD32"> yc2366</span> </td>
+                        <td> <span style="color:#32CD32"> yc2366</span>@<span class="text-primary">rhodes:412</span>
+                        </td>
+                        <td> Monday 5:00PM-7:00PM </td>
                     </tr>
                     <tr>
                         <td> Irene Yoon </td>
-                        <td> <span style="color:#32CD32"> ey222</span> </td>
+                        <td> <span style="color:#32CD32"> ey222</span>@<span class="text-primary">rhodes:408</span>
+                        </td>
+                        <td> Monday 12:30PM-1:30PM </td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td> </td>
+                        <td> Wednesday 12:30PM-1:30PM </td>
                     </tr>
                     <tr>
                         <td> Ashneel Das </td>
@@ -102,7 +112,9 @@
                     </tr>
                     <tr>
                         <td> Christopher Roman </td>
-                        <td> <span style="color:#32CD32"> cr469</span> </td>
+                        <td> <span style="color:#32CD32"> cr469</span>@<span class="text-primary">rhodes:412</span> </td> 
+                        <td> Wednesday 5:30PM-7:30PM</td> 
+                            
                     </tr>
                     <tr>
                         <td> Jason Liu </td>
@@ -130,7 +142,14 @@
                     </tr>
                     <tr>
                         <td> Callie Aboaf </td>
-                        <td> <span style="color:#32CD32"> cha46</span> </td>
+                        <td> <span style="color:#32CD32"> cha46</span>@<span class="text-primary">rhodes:408</span>
+                        </td>
+                        <td> Thursday 12:00PM-1:00PM</td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td> </td>
+                        <td> Thursday 3:30PM-4:30PM </td>
                     </tr>
                     <tr>
                         <td> Srishti Belwariar </td>
@@ -138,17 +157,17 @@
                         </td>
                         <td> Monday 3:00PM-5:00PM </td>
                     </tr>
-
                     <tr>
                         <td> Alex Katz </td>
-                        <td> <span style="color:#32CD32"> aik49</span> </td>
+                        <td> <span style="color:#32CD32"> aik49</span>@<span class="text-primary">rhodes:400</span> </td>
+                        <td> Thursday 7:30PM-9:30PM</td>  
                     </tr>
                 </tbody>
             </table>
             <br>
             <span style="color: red"> <b>
                     <h6> Note: Office hours may change location based on occasion. Check the calendar for
-                        the most up-to-date information! </h6> <br> 
+                        the most up-to-date information! </h6> <br>
                 </b> </span>
         </div>
     </div>
@@ -168,12 +187,12 @@
         var txt = 'Staff and Office Hours';
         var speed = 60;
         let hasBlinker = true;
-        document.getElementById("header").innerHTML = "|";
+        document.getElementById("header").innerHTML = "\u258e";
         function typeWriter() {
             if (i < txt.length) {
                 let x = document.getElementById("header");
                 let len = x.innerHTML.length;
-                x.innerHTML = x.innerHTML.substring(0, len - 1) + txt.charAt(i) + "|";
+                x.innerHTML = x.innerHTML.substring(0, len - 1) + txt.charAt(i) + "\u258e";
                 i++;
                 setTimeout(typeWriter, speed);
             }
@@ -189,7 +208,7 @@
                     hasBlinker = false;
                 }
                 else {
-                    x.innerHTML += "|";
+                    x.innerHTML += "\u258e";
                     hasBlinker = true;
                 }
             }
