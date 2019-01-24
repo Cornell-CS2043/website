@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="CS 2043">
+  <meta name="author" content="">
+
+
+  <title>CS 2043 &mdash; Command Index and Additional Resources</title>
+
+
+  
+
+
+<!-- Bootstrap core (v4.1.3) CSS, hosting courtesy of BootstrapCDN: https://www.bootstrapcdn.com/ -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Load in custom styling after bootstrap. -->
+<link rel="stylesheet" href="/css/main.css">
+<!-- Bring in the syntax highlighting last -->
+
+
+<!-- Used for the bootstrap-select index searching. -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
+
+<!-- Load in the highlight.js styling now -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css">
+
+
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body role="document">
+    <div class="container" role="main">
+      <!-- See customization options here: https://getbootstrap.com/docs/4.0/components/navbar/ -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="navbar">
+  
+  <a class="navbar-brand " href="/">CS 2043</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    
+      
+      <li class="nav-item">
+        <a class="nav-link" href="/schedule.html">
+          Schedule
+        </a>
+      </li>
+    
+      
+      <li class="nav-item">
+        <a class="nav-link" href="/syllabus.html">
+          Syllabus
+        </a>
+      </li>
+    
+      
+      <li class="nav-item">
+        <a class="nav-link" href="/command_index.html">
+          Command Index
+        </a>
+      </li>
+    
+      
+      <li class="nav-item">
+        <a class="nav-link" href="/staff.html">
+          Staff
+        </a>
+      </li>
+    
+      
+      <li class="nav-item">
+        <a class="nav-link" href="/calendar.html">
+          Calendar
+        </a>
+      </li>
+    
+    
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          External
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        
+          
+          
+          
+          
+          <a class="dropdown-item" href="https://www.piazza.com/cornell/spring2019/cs2043">Piazza</a>
+        
+          
+          
+          
+          
+          <a class="dropdown-item" href="https://wash.cs.cornell.edu">Course Server</a>
+        
+        </div>
+      </li>
+    
+    </ul>
+  </div><!-- /div id=navbarSupportedContent -->
+</nav>
+
+	  <h1 id="header"></h1>
+      <p>The below are parsed from the same code that generated the lecture slides.  The
+material on this page in no way is a replacement for reading through the full slides, as
+it only contains excerpts and potentially lacks relevant context.  That said, there’s
+little reason for you to need to hunt through the slides when you just want a refresher
+on how something works / what commands you learned when.</p>
+
+<div class="col-xs-12">
+  <div class="row well">
+    <div class="col-xs-12 col-sm-6">
+      <select class="selectpicker form-control" id="cmd_selector" title="Command blocks..." data-live-search="true">
+      <option class="text-dark" style="text-transform: none" data-tokens="cat Concatenate files and print them" data-target="#Navigating_the_Unix_File_System_cmd_cat" data-content="(&lt;kbd&gt;cat&lt;/kbd&gt;) Con&lt;kbd&gt;cat&lt;/kbd&gt;enate files and print them">(<kbd>cat</kbd>) Con<kbd>cat</kbd>enate files and print them</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="cd Change Directories" data-target="#Navigating_the_Unix_File_System_cmd_cd" data-content="(&lt;kbd&gt;cd&lt;/kbd&gt;) &lt;kbd&gt;C&lt;/kbd&gt;hange &lt;kbd&gt;D&lt;/kbd&gt;irectories">(<kbd>cd</kbd>) <kbd>C</kbd>hange <kbd>D</kbd>irectories</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="check-handin check if you handed in your homework" data-target="#Navigating_the_Unix_File_System_cmd_check_handin" data-content="(&lt;kbd&gt;check-handin&lt;/kbd&gt;) &lt;kbd&gt;check&lt;/kbd&gt; if you &lt;kbd&gt;hand&lt;/kbd&gt;ed &lt;kbd&gt;in&lt;/kbd&gt; your homework">(<kbd>check-handin</kbd>) <kbd>check</kbd> if you <kbd>hand</kbd>ed <kbd>in</kbd> your homework</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="cp Copy" data-target="#Navigating_the_Unix_File_System_cmd_cp" data-content="(&lt;kbd&gt;cp&lt;/kbd&gt;) &lt;kbd&gt;C&lt;/kbd&gt;o&lt;kbd&gt;p&lt;/kbd&gt;y">(<kbd>cp</kbd>) <kbd>C</kbd>o<kbd>p</kbd>y</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="handin hand in your homework" data-target="#Navigating_the_Unix_File_System_cmd_handin" data-content="(&lt;kbd&gt;handin&lt;/kbd&gt;) &lt;kbd&gt;hand in&lt;/kbd&gt; your homework">(<kbd>handin</kbd>) <kbd>hand in</kbd> your homework</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="ls List Directory Contents" data-target="#Navigating_the_Unix_File_System_cmd_ls" data-content="(&lt;kbd&gt;ls&lt;/kbd&gt;) &lt;kbd&gt;L&lt;/kbd&gt;i&lt;kbd&gt;s&lt;/kbd&gt;t Directory Contents">(<kbd>ls</kbd>) <kbd>L</kbd>i<kbd>s</kbd>t Directory Contents</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="man The Manual Command" data-target="#More_on_Commands_cmd_man" data-content="(&lt;kbd&gt;man&lt;/kbd&gt;) The &lt;kbd&gt;Man&lt;/kbd&gt;ual Command">(<kbd>man</kbd>) The <kbd>Man</kbd>ual Command</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="mkdir Make Directories" data-target="#Navigating_the_Unix_File_System_cmd_mkdir" data-content="(&lt;kbd&gt;mkdir&lt;/kbd&gt;) &lt;kbd&gt;M&lt;/kbd&gt;a&lt;kbd&gt;k&lt;/kbd&gt;e &lt;kbd&gt;Dir&lt;/kbd&gt;ectories">(<kbd>mkdir</kbd>) <kbd>M</kbd>a<kbd>k</kbd>e <kbd>Dir</kbd>ectories</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="mv Move or Rename Files and Directories" data-target="#Navigating_the_Unix_File_System_cmd_mv" data-content="(&lt;kbd&gt;mv&lt;/kbd&gt;) &lt;kbd&gt;M&lt;/kbd&gt;o&lt;kbd&gt;v&lt;/kbd&gt;e (or Rename) Files and Directories">(<kbd>mv</kbd>) <kbd>M</kbd>o<kbd>v</kbd>e (or Rename) Files and Directories</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="pwd Print Working Directory" data-target="#Navigating_the_Unix_File_System_cmd_pwd" data-content="(&lt;kbd&gt;pwd&lt;/kbd&gt;) &lt;kbd&gt;P&lt;/kbd&gt;rint &lt;kbd&gt;W&lt;/kbd&gt;orking &lt;kbd&gt;D&lt;/kbd&gt;irectory">(<kbd>pwd</kbd>) <kbd>P</kbd>rint <kbd>W</kbd>orking <kbd>D</kbd>irectory</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="rm Remove Files or Directories" data-target="#Navigating_the_Unix_File_System_cmd_rm" data-content="(&lt;kbd&gt;rm&lt;/kbd&gt;) &lt;kbd&gt;R&lt;/kbd&gt;e&lt;kbd&gt;m&lt;/kbd&gt;ove Files or Directories">(<kbd>rm</kbd>) <kbd>R</kbd>e<kbd>m</kbd>ove Files or Directories</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="rmdir Remove Directory" data-target="#Navigating_the_Unix_File_System_cmd_rmdir" data-content="(&lt;kbd&gt;rmdir&lt;/kbd&gt;) &lt;kbd&gt;R&lt;/kbd&gt;e&lt;kbd&gt;m&lt;/kbd&gt;ove &lt;kbd&gt;Dir&lt;/kbd&gt;ectory">(<kbd>rmdir</kbd>) <kbd>R</kbd>e<kbd>m</kbd>ove <kbd>Dir</kbd>ectory</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="ssh Secure Shell" data-target="#SSH_cmd_ssh" data-content="(&lt;kbd&gt;ssh&lt;/kbd&gt;) &lt;kbd&gt;S&lt;/kbd&gt;ecure &lt;kbd&gt;Sh&lt;/kbd&gt;ell">(<kbd>ssh</kbd>) <kbd>S</kbd>ecure <kbd>Sh</kbd>ell</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="touch Change File Timestamps" data-target="#Navigating_the_Unix_File_System_cmd_touch" data-content="(&lt;kbd&gt;touch&lt;/kbd&gt;) Change File Timestamps">(<kbd>touch</kbd>) Change File Timestamps</option>
+
+      </select><!-- end command selections -->
+    </div><!-- col-xs-12 col-sm-6 -->
+    <div class="col-xs-12 col-sm-6">
+      <select class="selectpicker form-control" id="info_selector" title="Information blocks..." data-live-search="true">
+      <option class="text-dark" style="text-transform: none" data-tokens="ssh Examples" data-target="#SSH_info_ssh_Examples" data-content="&lt;kbd&gt;ssh&lt;/kbd&gt; Examples"><kbd>ssh</kbd> Examples</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="basic prompt information" data-target="#Navigating_the_Unix_File_System_info_basic_prompt_information" data-content="basic prompt information">basic prompt information</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="how commands work" data-target="#Navigating_the_Unix_File_System_info_how_commands_work" data-content="how commands work">how commands work</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="path explanation" data-target="#Navigating_the_Unix_File_System_info_path_explanation" data-content="path explanation">path explanation</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="Relative Path Shortcuts" data-target="#Navigating_the_Unix_File_System_info_Relative_Path_Shortcuts" data-content="Relative Path Shortcuts">Relative Path Shortcuts</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="Flags  Command Clarification" data-target="#More_on_Commands_info_Flags_AND_Command_Clarification" data-content="Flags &amp; Command Clarification">Flags &amp; Command Clarification</option>
+
+      </select><!-- end info selections -->
+    </div><!-- col-xs-12 col-sm-6 -->
+  </div><!-- row well -->
+</div>
+<div class="row"></div>
+<!-- Add a little extra spacing -->
+
+<!-- BEGIN outer accordion -->
+<p><br /></p>
+<div class="accordion" id="lectures">
+ <div class="card">
+  <div class="card-header" id="SSH_header">
+   <h5 class="mb-0">
+    <button aria-controls="SSH_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#SSH_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+     02 – SSH
+    </button>
+   </h5>
+  </div>
+  <div aria-labelledby="SSH_header" class="collapse accordion" data-parent="#lectures" data-toggle="collapse" id="SSH_body">
+   <div class="card-body">
+    <!-- (ssh) Secure Shell ~~ (ssh) Secure Shell ~~ (ssh) Secure Shell -->
+    <div class="card">
+     <div class="card-header" id="SSH_cmd_ssh_header">
+      <h5 class="mb-0">
+       <button aria-controls="SSH_cmd_ssh_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#SSH_cmd_ssh_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>ssh</kbd>
+        )
+        <kbd>S</kbd>
+        ecure
+        <kbd>Sh</kbd>
+        ell
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="SSH_cmd_ssh_header" class="collapse" data-parent="#SSH_body" data-toggle="collapse" id="SSH_cmd_ssh_body">
+      <div class="card-body">
+       <p class="card-text">
+        <code class="bash">
+         ssh &lt;username&gt;@remote
+        </code>
+       </p>
+       <ul>
+        <li>
+         <code>username</code>
+         is the username on the
+         <em>
+          remote
+         </em>
+         host.
+        </li>
+        <li>
+         <p class="card-text">
+          <code>remote</code>
+          is the url of the server you want to log into.
+         </p>
+         <p class="card-text">
+         </p>
+         <ul>
+          <li>
+           IP Address, e.g.,
+           <code>128.253.141.34</code>
+          </li>
+          <li>
+           Symbolic name, e.g.,
+           <code>wash.cs.cornell.edu</code>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <p class="card-text">
+          Use
+          <code>@</code>
+          to specify username.
+         </p>
+         <ul>
+          <li>
+           <code>ssh username@remote</code>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- ssh Examples ~~ ssh Examples ~~ ssh Examples -->
+    <div class="card">
+     <div class="card-header" id="SSH_info_ssh_Examples_header">
+      <h5 class="mb-0">
+       <button aria-controls="SSH_info_ssh_Examples_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#SSH_info_ssh_Examples_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        <kbd>ssh</kbd>
+        Examples
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="SSH_info_ssh_Examples_header" class="collapse" data-parent="#SSH_body" data-toggle="collapse" id="SSH_info_ssh_Examples_body">
+      <div class="card-body">
+       <ul>
+        <li>
+         On
+         <code>wash</code>
+         I am
+         <code>mpm288</code>
+         :
+         <ul>
+          <li>
+           v1:
+           <code>ssh mpm288@128.253.3.197</code>
+          </li>
+          <li>
+           v2:
+           <code>ssh mpm288@wash.cs.cornell.edu</code>
+          </li>
+          <li>
+           (
+           <strong>
+            or
+           </strong>
+           fill in the fields if you’re using a graphical SSH client)
+          </li>
+          <li>
+           (if you need the port number, it’s
+           <code>22</code>
+           )
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+   </div>
+   <!-- card-body -->
+  </div>
+  <!-- div wrapper _body -->
+ </div>
+ <!-- card -->
+ <div class="card">
+  <div class="card-header" id="Navigating_the_Unix_File_System_header">
+   <h5 class="mb-0">
+    <button aria-controls="Navigating_the_Unix_File_System_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Navigating_the_Unix_File_System_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+     02 – Navigating the Unix File System
+    </button>
+   </h5>
+  </div>
+  <div aria-labelledby="Navigating_the_Unix_File_System_header" class="collapse accordion" data-parent="#lectures" data-toggle="collapse" id="Navigating_the_Unix_File_System_body">
+   <div class="card-body">
+    <!-- (pwd) Print Working Directory ~~ (pwd) Print Working Directory ~~ (pwd) Print Working Directory -->
+    <div class="card">
+     <div class="card-header" id="Navigating_the_Unix_File_System_cmd_pwd_header">
+      <h5 class="mb-0">
+       <button aria-controls="Navigating_the_Unix_File_System_cmd_pwd_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Navigating_the_Unix_File_System_cmd_pwd_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>pwd</kbd>
+        )
+        <kbd>P</kbd>
+        rint
+        <kbd>W</kbd>
+        orking
+        <kbd>D</kbd>
+        irectory
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Navigating_the_Unix_File_System_cmd_pwd_header" class="collapse" data-parent="#Navigating_the_Unix_File_System_body" data-toggle="collapse" id="Navigating_the_Unix_File_System_cmd_pwd_body">
+      <div class="card-body">
+       <p class="card-text">
+        <code class="bash">
+         pwd
+        </code>
+       </p>
+       <ul>
+        <li>
+         Prints the “full” path of the current directory.
+         <ul>
+          <li>
+           The
+           <code>-P</code>
+           flag is needed when
+           <em>
+            symbolic
+           </em>
+           links are present.
+          </li>
+         </ul>
+        </li>
+        <li>
+         Handy on minimalist systems when you get lost.
+        </li>
+        <li>
+         Can be used in scripts.
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- (ls) List Directory Contents ~~ (ls) List Directory Contents ~~ (ls) List Directory Contents -->
+    <div class="card">
+     <div class="card-header" id="Navigating_the_Unix_File_System_cmd_ls_header">
+      <h5 class="mb-0">
+       <button aria-controls="Navigating_the_Unix_File_System_cmd_ls_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Navigating_the_Unix_File_System_cmd_ls_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>ls</kbd>
+        )
+        <kbd>L</kbd>
+        i
+        <kbd>s</kbd>
+        t Directory Contents
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Navigating_the_Unix_File_System_cmd_ls_header" class="collapse" data-parent="#Navigating_the_Unix_File_System_body" data-toggle="collapse" id="Navigating_the_Unix_File_System_cmd_ls_body">
+      <div class="card-body">
+       <p class="card-text">
+        <code class="bash">
+         ls
+        </code>
+       </p>
+       <ul>
+        <li>
+         Lists directory contents (including subdirectories).
+        </li>
+        <li>
+         Works like the
+         <code class="bash">
+          dir
+         </code>
+         command in Windows.
+        </li>
+        <li>
+         The
+         <code>-l</code>
+         flag lists detailed file / directory information (we’ll learn more about flags later).
+        </li>
+        <li>
+         Use
+         <code>-a</code>
+         to list hidden files.
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- (cd) Change Directories ~~ (cd) Change Directories ~~ (cd) Change Directories -->
+    <div class="card">
+     <div class="card-header" id="Navigating_the_Unix_File_System_cmd_cd_header">
+      <h5 class="mb-0">
+       <button aria-controls="Navigating_the_Unix_File_System_cmd_cd_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Navigating_the_Unix_File_System_cmd_cd_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>cd</kbd>
+        )
+        <kbd>C</kbd>
+        hange
+        <kbd>D</kbd>
+        irectories
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Navigating_the_Unix_File_System_cmd_cd_header" class="collapse" data-parent="#Navigating_the_Unix_File_System_body" data-toggle="collapse" id="Navigating_the_Unix_File_System_cmd_cd_body">
+      <div class="card-body">
+       <p class="card-text">
+        <code class="bash">
+         cd [directory name]
+        </code>
+       </p>
+       <ul>
+        <li>
+         Changes directory to
+         <code class="bash">
+          [directory name]
+         </code>
+         .
+        </li>
+        <li>
+         If not given a destination defaults to the user’s home directory.
+         <ul>
+          <li>
+           Reminder: the home directory is
+           <code>~</code>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- (cat) Concatenate files and print them ~~ (cat) Concatenate files and print them ~~ (cat) Concatenate files and print them -->
+    <div class="card">
+     <div class="card-header" id="Navigating_the_Unix_File_System_cmd_cat_header">
+      <h5 class="mb-0">
+       <button aria-controls="Navigating_the_Unix_File_System_cmd_cat_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Navigating_the_Unix_File_System_cmd_cat_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>cat</kbd>
+        ) Con
+        <kbd>cat</kbd>
+        enate files and print them
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Navigating_the_Unix_File_System_cmd_cat_header" class="collapse" data-parent="#Navigating_the_Unix_File_System_body" data-toggle="collapse" id="Navigating_the_Unix_File_System_cmd_cat_body">
+      <div class="card-body">
+       <p class="card-text">
+        <code class="bash">
+         cat [files]...
+        </code>
+       </p>
+       <ul>
+        <li>
+         Prints (“concatenates”) the listed files to your terminal
+        </li>
+        <li>
+         With no arguments, does something more advanced
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- (touch) Change File Timestamps ~~ (touch) Change File Timestamps ~~ (touch) Change File Timestamps -->
+    <div class="card">
+     <div class="card-header" id="Navigating_the_Unix_File_System_cmd_touch_header">
+      <h5 class="mb-0">
+       <button aria-controls="Navigating_the_Unix_File_System_cmd_touch_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Navigating_the_Unix_File_System_cmd_touch_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>touch</kbd>
+        ) Change File Timestamps
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Navigating_the_Unix_File_System_cmd_touch_header" class="collapse" data-parent="#Navigating_the_Unix_File_System_body" data-toggle="collapse" id="Navigating_the_Unix_File_System_cmd_touch_body">
+      <div class="card-body">
+       <p class="card-text">
+        <code class="bash">
+         touch [flags] &lt;file&gt;
+        </code>
+       </p>
+       <ul>
+        <li>
+         Adjusts the timestamp of the specified file.
+        </li>
+        <li>
+         With no flags uses the current date and time.
+        </li>
+        <li>
+         If the file does not exist,
+         <code class="bash">
+          touch
+         </code>
+         creates it.
+        </li>
+        <li>
+         “But I swear I haven’t changed the file, look at the timestamp.”
+         <ul>
+          <li>
+           … timestamps prove nothing.
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- (mkdir) Make Directories ~~ (mkdir) Make Directories ~~ (mkdir) Make Directories -->
+    <div class="card">
+     <div class="card-header" id="Navigating_the_Unix_File_System_cmd_mkdir_header">
+      <h5 class="mb-0">
+       <button aria-controls="Navigating_the_Unix_File_System_cmd_mkdir_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Navigating_the_Unix_File_System_cmd_mkdir_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>mkdir</kbd>
+        )
+        <kbd>M</kbd>
+        a
+        <kbd>k</kbd>
+        e
+        <kbd>Dir</kbd>
+        ectories
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Navigating_the_Unix_File_System_cmd_mkdir_header" class="collapse" data-parent="#Navigating_the_Unix_File_System_body" data-toggle="collapse" id="Navigating_the_Unix_File_System_cmd_mkdir_body">
+      <div class="card-body">
+       <p class="card-text">
+        <code class="bash">
+         mkdir [flags] &lt;dir1&gt; &lt;dir2&gt; &lt;...&gt; &lt;dirN&gt;
+        </code>
+       </p>
+       <ul>
+        <li>
+         Can use relative or absolute paths.
+         <ul>
+          <li>
+           Not restricted to making directories in the current directory only.
+          </li>
+         </ul>
+        </li>
+        <li>
+         Need to specify at least one directory name.
+        </li>
+        <li>
+         Can specify multiple, separated by spaces.
+        </li>
+        <li>
+         The
+         <code>-p</code>
+         flag is commonly used in scripts:
+         <ul>
+          <li>
+           Makes all parent directories if they do not exist.
+          </li>
+          <li>
+           Convenient because if the directory exists,
+           <code class="bash">
+            mkdir
+           </code>
+           will not fail.
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- (rm) Remove Files or Directories ~~ (rm) Remove Files or Directories ~~ (rm) Remove Files or Directories -->
+    <div class="card">
+     <div class="card-header" id="Navigating_the_Unix_File_System_cmd_rm_header">
+      <h5 class="mb-0">
+       <button aria-controls="Navigating_the_Unix_File_System_cmd_rm_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Navigating_the_Unix_File_System_cmd_rm_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>rm</kbd>
+        )
+        <kbd>R</kbd>
+        e
+        <kbd>m</kbd>
+        ove Files or Directories
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Navigating_the_Unix_File_System_cmd_rm_header" class="collapse" data-parent="#Navigating_the_Unix_File_System_body" data-toggle="collapse" id="Navigating_the_Unix_File_System_cmd_rm_body">
+      <div class="card-body">
+       <p class="card-text">
+        <code class="bash">
+         rm [flags] &lt;filename&gt;
+        </code>
+       </p>
+       <ul>
+        <li>
+         Removes the file
+         <code>&lt;filename&gt;</code>
+         .
+        </li>
+        <li>
+         Remove multiple files with wildcards (more on this later).
+         <ul>
+          <li>
+           Remove every file in the current directory:
+           <code class="bash">
+            rm *
+           </code>
+          </li>
+          <li>
+           Remove every
+           <code>.jpg</code>
+           file in the current directory:
+           <code class="bash">
+            rm *.jpg
+           </code>
+          </li>
+         </ul>
+        </li>
+        <li>
+         Prompt before deletion:
+         <code class="bash">
+          rm -i &lt;filename&gt;
+         </code>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- (rmdir) Remove Directory ~~ (rmdir) Remove Directory ~~ (rmdir) Remove Directory -->
+    <div class="card">
+     <div class="card-header" id="Navigating_the_Unix_File_System_cmd_rmdir_header">
+      <h5 class="mb-0">
+       <button aria-controls="Navigating_the_Unix_File_System_cmd_rmdir_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Navigating_the_Unix_File_System_cmd_rmdir_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>rmdir</kbd>
+        )
+        <kbd>R</kbd>
+        e
+        <kbd>m</kbd>
+        ove
+        <kbd>Dir</kbd>
+        ectory
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Navigating_the_Unix_File_System_cmd_rmdir_header" class="collapse" data-parent="#Navigating_the_Unix_File_System_body" data-toggle="collapse" id="Navigating_the_Unix_File_System_cmd_rmdir_body">
+      <div class="card-body">
+       <p class="card-text">
+        <code class="bash">
+         rmdir [flags] &lt;directory&gt;
+        </code>
+       </p>
+       <ul>
+        <li>
+         Removes an
+         <strong>
+          empty
+         </strong>
+         directory.
+        </li>
+        <li>
+         Throws an error if the directory is not empty.
+        </li>
+        <li>
+         You are encouraged to use this command: failing on non-empty can and will save you!
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- (cp) Copy ~~ (cp) Copy ~~ (cp) Copy -->
+    <div class="card">
+     <div class="card-header" id="Navigating_the_Unix_File_System_cmd_cp_header">
+      <h5 class="mb-0">
+       <button aria-controls="Navigating_the_Unix_File_System_cmd_cp_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Navigating_the_Unix_File_System_cmd_cp_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>cp</kbd>
+        )
+        <kbd>C</kbd>
+        o
+        <kbd>p</kbd>
+        y
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Navigating_the_Unix_File_System_cmd_cp_header" class="collapse" data-parent="#Navigating_the_Unix_File_System_body" data-toggle="collapse" id="Navigating_the_Unix_File_System_cmd_cp_body">
+      <div class="card-body">
+       <p class="card-text">
+        <code class="bash">
+         cp [flags] &lt;file&gt; &lt;destination&gt;
+        </code>
+       </p>
+       <ul>
+        <li>
+         Copies from one location to another.
+        </li>
+        <li>
+         To copy multiple files, use wildcards (such as
+         <code class="bash">
+          *
+         </code>
+         ).
+         <ul>
+          <li>
+           Globs / patterns can only be used for
+           <code>&lt;src&gt;</code>
+           .
+          </li>
+          <li>
+           <code>&lt;dest&gt;</code>
+           must be explicit and singularly defined.
+          </li>
+          <li>
+           Completely reasonable…how would it know what to do if there is ambiguity in where to send the file(s)?
+          </li>
+         </ul>
+        </li>
+        <li>
+         To copy a complete directory:
+         <code class="bash">
+          cp -r &lt;src&gt; &lt;dest&gt;
+         </code>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- (mv) Move (or Rename) Files and Directories ~~ (mv) Move (or Rename) Files and Directories ~~ (mv) Move (or Rename) Files and Directories -->
+    <div class="card">
+     <div class="card-header" id="Navigating_the_Unix_File_System_cmd_mv_header">
+      <h5 class="mb-0">
+       <button aria-controls="Navigating_the_Unix_File_System_cmd_mv_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Navigating_the_Unix_File_System_cmd_mv_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>mv</kbd>
+        )
+        <kbd>M</kbd>
+        o
+        <kbd>v</kbd>
+        e (or Rename) Files and Directories
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Navigating_the_Unix_File_System_cmd_mv_header" class="collapse" data-parent="#Navigating_the_Unix_File_System_body" data-toggle="collapse" id="Navigating_the_Unix_File_System_cmd_mv_body">
+      <div class="card-body">
+       <p class="card-text">
+        <code class="bash">
+         mv [flags] &lt;source&gt; &lt;destination&gt;
+        </code>
+       </p>
+       <ul>
+        <li>
+         Moves a file or directory from one place to another.
+        </li>
+        <li>
+         Also used for renaming, rename
+         <code>&lt;oldname&gt;</code>
+         to
+         <code>&lt;newname&gt;</code>
+         .
+         <ul>
+          <li>
+           <code class="bash">
+            mv badFolderName correctName
+           </code>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- (handin) hand in your homework ~~ (handin) hand in your homework ~~ (handin) hand in your homework -->
+    <div class="card">
+     <div class="card-header" id="Navigating_the_Unix_File_System_cmd_handin_header">
+      <h5 class="mb-0">
+       <button aria-controls="Navigating_the_Unix_File_System_cmd_handin_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Navigating_the_Unix_File_System_cmd_handin_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>handin</kbd>
+        )
+        <kbd>hand in</kbd>
+        your homework
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Navigating_the_Unix_File_System_cmd_handin_header" class="collapse" data-parent="#Navigating_the_Unix_File_System_body" data-toggle="collapse" id="Navigating_the_Unix_File_System_cmd_handin_body">
+      <div class="card-body">
+       <p class="card-text">
+        <code class="bash">
+         handin &lt;assignment&gt; &lt;file_name&gt;
+        </code>
+       </p>
+       <ul>
+        <li>
+         Hands in a
+         <em>
+          single file
+         </em>
+         for the named assignment
+        </li>
+        <li>
+         You can never hand in more than one file per assignment
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- (check-handin) check if you handed in your homework ~~ (check-handin) check if you handed in your homework ~~ (check-handin) check if you handed in your homework -->
+    <div class="card">
+     <div class="card-header" id="Navigating_the_Unix_File_System_cmd_check_handin_header">
+      <h5 class="mb-0">
+       <button aria-controls="Navigating_the_Unix_File_System_cmd_check_handin_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Navigating_the_Unix_File_System_cmd_check_handin_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>check-handin</kbd>
+        )
+        <kbd>check</kbd>
+        if you
+        <kbd>hand</kbd>
+        ed
+        <kbd>in</kbd>
+        your homework
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Navigating_the_Unix_File_System_cmd_check_handin_header" class="collapse" data-parent="#Navigating_the_Unix_File_System_body" data-toggle="collapse" id="Navigating_the_Unix_File_System_cmd_check_handin_body">
+      <div class="card-body">
+       <p class="card-text">
+        <code class="bash">
+         check-handin &lt;assignment&gt;
+        </code>
+       </p>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- basic prompt information ~~ basic prompt information ~~ basic prompt information -->
+    <div class="card">
+     <div class="card-header" id="Navigating_the_Unix_File_System_info_basic_prompt_information_header">
+      <h5 class="mb-0">
+       <button aria-controls="Navigating_the_Unix_File_System_info_basic_prompt_information_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Navigating_the_Unix_File_System_info_basic_prompt_information_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        basic prompt information
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Navigating_the_Unix_File_System_info_basic_prompt_information_header" class="collapse" data-parent="#Navigating_the_Unix_File_System_body" data-toggle="collapse" id="Navigating_the_Unix_File_System_info_basic_prompt_information_body">
+      <div class="card-body">
+       <div class="card mb-3 border-info">
+        <div class="card-header bg-info text-light">
+         <h5 class="mb-0">
+          What you should see now (modulo colors)
+         </h5>
+        </div>
+        <div class="card-body">
+         <p class="card-text">
+          <code class="bash">
+           NetID@wash ~ $
+          </code>
+         </p>
+         <ul>
+          <li>
+           <em>
+            NetID
+           </em>
+           is your username
+          </li>
+          <li>
+           <code>wash</code>
+           is the
+           <em>
+            hostname
+           </em>
+           of the computer you’re accessing
+          </li>
+          <li>
+           <code>~</code>
+           is the path to your current
+           <em>
+            directory
+           </em>
+           <ul>
+            <li>
+             (we call folders “directories” in *nix land because AT&amp;T invented these words)
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <ul>
+        <li>
+         This is the
+         <strong>
+          bash prompt
+         </strong>
+         , the default command line.
+        </li>
+        <li>
+         everything in bash is based on a
+         <em>
+          current directory
+         </em>
+        </li>
+        <li>
+         You are currently
+         <em>
+          inside
+         </em>
+         the
+         <code>~</code>
+         Directory. What does this mean?
+         <ul>
+          <li>
+           <code>~</code>
+           is a special symbol for your
+           <em>
+            home
+           </em>
+           directory
+          </li>
+          <li>
+           you own everything in your home directory
+          </li>
+          <li>
+           (on personal computers) contains Desktop, Downloads, etc.
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- how commands work ~~ how commands work ~~ how commands work -->
+    <div class="card">
+     <div class="card-header" id="Navigating_the_Unix_File_System_info_how_commands_work_header">
+      <h5 class="mb-0">
+       <button aria-controls="Navigating_the_Unix_File_System_info_how_commands_work_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Navigating_the_Unix_File_System_info_how_commands_work_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        how commands work
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Navigating_the_Unix_File_System_info_how_commands_work_header" class="collapse" data-parent="#Navigating_the_Unix_File_System_body" data-toggle="collapse" id="Navigating_the_Unix_File_System_info_how_commands_work_body">
+      <div class="card-body">
+       <ul>
+        <li>
+         Commands work like functions for bash
+        </li>
+        <li>
+         Command is a single word, like
+         <code>command</code>
+        </li>
+        <li>
+         Commands can take arguments
+         <ul>
+          <li>
+           arguments are space-separated:
+          </li>
+          <li>
+           <code>command arg1 arg2</code>
+           passes
+           <code>arg1</code>
+           and
+           <code>arg2</code>
+           to
+           <code>command</code>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <strong>
+          Most arguments are optional
+         </strong>
+        </li>
+        <li>
+         <em>
+          position-independent
+         </em>
+         arguments are called “flags” and are prefixed with a
+         <code>-</code>
+         or
+         <code>--</code>
+        </li>
+        <li>
+         example:
+         <code>command --flag</code>
+        </li>
+        <li>
+         example:
+         <code>command -f</code>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- path explanation ~~ path explanation ~~ path explanation -->
+    <div class="card">
+     <div class="card-header" id="Navigating_the_Unix_File_System_info_path_explanation_header">
+      <h5 class="mb-0">
+       <button aria-controls="Navigating_the_Unix_File_System_info_path_explanation_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Navigating_the_Unix_File_System_info_path_explanation_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        path explanation
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Navigating_the_Unix_File_System_info_path_explanation_header" class="collapse" data-parent="#Navigating_the_Unix_File_System_body" data-toggle="collapse" id="Navigating_the_Unix_File_System_info_path_explanation_body">
+      <div class="card-body">
+       <ul>
+        <li>
+         A
+         <em>
+          path
+         </em>
+         describes how to access a file
+        </li>
+        <li>
+         Most paths are
+         <em>
+          relative
+         </em>
+         paths – they start in your current working directory
+        </li>
+        <li>
+         Simple paths are just file names in the current directory
+         <ul>
+          <li>
+           example: I’m in
+           <code>~</code>
+           , which contains
+           <code>course</code>
+           ; while I’m in
+           <code>~</code>
+           the path
+           <code>course</code>
+           will refer to this directory
+          </li>
+         </ul>
+        </li>
+        <li>
+         A path can
+         <em>
+          traverse
+         </em>
+         directories using the
+         <code>/</code>
+         separator
+         <ul>
+          <li>
+           example: the path
+           <code>~/course</code>
+           will
+           <em>
+            always
+           </em>
+           mean the directory
+           <code>course</code>
+           in my home directory, no matter what my current working directory is.
+          </li>
+          <li>
+           example: to get to the directory
+           <code>bar</code>
+           in the directory
+           <code>baz</code>
+           in the directory
+           <code>~</code>
+           , I could
+           <code>cd ~/bar/baz</code>
+           .
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- Relative Path Shortcuts ~~ Relative Path Shortcuts ~~ Relative Path Shortcuts -->
+    <div class="card">
+     <div class="card-header" id="Navigating_the_Unix_File_System_info_Relative_Path_Shortcuts_header">
+      <h5 class="mb-0">
+       <button aria-controls="Navigating_the_Unix_File_System_info_Relative_Path_Shortcuts_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Navigating_the_Unix_File_System_info_Relative_Path_Shortcuts_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        Relative Path Shortcuts
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Navigating_the_Unix_File_System_info_Relative_Path_Shortcuts_header" class="collapse" data-parent="#Navigating_the_Unix_File_System_body" data-toggle="collapse" id="Navigating_the_Unix_File_System_info_Relative_Path_Shortcuts_body">
+      <div class="card-body">
+       <ul>
+        <li>
+         <p class="card-text">
+          Relative path shortcuts worth remembering:
+         </p>
+         <div class="table-responsive">
+          <table class="table table-striped table-bordered" style="width:97%;">
+           <colgroup>
+            <col style="width: 19%" />
+            
+            <col style="width: 77%" />
+            
+           </colgroup>
+           <thead>
+            <tr class="header">
+             <th style="text-align: center;">
+              Shortcut
+             </th>
+             <th style="text-align: left;">
+              Expands To
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="odd">
+             <td style="text-align: center;">
+              <code>~</code>
+             </td>
+             <td style="text-align: left;">
+              current user’s home directory
+             </td>
+            </tr>
+            <tr class="even">
+             <td style="text-align: center;">
+              <code>.</code>
+             </td>
+             <td style="text-align: left;">
+              the current directory
+             </td>
+            </tr>
+            <tr class="odd">
+             <td style="text-align: center;">
+              <code>..</code>
+             </td>
+             <td style="text-align: left;">
+              the parent directory of the current directory
+             </td>
+            </tr>
+            <tr class="even">
+             <td style="text-align: center;">
+              <code>-</code>
+             </td>
+             <td style="text-align: left;">
+              for
+              <code>cd</code>
+              , return to previous working directory
+             </td>
+            </tr>
+           </tbody>
+          </table>
+         </div>
+        </li>
+        <li>
+         An example:
+         <ul>
+          <li>
+           <code>~/course/cs2043</code>
+           arbitrary choice, nothing special about it.
+          </li>
+          <li>
+           After each
+           <code class="bash">
+            cd
+           </code>
+           command, execute
+           <code class="bash">
+            pwd
+           </code>
+           to confirm.
+          </li>
+         </ul>
+         <pre class="bash"><code>$ cd ~/course/cs2043 # go to starting location
+$ cd                 # now at /home/mpm288
+$ cd -               # now at ~/course/cs2043
+$ cd ..              # now at ~/course</code></pre>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+   </div>
+   <!-- card-body -->
+  </div>
+  <!-- div wrapper _body -->
+ </div>
+ <!-- card -->
+ <div class="card">
+  <div class="card-header" id="More_on_Commands_header">
+   <h5 class="mb-0">
+    <button aria-controls="More_on_Commands_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#More_on_Commands_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+     02 – More on Commands
+    </button>
+   </h5>
+  </div>
+  <div aria-labelledby="More_on_Commands_header" class="collapse accordion" data-parent="#lectures" data-toggle="collapse" id="More_on_Commands_body">
+   <div class="card-body">
+    <!-- (man) The Manual Command ~~ (man) The Manual Command ~~ (man) The Manual Command -->
+    <div class="card">
+     <div class="card-header" id="More_on_Commands_cmd_man_header">
+      <h5 class="mb-0">
+       <button aria-controls="More_on_Commands_cmd_man_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#More_on_Commands_cmd_man_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>man</kbd>
+        ) The
+        <kbd>Man</kbd>
+        ual Command
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="More_on_Commands_cmd_man_header" class="collapse" data-parent="#More_on_Commands_body" data-toggle="collapse" id="More_on_Commands_cmd_man_body">
+      <div class="card-body">
+       <p class="card-text">
+        <code class="bash">
+         man command_name
+        </code>
+       </p>
+       <ul>
+        <li>
+         Loads the manual (manpage) for the specified command.
+        </li>
+        <li>
+         Unlike google, manpages are
+         <code>system-specific</code>
+         .
+        </li>
+        <li>
+         Usually very comprehensive. Sometimes
+         <em>
+          too
+         </em>
+         comprehensive.
+        </li>
+        <li>
+         Type
+         <code>/keyword</code>
+         to search for
+         <code>keyword</code>
+         , and hit
+         <code class="html">
+          &lt;enter&gt;
+         </code>
+         .
+        </li>
+        <li>
+         The
+         <code>n</code>
+         key jumps to the next search result.
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- Flags & Command Clarification ~~ Flags & Command Clarification ~~ Flags & Command Clarification -->
+    <div class="card">
+     <div class="card-header" id="More_on_Commands_info_Flags_AND_Command_Clarification_header">
+      <h5 class="mb-0">
+       <button aria-controls="More_on_Commands_info_Flags_AND_Command_Clarification_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#More_on_Commands_info_Flags_AND_Command_Clarification_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        Flags &amp; Command Clarification
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="More_on_Commands_info_Flags_AND_Command_Clarification_header" class="collapse" data-parent="#More_on_Commands_body" data-toggle="collapse" id="More_on_Commands_info_Flags_AND_Command_Clarification_body">
+      <div class="card-body">
+       <h2 id="flags-and-options-formats">
+        Flags and Options: Formats
+       </h2>
+       <ul>
+        <li>
+         A flag that is
+         <ul>
+          <li>
+           One letter is specified with a single dash (
+           <code>-a</code>
+           ).
+          </li>
+          <li>
+           More than one letter is specified with two dashes (
+           <code>--all</code>
+           ).
+          </li>
+          <li>
+           The reason is because of how switches can be combined.
+          </li>
+         </ul>
+        </li>
+        <li>
+         We generally use “flag” and “switch” interchangeably:
+         <ul>
+          <li>
+           “flag” the command, telling it that “action X” should occur
+          </li>
+          <li>
+           specify to the command to “switch on/off action X”
+          </li>
+         </ul>
+        </li>
+       </ul>
+       <h2 id="flags-and-options-switches">
+        Flags and Options: Switches
+       </h2>
+       <ul>
+        <li>
+         <em>
+          Switches
+         </em>
+         take no arguments, and can be specified in a couple of different ways.
+        </li>
+        <li>
+         Switches are usually one letter, and multiple letter switches usually have a one letter alias.
+        </li>
+        <li>
+         One option:
+         <ul>
+          <li>
+           <code>ls -a</code>
+          </li>
+          <li>
+           <code>ls --all</code>
+          </li>
+         </ul>
+        </li>
+        <li>
+         Two options:
+         <ul>
+          <li>
+           <code>ls -l -Q</code>
+          </li>
+          <li>
+           <code>ls -lQ</code>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <em>
+          Usually
+         </em>
+         applied from left to right in terms of operator precedence, but not always:
+         <ul>
+          <li>
+           This is up to the developer of the tool.
+          </li>
+          <li>
+           Prompts:
+           <code>rm -fi &lt;file&gt;</code>
+          </li>
+          <li>
+           Does
+           <strong>
+            not
+           </strong>
+           prompt:
+           <code>rm -if &lt;file&gt;</code>
+          </li>
+         </ul>
+        </li>
+       </ul>
+       <h2 id="flags-and-options-argument-specifiers">
+        Flags and Options: Argument Specifiers
+       </h2>
+       <ul>
+        <li>
+         The
+         <code>--argument="value"</code>
+         format, where the
+         <code>=</code>
+         and quotes are needed if
+         <code>value</code>
+         is more than one word.
+         <ul>
+          <li>
+           Yes:
+           <code>ls --hide="Desktop" ~/</code>
+          </li>
+          <li>
+           Yes:
+           <code>ls --hide=Desktop ~/</code>
+           <ul>
+            <li>
+             One word, no quotes necessary
+            </li>
+           </ul>
+          </li>
+          <li>
+           No:
+           <code>ls --hide = "Desktop" ~/</code>
+           <ul>
+            <li>
+             Spaces by the
+             <code>=</code>
+             will be misinterpreted
+            </li>
+            <li>
+             It used
+             <code>=</code>
+             as the argument to
+             <code>hide</code>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         The
+         <code>--argument value</code>
+         format (space after the
+         <code>argument</code>
+         ).
+         <ul>
+          <li>
+           Quote rules same as above.
+          </li>
+          <li>
+           <code>ls --hide "Desktop" ~/</code>
+          </li>
+          <li>
+           <code>ls --hide Desktop ~/</code>
+          </li>
+         </ul>
+        </li>
+        <li>
+         Usually,
+         <code>--argument value</code>
+         and
+         <code>--argument=value</code>
+         are interchangeable.
+         <ul>
+          <li>
+           Not always!
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+   </div>
+   <!-- card-body -->
+  </div>
+  <!-- div wrapper _body -->
+ </div>
+ <!-- card -->
+</div>
+<!-- END lectures -->
+<!-- WARNING: make sure there is an empty line at the BEGINNING and END of this file. -->
+<!-- Lecture demo / course related links; update for your semester.
+
+     WARNING: make sure there is an empty line before / after this html comment. -->
+<!-- Other links sprinkled throughout.  Some make more sense as links.  Some should
+     probably be in references.bib instead but whatever.
+
+     WARNING: make sure there is an empty line before / after this html comment. -->
+
+
+
+      <footer>
+  <hr>
+  <div class="pull-left">
+    <strong>Matthew Milano, Stephen McDowell, Ashneel Das, Henry Zheng</strong>
+    (<a href="mailto:cs2043-ta@cornell.edu?subject=[CS 2043]">cs2043-ta@cornell.edu</a>).
+  </div>
+  <div class="pull-right">
+    Last compiled Thu, 24 Jan 2019 12:49:29 -0500.
+  </div>
+</footer>
+
+    </div>
+    <!-- /.container theme-showcase -->
+    <!-- https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+<!-- Bootstrap select used for cmd / info block searching. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
+
+<!-- highlight.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<!-- Enable the tool-tips everywhere -->
+<script type="text/javascript">
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  });
+</script>
+<script type="text/javascript">
+  var i = 0;
+  var txt = 'Command Index and Additional Resources';
+  var speed = 60;
+  let hasBlinker = true;
+  document.getElementById("header").innerHTML = "|";
+  function typeWriter() {
+    if (i < txt.length) {
+      let x = document.getElementById("header");
+      let len = x.innerHTML.length;
+      x.innerHTML = x.innerHTML.substring(0, len - 1) + txt.charAt(i) + "|";
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+    let x = document.getElementById("header");
+  }
+
+  function blink() {
+    let x = document.getElementById("header");
+    let len = x.innerHTML.length;
+    if (x.innerHTML.includes('Command Index and Additional Resources')) {
+      if (hasBlinker) {
+        x.innerHTML = x.innerHTML.substring(0, len - 1);
+        hasBlinker = false;
+      }
+      else {
+        x.innerHTML += "|";
+        hasBlinker = true;
+      }
+    }
+  }
+
+  typeWriter();
+  setInterval(blink, 500); 
+</script>
+
+    
+      
+      <!-- Search bars make use of data-target; rely on scrolling functionality in page-load. -->
+<script type="text/javascript">
+  $(function() {
+    $('.selectpicker').on('change', function(){
+      var selected = $(this).find("option:selected");
+      var target = $(selected).attr("data-target");
+      var base_url = window.location.href.split("#")[0];
+      var set_url  = base_url + target;
+      window.location.href = set_url;
+      window.location.reload();
+    });
+  });
+</script>
+<!-- add a function that will scroll if there is an #anchor in the url -->
+<script type="text/javascript">
+  $(document).ready(function() {
+    // linking to references shouldn't change url
+    $("span[class='citation'] a").click(function(e) {
+      // Remove info from the nested buttons
+      $('#refs-listing').find('.list-group-item').removeClass("list-group-item-success");
+      // Remove success from all reference group items
+      $('#refs-listing').find('.list-group-item').find("a[class='btn btn-info']").removeClass("btn-info");
+      // Make this one highlighted (eqivalent to active...sort of)
+      $(e.target.hash).addClass("list-group-item-success");
+      $(e.target.hash).find("a[class='btn']").addClass("btn-info");
+      // Scroll there without changing url.
+      // See: http://stackoverflow.com/a/6677069/3814202
+      $("html, body").scrollTop($(e.target.hash).offset().top);
+      // Prevent url from changing
+      e.preventDefault();
+    });
+
+    // I know barely any JavaScript. Probably a lot of things that could be much better
+    // ...but it works so yay :)
+    var url = document.location.toString();
+
+    // If the url has a # in it then we are potentially trying to expand accordion
+    if ( url.match('#') ) {
+      // Find the name first.  If the name matches either *_info_* or *_cmd_*, it
+      // is a nested accordion.
+      var name = '#' + url.split('#')[1];
+      // Check for *_info_*
+      if ( name.match('_info_') ) {
+        var parent_name = name.split('_info_')[0];
+      }
+      // Check for *_cmd_*
+      if ( name.match('_cmd_') ) {
+        var parent_name = name.split('_cmd_')[0];
+      }
+
+      /* Collapse accordions / expand the currently selected one.
+       *
+       * NOTE: bootstrap docs suggest $('.collapse').collapse('hide'), but this is both
+       * asynchronous *and* very slow (there's a lot of elements with collapse class).
+       * We add / remove the class 'show' as a really dirty hack that may not be
+       * a good idea, but it's done this way so that window.scroll(...) below executes
+       * correctly (namely, we don't have to wait because .collapse('show' | 'hide')
+       * is not an immediate action).
+       *
+       * The author is unsure about whether or not aria-expanded getting set to true is
+       * actually necessary or good, but believes that it should be done to help
+       * facilitate users with accessibility tools, or at least that was the author's
+       * understanding of the bootstrap-documentation.
+       *
+       * So div[class*=accordion] selects the outer accordion's and removes show, the
+       * inner accordions are not affected.
+       */
+      $('#lectures').find('div[class*=accordion]').removeClass('show');
+
+      // If this is a nested accordion show the parent
+      if ( typeof parent_name !== 'undefined' ) {
+        $(parent_name + '_header').find('button').attr("aria-expanded", "true");
+        $(parent_name + '_body').addClass('show');
+      }
+
+      // Show the current element
+      var name_header = $(name + '_header');
+      $(name_header).find('button').attr('aria-expanded', 'true');
+      $(name + '_body').addClass('show');
+
+      // Scroll this element into view <3
+      var header_top = $(name_header).offset().top;
+      var navbar_height = $('#navbar').height();
+      if ( typeof navbar_height === 'undefined' ) {
+        navbar_height = 0;
+      }
+      var pad_offset = 100;// pixels, just to bring it down a little
+      window.scroll(0, header_top - navbar_height - pad_offset);
+    }
+  });
+</script>
+
+    
+  </body>
+</html>
