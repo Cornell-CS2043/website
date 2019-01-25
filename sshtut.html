@@ -9,7 +9,7 @@
   <meta name="author" content="">
 
 
-  <title>CS 2043 &mdash; Schedule</title>
+  <title>CS 2043 &mdash; SSH Tutorial</title>
 
 
   
@@ -92,7 +92,7 @@
     <ul class="navbar-nav mr-auto">
     
       
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="/courses/cs2043/2019sp/schedule.html">
           Schedule
         </a>
@@ -161,156 +161,42 @@
 </nav>
 
 	  <h1 id="header"></h1>
-      <p>This schedule should be considered tentative, at least until it actually takes place!</p>
-
-<div class="table-responsive">
-  <table class="table table-striped table-dark">
-    <colgroup>
-      <col class="col-xs-1" />
-      <col class="col-xs-2" />
-      <col class="col-xs-9" />
-    </colgroup>
-    <thead>
-      <tr>
-        <th>Week</th>
-        <th>Date</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    
-    
-    
-    
-    <tr>
-      
-      <th>1</th>
-      <td>Wed, Jan 23</td>
-      
-      <td>
-        
-        <h4><p>01 – Introduction</p>
-</h4>
-        
-        
-        <div>
-          <ul>
-  <li>Welcome to Unix Tools and Scripting!</li>
-</ul>
-
-        </div>
-        
-        
-          <a type="button" class="btn btn-sm btn-primary" href="/courses/cs2043/2019sp/_data/lecture-source/lecture-slides/dark/01_Introduction.pdf" target="_blank" rel="noopener">Dark Slides</a>
-          <a type="button" class="btn btn-sm btn-info" href="/courses/cs2043/2019sp/_data/lecture-source/lecture-slides/light/01_Introduction.pdf" target="_blank" rel="noopener">Light Slides</a>
-        
-        
-      </td>
-      
-    </tr>
-    
-    <tr>
-      
-      <th></th>
-      <td>Fri, Jan 25</td>
-      
-      <td>
-        
-        <h4><p>02 – SSH</p>
-</h4>
-        
-        
-        <div>
-          <ul>
-  <li>Set up SSH so that my server survives longer!</li>
-</ul>
-
-        </div>
-        
-        
-          <a type="button" class="btn btn-sm btn-primary" href="/courses/cs2043/2019sp/_data/lecture-source/lecture-slides/dark/01a_SSH.pdf" target="_blank" rel="noopener">Dark Slides</a>
-          <a type="button" class="btn btn-sm btn-info" href="/courses/cs2043/2019sp/_data/lecture-source/lecture-slides/light/01a_SSH.pdf" target="_blank" rel="noopener">Light Slides</a>
-        
-        
-          <a type="button" class="btn btn-sm btn-warning" href="/courses/cs2043/2019sp/command_index#SSH">Command Index</a>
-        
-      </td>
-      
-    </tr>
-    
-    <tr>
-      
-      <th></th>
-      <td>Fri, Jan 25</td>
-      
-      <td>
-        
-        <h4><p>02 – Navigating the Unix File System</p>
-</h4>
-        
-        
-        <div>
-          <ul>
-  <li>Synopsis of how the Unix Filesystem is setup, what’s where, and how to get around.</li>
-  <li>Core navigational commands: <kbd>cd</kbd>, <kbd>ls</kbd>, and <kbd>pwd</kbd>.</li>
-  <li>How to alter command behavior (<em>flags</em>), and how to get more information (<kbd>man</kbd>).</li>
-</ul>
-
-        </div>
-        
-        
-          <a type="button" class="btn btn-sm btn-primary" href="/courses/cs2043/2019sp/_data/lecture-source/lecture-slides/dark/02_The_Unix_File_System.pdf" target="_blank" rel="noopener">Dark Slides</a>
-          <a type="button" class="btn btn-sm btn-info" href="/courses/cs2043/2019sp/_data/lecture-source/lecture-slides/light/02_The_Unix_File_System.pdf" target="_blank" rel="noopener">Light Slides</a>
-        
-        
-          <a type="button" class="btn btn-sm btn-warning" href="/courses/cs2043/2019sp/command_index#Navigating_the_Unix_File_System">Command Index</a>
-        
-      </td>
-      
-    </tr>
-    
-    <tr>
-      
-      <th></th>
-      <td>Fri, Jan 25</td>
-      
-      <td>
-        
-        <h4><p>02 – More on Commands</p>
-</h4>
-        
-        
-        <div>
-          <ul>
-  <li>Giving a better understanding of commands, flags, and arguments.</li>
-  <li>How to alter command behavior (<em>flags</em>), and how to get more information (<kbd>man</kbd>).</li>
-</ul>
-
-        </div>
-        
-        
-          <a type="button" class="btn btn-sm btn-primary" href="/courses/cs2043/2019sp/_data/lecture-source/lecture-slides/dark/02b_More_On_Commands.pdf" target="_blank" rel="noopener">Dark Slides</a>
-          <a type="button" class="btn btn-sm btn-info" href="/courses/cs2043/2019sp/_data/lecture-source/lecture-slides/light/02b_More_On_Commands.pdf" target="_blank" rel="noopener">Light Slides</a>
-        
-        
-          <a type="button" class="btn btn-sm btn-warning" href="/courses/cs2043/2019sp/command_index#More_on_Commands">Command Index</a>
-        
-      </td>
-      
-    </tr>
-    
-    <tr>
-      
-      <th>5</th>
-      <td>Mon, Feb 25</td>
-      
-      <td><p>February Break – No Class</p>
-</td>
-      
-    </tr>
-    
-  </table>
-</div>
-
+      <h1> Connecting to wash </h1>
+<p>Wash is a computer sitting somewhere on campus. You’ll need to access
+		it to do your assignments. This document will detail how to connect to
+		Wash.</p>
+<h2>1. Be on Cornell campus, or use CU VPN.</h2>
+<p>To connect, you’ll either need to be on campus, or  you’ll need to connect to Cornell’s Virtual Private Network (VPN). To install and connect to CU VPN:</p>
+<ol> 
+	<li>Navigate <a href="https://it.cornell.edu/cuvpn">here</a> and click the button that says "Install CU VPN." </li>
+	<li>Select and follow the instructions corresponding to your OS. </li>
+	<li>Navigate back to <a href="https://it.cornell.edu/cuvpn">here</a> and click the button that says "Connect to CU VPN". </li>
+	<li>Select and follow the instructions corresponding to your OS. </li> 
+</ol>
+<h2>2. Connect to the server.</h2>
+<h3>If you're using Gate One:</h3>
+<ol>
+	<li>Open up a web browser, and navigate to <a href="https://wash.cs.cornell.edu">wash.cs.cornell.edu</a>. You should see a dark web page with some header text that says ``Gate One - Applications". Click the button beneath it, which is labeled ``Terminal: SSH". </li> 
+	<li>You should first be prompted for something called <span id="tt">Host/IP or ssh:// URL</span>, which will identify where you want to connect. You can just press enter and the default value (<span id="tt">localhost</span>, indicated in the square brackets will be selected, and will work. </li>
+	<li>The next prompt will say <span id="tt">Port</span>. Don't worry if you don't know what a port is yet. You can just use the default value. </li> 
+	<li>Next it will ask for a <span id="tt">User</span>. Enter your assigned username. (You should receive this in an email before the first lecture.) </li> 
+	<li>Finally, enter your assigned password. The characters you type will not appear on the screen, but don't worry, they are really being entered. </li>
+</ol>
+<h3>If you're using <span id="tt">ssh</span>:</h3>
+<ol>
+	<li>In your terminal, type in <span id="tt">ssh assigned_username@wash.cs.cornell.edu</span> and hit enter. </li>
+	<li>Enter your assigned password. The characters you type will not appear on the screen, but don't worry, they are really being entered. </li>
+</ol>
+<p>Now you should be connected! Please let a TA or the instructor know if you run into any issues.</p>
+<h2>Public/Private Keys</h2>
+<p>You can always use your username and password to log into Wash. Another way people often log into
+		computers remotely is with a <a href="https://en.wikipedia.org/wiki/Public-key_cryptography">public key</a>.
+		An administrator would need to set this up for you; if your instructor never talks to you about this,
+		you can ignore this section.</p>
+<p>If you do have a public key, you may find that the Gate One interface allows
+		you to upload your private key. <b>Please do not upload your private key to Gate One!</b> It will be
+		visible to everyone else using the service. Always keep your private key safe! If you ever run into
+		a situation where you're worried about this, feel free to come talk to a member of the course staff.</p>
 
 
       <div id="footer">
@@ -341,7 +227,7 @@
 </script>
 <script type="text/javascript">
   var i = 0;
-  var txt = 'Schedule';
+  var txt = 'SSH Tutorial';
   var speed = 60;
   let hasBlinker = true;
   document.getElementById("header").innerHTML = "|";
@@ -359,7 +245,7 @@
   function blink() {
     let x = document.getElementById("header");
     let len = x.innerHTML.length;
-    if (x.innerHTML.includes('Schedule')) {
+    if (x.innerHTML.includes('SSH Tutorial')) {
       if (hasBlinker) {
         x.innerHTML = x.innerHTML.substring(0, len - 1);
         hasBlinker = false;

@@ -5,6 +5,12 @@ body {
 	padding-top:77px;
 }
 
+#tt {
+	display: inline;
+	background-color: #808080;
+	font-family: monospace;
+	padding: 1px 3px 1px 3px;
+}
 
 nav {
   min-width: 100% !important; 

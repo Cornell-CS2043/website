@@ -42,6 +42,7 @@
     <div class="container" role="main">
       <!-- See customization options here: https://getbootstrap.com/docs/4.0/components/navbar/ -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="navbar">
+  <div class="container"> 
   
   <a class="navbar-brand " href="/courses/cs2043/2019sp/">CS 2043</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,7 +66,7 @@
       </li>
     
       
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="/courses/cs2043/2019sp/command_index.html">
           Command Index
         </a>
@@ -115,6 +116,7 @@
       </li>
     
     </ul>
+  </div> 
   </div><!-- /div id=navbarSupportedContent -->
 </nav>
 
@@ -844,10 +846,16 @@ on how something works / what commands you learned when.</p>
          <em>
           single file
          </em>
+         or a
+         <em>
+          directory you own
+         </em>
          for the named assignment
         </li>
         <li>
-         You can never hand in more than one file per assignment
+         If you need to hand in more than one file, make a directory and
+         <code>cp</code>
+         the files into it
         </li>
        </ul>
       </div>
@@ -1516,16 +1524,16 @@ $ cd ..              # now at ~/course</code></pre>
 
 
 
-      <footer>
+      <div id="footer">
   <hr>
   <div class="pull-left">
     <strong>Matthew Milano, Stephen McDowell, Ashneel Das, Henry Zheng</strong>
     (<a href="mailto:cs2043-ta@cornell.edu?subject=[CS 2043]">cs2043-ta@cornell.edu</a>).
   </div>
   <div class="pull-right">
-    Last compiled Thu, 24 Jan 2019 23:04:05 -0500.
+    Last compiled Fri, 25 Jan 2019 00:25:40 -0500.
   </div>
-</footer>
+</div>
 
     </div>
     <!-- /.container theme-showcase -->
