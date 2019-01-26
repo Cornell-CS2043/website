@@ -46,10 +46,10 @@ table tr td {
 }
 
 .table td {
-  padding: 0.3rem !important; 
+  padding: 0.23rem !important; 
 }
 
-.table {
+#officehours {
   width: 90% !important; 
 }
 
@@ -59,10 +59,8 @@ table tr td {
 
 .calendar {
   position: relative;
-  overflow: auto; 
-  padding-top: 35%;
-  height: 80%; 
-  width: 90%; 
+  width: 100%;
+  padding-bottom: 50%;
 }
 
 .be-red{
@@ -140,3 +138,13 @@ pre[class^="highlight"] {
 
 
 
+@media only screen and (max-width: 500px) {
+  .calendar {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+  }
+  h1 {
+    font-size: 9vw; 
+  }
+}
