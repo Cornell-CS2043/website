@@ -191,38 +191,40 @@
 </ul>
 
 <h3 id="cs-2043-assignment-2-harry-potter-and-the-chamber-of-d">CS 2043 Assignment 2: Harry Potter and the Chamber of d———</h3>
-<h4 id="due-date-wednesday-february-6-at-1115-am">Due Date: Wednesday February 6 at 11:15 am</h4>
+<h4 id="due-date-monday-february-4-at-1115-am">Due Date: Monday February 4 at 11:15 am</h4>
 <h4 id="assignment-captain-srishti-belwariar">Assignment Captain: <a href="staff.html">Srishti Belwariar</a></h4>
 <h4 id="part-1-unlocking-the-chamber-of-d">Part 1: Unlocking the Chamber of d———!</h4>
 <p>Welcome to the Chamber of d———!  You and Harry are about to enter the chamber but alas no Parseltounge password can open the chamber this time- only your amazing UNIX tools can help you unlock it!<br />
 <br />
-First let’s get to the entrance of the dungeon.  Start by logging into wash. Next, make you way into the dungeon subdirectory. To do this, use the command ls to list the contents of your current directory (your home or ~ directory). Use cd course to move to the course directory. Enter cs2043 and then assignments and then project2.  Use ls to list the contents of the project2 directory.  See the dungeon directory?  Great!  Try entering that directory.<br />
+First let’s get to the entrance of the dungeon.  Start by logging into wash. Next, make your way into the <span style="color: #f50084"> dungeon </span> subdirectory. To do this, use the command <span style="color: #f50084"> ls </span> to list the contents of your current directory (your <span style="color: #f50084"> home </span> or <span style="color: #f50084"> ~ </span> directory). Use <span style="color: #f50084"> cd course </span> to move to the course directory. Enter <span style="color: #f50084"> cs2043 </span> and then <span style="color: #f50084"> assignments </span> and then <span style="color: #f50084"> project2 </span>.  Use <span style="color: #f50084"> ls </span> to list the contents of the <span style="color: #f50084"> project2 </span> directory.  See the <span style="color: #f50084"> dungeon </span> directory?  Great!  Try entering that directory.<br />
 <br />
-Interestingly enough, you can’t seem to enter the dungeon.  Harry’s giving up already but you know exactly how you can get permission to access the dungeon directory.</p>
+Interestingly enough, you can’t seem to enter the dungeon.  Harry’s giving up already but you know exactly how you can get permission to access the <span style="color: #f50084"> dungeon </span> directory.</p>
 <h4 id="task-1-modify-permissions-of-the-dungeon-directory-so-you-can-enter--enter-using-cd-into-the-dungeon-directory">Task 1: Modify permissions of the dungeon directory so you can enter.  Enter (using cd) into the dungeon directory.</h4>
-<p>Once you’re in, you want to check what’s inside the the dungeon.  So take the time to explore this directory using ls and cd.  You list out the sub-directories but you can’t enter them or see what’s inside.  You don’t even know how many sub-directories and files there are within them.  Harry’s ready to give up (again) but you know you can solve this.  You remember outside the dungeon (in the project2 directory) there was a dungeon-key.sh file.  You should cd back to the project2 directory.
+<p>Once you’re in, you want to check what’s inside the the dungeon.  So take the time to explore this directory using <span style="color: #f50084"> ls </span> and <span style="color: #f50084"> cd </span>.  You list out the sub-directories but you can’t enter them or see what’s inside.  You don’t even know how many sub-directories and files there are within them.  Harry’s ready to give up (again) but you know you can solve this.  You remember outside the dungeon (in the <span style="color: #f50084"> project2 </span> directory) there was a <span style="color: #f50084"> dungeon-key.sh </span> file.  You should <span style="color: #f50084"> cd </span> back to the <span style="color: #f50084"> project2 </span> directory.
 <br />
-Try opening up dungeon-key.sh and read through the file.  Looks like you’ll have to write a few commands to unlock the dungeon fully:</p>
+Try opening up <span style="color: #f50084"> dungeon-key.sh </span> and read through the file.  Looks like you’ll have to write a few commands to unlock the dungeon fully:</p>
 <h4 id="task-2-modify-dungeon-keysh-following-the-directions-on-the-script--you-will-be-writing-commands-that-will-allow-you-to-complete-the-following-3-tasks">Task 2: Modify dungeon-key.sh, following the directions on the script.  You will be writing commands that will allow you to complete the following 3 tasks:</h4>
 <ul> 
 <li> modify the permissions of all directories within dungeon to have read-write-execute permissions for the user, read-execute permissions for group, and read-execute permissions for other. </li> 
-<li> modify the permissions of all files within dungeon to have read-write permissions for the user, read permission for the group, and no permissions for other. </li> 
+<li> modify the permissions of all files within <span style="color: #f50084"> dungeon </span> to have read-write permissions for the user, read permission for the group, and no permissions for other. </li> 
 <li> set the group owner of all contents in dungeon (including those of its subdirectories) to 'cs2043student'
 It's recommended that you finish these tasks in order. </li>
 </ul>
-<p>To run your dungeon-key.sh script, make sure you’re inside the project2/ directory and dungeon-key.sh is in this directory.  Run the following command: ./dungeon-key.sh
+<p>To run your dungeon-key.sh script, make sure you’re inside the <span style="color: #f50084"> project2 </span> directory and <span style="color: #f50084"> dungeon-key.sh </span> is in this directory.  Run the following command: <span style="color: #f50084"> ./dungeon-key.sh </span>
 <br />
 To check if your script worked, try going back into dungeon and see if you can access its subdirectories and files.  Also make sure that you’ve checked that the group and permissions have been changed (Hint: maybe ls can help you with this).
 <br />
-When you’ve completed all the TODOs in dungeon-key.sh, make sure you are in the project2/ directory and hand in your script using handin enter-the-dungeon dungeon-key.sh</p>
+When you’ve completed all the TODOs in dungeon-key.sh, make sure you are in the project2/ directory and hand in your script using <span style="color: #f50084"> handin enter-the-dungeon dungeon-key.sh </span></p>
 <h4 id="part-2-making-your-own-secret-room">Part 2: Making Your Own Secret Room</h4>
-<p>Now that you’re done with developing your own dungeon key, you’re ready to make your own secret room (directory).  Make sure you’re in the project2/ folder for this part.  Find a partner and create a new script file called blueprint.sh in the project2/ directory.  You will insert commands in this file that will create a directory in your ~/ directory that can’t be accessed by anyone unless they know the secret word (its name) (Hint: think about how you can set permissions so only those who know the name can access it).  Don’t tell your partner what the secret word is.  Once you’re done, ask your partner to find the secret directory you created through this script.  As long as they don’t know the name of the directory, they shouldn’t be able to find it within ~/.
+<p>Now that you’re done with developing your own dungeon key, you’re ready to make your own secret room (directory).  Make sure you’re in the <span style="color: #f50084"> project2 </span> folder for this part.  Find a partner and create a new script file called <span style="color: #f50084"> blueprint.sh </span> in the <span style="color: #f50084"> project2 </span> directory.  You will insert commands in this file that will create a directory in your <span style="color: #f50084"> ~ </span> directory that can’t be accessed by anyone unless they know the secret word (its name) (Hint: think about how you can set permissions so only those who know the name can access it).  Don’t tell your partner what the secret word is.  Once you’re done, ask your partner to find the secret directory you created through this script.  As long as they don’t know the name of the directory, they shouldn’t be able to find it within <span style="color: #f50084"> ~ </span>. 
 <br />
-Remember, this secret directory should be in ~/, but ~/ has permissions that are restricted right now.  Think about how you can allow for your partner to gain access into this directory but still not see the secret room you’ve created.
+Remember, this secret directory should be in <span style="color: #f50084"> ~ </span>, but <span style="color: #f50084"> ~ </span> has permissions that are restricted right now.  Think about how you can allow for your partner to gain access into this directory but still not see the secret room you’ve created.
 <br />
-To run your blueprint.sh script, make sure you’re inside the project2/ directory and blueprint.sh is in the project2/ directory.  Run the following command: ./blueprint.sh
+To run your <span style="color: #f50084"> blueprint.sh </span> script, make sure you’re inside the <span style="color: #f50084"> project2 </span> directory and blueprint.sh is in the project2/ directory.  Run the following command: <span style="color: #f50084"> ./blueprint.sh </span> 
 <br />
-When you’ve saved your work and are ready to submit, hand in your work using handin secret-room blueprint.sh</p>
+When you’ve saved your work and are ready to submit, hand in your work using <span style="color: #f50084"> handin secret-room blueprint.sh </span> <br /></p>
+
+<p><span style="color: red"> NOTE: If you need to generate a new copy of the assignment, please run the trolls_in_the_dungeon.sh command in project2/ .  This will refresh the dungeon directory but not overwrite dungeon-key.sh or blueprint.sh.  If you need a new copy of dungeon-key.sh, please move your current dungeon-key.sh out of project2/ and run the trolls_in_the_dungeon.sh command in project2/.  Only then will this generate both a new dungeon/ and a new dungeon-key.sh. </span></p>
 
 
       <div id="footer">
@@ -232,7 +234,7 @@ When you’ve saved your work and are ready to submit, hand in your work using h
     (<a href="mailto:cs2043-ta@cornell.edu?subject=[CS 2043]">cs2043-ta@cornell.edu</a>).
   </div>
   <div class="pull-right">
-    Last compiled Wed, 30 Jan 2019 13:13:13 -0500.
+    Last compiled Thu, 31 Jan 2019 00:52:32 -0500.
   </div>
 </div>
 
