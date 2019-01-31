@@ -150,6 +150,13 @@ pre[class^="highlight"] {
   }
 }
 
+.card-header {
+  background-color: #333a40 !important; 
+}
+.list-group-item {
+  background-color: #333a40 !important; 
+}
+
 @media only screen and (max-width: 1080px) and (min-width: 500px) {
   h1 {
     font-size: 3.8vw;  
