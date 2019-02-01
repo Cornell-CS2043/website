@@ -9,7 +9,7 @@
   <meta name="author" content="">
 
 
-  <title>CS 2043 &mdash; CS 2043: Unix Tools and Scripting</title>
+  <title>CS 2043 &mdash; Old Assignment Information</title>
 
 
   
@@ -84,7 +84,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="navbar">
   <div class="container"> 
   
-  <a class="navbar-brand active" href="/courses/cs2043/2019sp/">CS 2043</a>
+  <a class="navbar-brand " href="/courses/cs2043/2019sp/">CS 2043</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -168,54 +168,27 @@
 </nav>
 
 	  <h1 id="header"></h1>
-      <!---
-Made with love by Ashneel and Henry ❤ 
-  --->
-<h2 style="color:#32CD32">Spring 2019 </h2>
+      <h3 id="cs-2043--assignment-1-maze">CS 2043  Assignment 1: Maze</h3>
 
-<p><br /></p>
-<div class="container2">
-  Instructor: <a href="#" data-contact="bWFpbHRvOm1pbGFub0Bjcy5jb3JuZWxsLmVkdQ==" onmouseover="this.href = atob(this.dataset.contact)" onfocus="this.href = atob(this.dataset.contact)">Matthew Milano</a> <br />
-  Hours: MWF, 11:15AM-12:05PM <br />
-  Course Email: CS2043-ta@cornell.edu <br />
-  <a href="https://piazza.com/cornell/spring2019/cs2043"> Piazza Signup Link</a><br /><br />
-  <span style="color: #f50084"> Announcement: </span> There will be a short commands quiz on Monday. You will need to write one command and a brief sentence describing what it does. <br /> <br /> 
-  <h3> Course Description </h3>
-  UNIX and UNIX-like systems are increasingly being used on personal computers, mobile phones, web servers, and
-  many other systems. They represent a wonderful family of programming environments useful both to computer
-  scientists and to people in many other fields, such as computational biology and computational linguistics, in
-  which data is naturally represented by strings. This course takes students from shell basics and piping, to
-  regular-expression processing tools, to shell scripting and Python. Other topics to be covered include handling
-  concurrent and remote resources, manipulating streams and files, and managing software installations. <br /> <br />
-  <h3> Server Login Instructions </h3>
-  <b> <h5> With Raw SSH </h5> </b>
-  <ol>
-    <li> Open up your terminal if you're on Mac or Linux, or open up an SSH client like PuTTY on Windows. </li>
-    <li> Type in "ssh <span style="color:#32CD32">netID</span>@wash.cs.cornell.edu" </li>
-    <li> You may be asked if you would like to trust the server. If this is asked, type "yes". </li>
-    <li> Type in your password. Note that you will not be able to see the characters appear on the screen, but rest
-        assured, they are there.</li>
-  </ol>
-  <b> <h5> With Gate One (Web interface) </h5> </b>
-  <ol>
-    <li> Go to <a href="http://wash.cs.cornell.edu"> wash.cs.cornell.edu</a>. </li>
-    <li> When asked for host, press enter. </li>
-    <li> When asked for port, press enter. </li>
-    <li> Type in your username (netID). </li>
-    <li> Type in your password. Note that you will not be able to see the characters appear on the screen, but rest
-      assured, they are there. </li>
-  </ol>
-  If you are struggling to connect, visit <a href="sshtut.html"> this page</a> for more detailed instructions. If you continue to have issues, please come to office hours or send an email to the course staff.<br /> 
-<br /> 
-</div>
-<div id="footer">
-<div class="container2">
-<span class="text-muted"> <a href="https://cornell.edu"> Cornell University </a> </span>
-</div>
+<h4 id="due-date--wednesday-january-30-at-1115-am">Due Date:  Wednesday January 30 at 11:15 am</h4>
 
+<h4 id="assignment-captain-callie-aboaf">Assignment Captain: <a href="staff.html">Callie Aboaf</a></h4>
 
+<p>Welcome to  the maze! Your task is to find a file named “victory” somewhere in a  subdirectory of maze. On the way, you’ll see a bunch of files called “README”  with hints as to where to look; you should print these out!</p>
 
-</div>
+<p>Start by  logging into wash. Next, we’ll need to make our way into the <code class="highlighter-rouge">maze</code> subdirectory. To do this, use the  command <code class="highlighter-rouge">ls</code> to list the contents of  your current directory (your home or ~ directory). Use <code class="highlighter-rouge">cd course</code> to move to the <code class="highlighter-rouge">course</code> directory. Enter <code class="highlighter-rouge">cs2043</code>, <code class="highlighter-rouge">assignments</code>, and then <code class="highlighter-rouge">maze</code> similarly.</p>
+
+<p>Once inside <code class="highlighter-rouge">maze</code>, use the <code class="highlighter-rouge">ls</code> command. There is a README located here that contains a hint as to where to look for victory. You can print the README out using <code class="highlighter-rouge">cat README</code>. From here on, use the <code class="highlighter-rouge">cd</code>, <code class="highlighter-rouge">ls</code>, and <code class="highlighter-rouge">cat</code> commands to find a file named “victory.”</p>
+
+<p>Once you  find “victory,” hand this file in using <code class="highlighter-rouge">handin maze victory</code>.</p>
+
+<p>As a  refresher, here are some helpful commands:</p>
+<ul>
+  <li><a href="command_index.html#Navigating_the_Unix_File_System_cmd_cd"><code class="highlighter-rouge">cd &lt; directory &gt;</code></a> changes your location to <code class="highlighter-rouge">&lt;  directory &gt;</code></li>
+  <li><a href="command_index.html#Navigating_the_Unix_File_System_cmd_ls"><code class="highlighter-rouge">ls</code></a> lists directory contents</li>
+  <li><a href="command_index.html#Navigating_the_Unix_File_System_cmd_cat"><code class="highlighter-rouge">cat &lt; filename &gt;</code></a>  prints the contents of <code class="highlighter-rouge">&lt; filename &gt;</code></li>
+  <li><code class="highlighter-rouge">..</code> is a special directory that means  “go up one level”</li>
+</ul>
 
 
       <div id="footer">
@@ -246,7 +219,7 @@ Made with love by Ashneel and Henry ❤
 </script>
 <script type="text/javascript">
   var i = 0;
-  var txt = 'CS 2043: Unix Tools and Scripting';
+  var txt = 'Old Assignment Information';
   var speed = 60;
   let hasBlinker = true;
   document.getElementById("header").innerHTML = "|";
@@ -264,7 +237,7 @@ Made with love by Ashneel and Henry ❤
   function blink() {
     let x = document.getElementById("header");
     let len = x.innerHTML.length;
-    if (x.innerHTML.includes('CS 2043: Unix Tools and Scripting')) {
+    if (x.innerHTML.includes('Old Assignment Information')) {
       if (hasBlinker) {
         x.innerHTML = x.innerHTML.substring(0, len - 1);
         hasBlinker = false;
