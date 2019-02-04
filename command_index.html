@@ -6141,23 +6141,7 @@ find / -iname victory -exec handin maze {} \+</code></pre>
          </p>
          <p class="card-text">
          </p>
-         <pre class="console"><code>$ sudo chsh -s /usr/local/bin/bash username</code></pre>
-        </li>
-        <li>
-         Above example specific to macOS users who did
-         <code>brew install bash</code>
-         <ul>
-          <li>
-           <code>brew</code>
-           installs the newer
-           <code>bash</code>
-           to
-           <code>/usr/local/bin/bash</code>
-          </li>
-          <li>
-           macOS cannot ship Bash 4 or later (GPL v3 license).
-          </li>
-         </ul>
+         <pre class="console"><code>$ sudo chsh -s /bin/zsh username</code></pre>
         </li>
         <li>
          <strong>
@@ -6421,11 +6405,6 @@ $ cmd1 || cmd2 # exec cmd2 only if cmd1 returned NOT 0</code></pre>
      </div>
      <div aria-labelledby="Wildcards__loops__and_variables_info_If_Conditional_Syntax_header" class="collapse" data-parent="#Wildcards__loops__and_variables_body" data-toggle="collapse" id="Wildcards__loops__and_variables_info_If_Conditional_Syntax_body">
       <div class="card-body">
-       <ul>
-        <li>
-         If statements are structured just as you would expect…
-        </li>
-       </ul>
        <div class="table-static">
         <table class="table table-bordered" id="columns_if_conditions">
          <colgroup>
@@ -6472,6 +6451,15 @@ fi  # fi necessary</code></pre>
           only!)
           <code>[[ expr ]]</code>
           allow for more features e.g., boolean operations.
+         </p>
+        </li>
+        <li>
+         <p class="card-text">
+          both
+          <code>[</code>
+          and
+          <code>[[</code>
+          are actually commands!
          </p>
          <pre class="bash"><code>if [[ CONDITION_1 ]] || [[ CONDITION_2 ]]; then
     # statements
@@ -6551,7 +6539,10 @@ if [[ 0 -eq 0 ]]; then echo "Hiya"; fi</code></pre>
        </h2>
        <ul>
         <li>
-         Bash has a special set of commands that allow various checks.
+         <code>[</code>
+         and
+         <code>[[</code>
+         have a special set of commands that allow checks.
         </li>
         <li>
          Numerical comparisons (often used with variables):
@@ -7170,6 +7161,9 @@ done &lt; "$file"</code></pre>
                full demo
               </a>
               at end of lecture!
+             </li>
+             <li>
+              (see more_demos.txt)
              </li>
             </ul>
            </td>
@@ -7929,7 +7923,7 @@ done</code></pre>
     (<a href="mailto:cs2043-ta@cornell.edu?subject=[CS 2043]">cs2043-ta@cornell.edu</a>).
   </div>
   <div class="pull-right">
-    Last compiled Mon, 04 Feb 2019 11:00:33 -0500.
+    Last compiled Mon, 04 Feb 2019 11:08:56 -0500.
   </div>
 </div>
 
