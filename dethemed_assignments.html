@@ -9,7 +9,7 @@
   <meta name="author" content="">
 
 
-  <title>CS 2043 &mdash; Assignment Information</title>
+  <title>CS 2043 &mdash; Dethemed Assignment Information</title>
 
 
   
@@ -126,7 +126,7 @@
       
         
         
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="/courses/cs2043/2019sp/assignments.html">
             Assignments
           </a>
@@ -175,44 +175,30 @@
 
 <h4 id="assignment-captain-irene-yoon">Assignment Captain: <a href="staff.html">Irene Yoon</a></h4>
 
-<p>In this assignment, we will be learning the fundamentals of Git through a <a href="https://en.wikipedia.org/wiki/Kurt_Vonnegut">Kurt Vonnegut</a>-themed story.
-If you would like a de-themed version of the assignment, please go <a href="/courses/cs2043/2019sp/dethemed_assignments.html">here</a>.</p>
+<p>In this assignment, we will be learning the fundamentals of Git.
+If you would like a <a href="https://en.wikipedia.org/wiki/Kurt_Vonnegut">Kurt Vonnegut</a>-themed version of the assignment, please go <a href="/courses/cs2043/2019sp/assignments.html">here</a>.</p>
 
 <p>The <strong>Task</strong> sections complete parts of the assignment that must be completed for submission.
 The <strong>Git Parable</strong> sections will help you gain <em>intuition</em> about how <code class="highlighter-rouge">git</code> works. No part of the <strong>Git Parable</strong> sections require submission.</p>
 
-<p>Let’s git going!</p>
-
 <h4 id="part-1-its-tralfamadorian-time-">Part 1: It’s Tralfamadorian Time! ⏰</h4>
 
-<p><a href="https://en.wikipedia.org/wiki/Tralfamadore">Tralfamadorians</a> are back – your favorite green-eyed, time-bending, toilet plunger-like aliens! This time, they’ve chosen to abduct YOU for a lesson on time and the fourth dimension (<code class="highlighter-rouge">git</code>).</p>
+<h5 id="task-time-is-just-snapshots-">Task: Time is just Snapshots 📸</h5>
 
-<p>Here: <span style="color: #00FF00"> qkfzca </span>, your Tralfamadorian abductress, will guide you through your enlightenment.</p>
-
-<h5 id="time-is-just-snapshots-">Time is just Snapshots 📸</h5>
-
-<p><span style="color: #00FF00"> qkfzca </span>: “All moments, past, present and future, always have existed, always will exist. Us Tralfamadorians can look at all the different moments just that way we can look at a stretch of the Rocky Mountains, for instance. We can see how permanent all the moments are, and we can look at any moment that interests them. It is just an illusion that for Earthlings one moment follows another one, like beads on a string, and that once a moment is gone it is gone forever.”</p>
-
-<p>Luckily, we are able to experience time just like the Tralfamadorians with our fourth-dimensional tool, <code class="highlighter-rouge">git</code>!</p>
-
-<h5 id="task-so-it-goes">Task: So it goes.</h5>
-
-<p>Find <code class="highlighter-rouge">part1/</code> under <code class="highlighter-rouge">tralfamadorian-git-gud/</code>. 
-(Don’t worry about <code class="highlighter-rouge">part1_dethemed/</code>. This is the dethemed version of <code class="highlighter-rouge">part1</code>, and you will get equal credit for submitting either version.)</p>
-
-<p>You’ll find the following file structure:</p>
+<p>Find <code class="highlighter-rouge">part1_dethemed/</code> under <code class="highlighter-rouge">vonne-git/</code>. You’ll find the following file structure:
+(Don’t worry about <code class="highlighter-rouge">part1/</code>. This is the themed version of <code class="highlighter-rouge">part1</code>, and you will get equal credit for submitting either version.)</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.git/
 billy.txt
 </code></pre></div></div>
 
-<p>If you happen to open up <code class="highlighter-rouge">billy.txt</code>, you will see that Billy is dead. You wish Billy were still alive. <span style="color: #00FF00"> qkfzca </span> is back again to spread more Tralfamadorian wisdom…</p>
+<p>If you open <code class="highlighter-rouge">billy.txt</code>, you will see that its contents say <code class="highlighter-rouge">I am dead!</code></p>
 
-<p><span style="color: #00FF00"> qkfzca </span>: “That’s one thing Earthlings might learn to do, if they tried hard enough: Ignore the awful times and concentrate on the good ones.”</p>
+<p>The history of the contents of <code class="highlighter-rouge">billy.txt</code> are tracked with a local <code class="highlighter-rouge">git</code> repository (<code class="highlighter-rouge">.git/</code>). The history comprises of discrete <em>snapshots</em>, which have been tracked by <code class="highlighter-rouge">commit</code>s.</p>
 
-<p>Here’s your task: <strong>REVIVE BILLY</strong> (Tralfamadorians may disagree whether this is actual revival or not) using your time-travelling <code class="highlighter-rouge">git</code> powers! Billy’s entire life has been kept track by <code class="highlighter-rouge">git</code>, and you can revive Billy through exploring snapshots of his life.</p>
+<p>Here’s your task: find the snapshot where <code class="highlighter-rouge">billy.txt</code> contains the text <code class="highlighter-rouge">I am alive!</code>, using <code class="highlighter-rouge">git</code>. You can accomplish this with the right set of <code class="highlighter-rouge">git</code> commands.</p>
 
-<p>You can go back to <em>any</em> snapshot where Billy was alive.</p>
+<p>(You can go back to <em>any</em> snapshot where you see the text <code class="highlighter-rouge">I am alive!</code>.)</p>
 
 <p>Hint: a couple of useful <code class="highlighter-rouge">git</code> commands that may help you. Feel free to use <code class="highlighter-rouge">man</code> generously.</p>
 
@@ -221,7 +207,7 @@ git checkout
 git reset
 </code></pre></div></div>
 
-<p><span style="color: #FF0000"> WARNING: you will receive no credit for using three-dimensional (plain file editing) powers. You <em>must</em> use <code class="highlighter-rouge">git</code> to “revive” Billy! </span></p>
+<p><span style="color: #FF0000"> WARNING: you will receive no credit for plain file editing. You <em>must</em> use <code class="highlighter-rouge">git</code>! </span></p>
 
 <h5 id="-git-parable-snapshots-"><span style="color: #32CD32"> Git Parable: Snapshots </span></h5>
 
@@ -229,17 +215,9 @@ git reset
 
 <p>To make it easy to remember what changes you made in each snapshot (usually called a <code class="highlighter-rouge">commit</code>), <code class="highlighter-rouge">git</code> requires you to tag your snapshot with a <em>commit message</em>.</p>
 
-<p><strong>Once you’re done with Part 1, hand it in by running <code class="highlighter-rouge">handin vonne-git-1 part1/</code>.</strong></p>
+<p><strong>Once you’re done with Part 1, hand it in by running <code class="highlighter-rouge">handin vonne-git-1 part1_dethemed/</code>.</strong></p>
 
 <h4 id="part-2-a-tralfamadorian-stage-">Part 2: A Tralfamadorian Stage 🎤</h4>
-
-<p>This is (probably) Billy’s message of gratitude after his “revival”:</p>
-
-<p><span style="color: #0000FF"> Billy </span>: “It is (has been) time for me to be dead for a little while - and then live again. (Thanks.)”</p>
-
-<p><span style="color: #0000FF">Billy</span> is alive, but this doesn’t change the fact that you’re still abducted by our lovely <span style="color: #00FF00"> qkfzca </span>.</p>
-
-<p><span style="color: #00FF00"> qkfzca </span>: “Well, here we are, trapped in the amber of this moment. There is no why.”</p>
 
 <h5 id="-git-parable-staging-"><span style="color: #32CD32"> Git Parable: Staging </span></h5>
 
@@ -251,11 +229,9 @@ git reset
 
 <p>This exercise will have you stage and commit in a particular order, so you can have a better sense of control over your <code class="highlighter-rouge">git</code> workflow.</p>
 
-<p>Go to <code class="highlighter-rouge">part2/</code> to explore our upcoming Tralfamadorian Stage.</p>
+<p>Go to <code class="highlighter-rouge">part2/</code> to explore our upcoming stage.</p>
 
-<p>Surprise, <span style="color: #00FF00"> qkfzca </span> has planned a stage for you! However, you find that you need to relay pieces of information in a <em>certain order</em>.</p>
-
-<p>In <code class="highlighter-rouge">part2/</code>, you should see the following files:</p>
+<p>You should see the following files:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.git/
 juggle.txt
@@ -263,21 +239,11 @@ jumprope.txt
 jazz-hands.txt
 </code></pre></div></div>
 
-<p>As Tralfamadorians can only see time through snapshots (commits), you MUST provide your performance in snapshots. It is crucial that the snapshots are given in an order that will amuse them.</p>
+<p>You hear that this is the right order for staging your snapshots: <em>jazz hands, jumprope, then juggle</em>.</p>
 
-<p>According to another Earthling waiting to perform, the trick is:</p>
+<p>To survive this stage, <strong>provide snapshots (commits) that contain each of jazz hands, jumprope, and juggle in the correct order.</strong></p>
 
-<p><span style="color: #0000FF"> ?? </span>: “Jazz hands, Jumprope, THEN Juggle. Nothing else is acceptable around here.”</p>
-
-<p>To survive this stage, <strong>provide snapshots that contain each of juggle, jumprope, and jazz hands in the order that is Tralfamadorian-approved.</strong> Do <em>not</em> provide a single snapshot with all three performances staged at once.</p>
-
-<p>Hint: try running <code class="highlighter-rouge">git status</code> and <code class="highlighter-rouge">git diff</code></p>
-
-<p>Hint 2: you can use <code class="highlighter-rouge">git commit -m "&lt;message&gt;"</code> to <code class="highlighter-rouge">commit</code> a snapshot with a message.</p>
-
-<p><span style="color: #00FF00"> qkfzca </span>: “Each clump of symbols is a brief, urgent message– describing a situation, a scene. We Tralfamadorians read them all at once.”</p>
-
-<p>When you’re done, you’ll have a <em>commit chain</em>, comprising of commit nodes that <em>point</em> to previous commits. Your commit chain should look “linear”, and each commit should be adding a single file to the snapshot:</p>
+<p>When you’re done, you’ll have a commit chain, comprising of commit nodes that point to previous commits. Your commit chain should look “linear”, and each commit should be adding a single file to the snapshot:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   juggle
 
@@ -302,13 +268,19 @@ git commit -m "I've committed everything"
 </code></pre></div></div>
 <p>will be incorrect, as it provides exactly a single snapshot with all three performances staged at the same time.)</p>
 
+<p>Hint: here are some useful commands.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+git diff
+git add
+</code></pre></div></div>
+
 <p><span style="color: #FF0000">For credit, each commit message must contain <em>information about what is being committed</em> (i.e. if you’re juggling, your commit message should contain the word “juggle”; jumproping - “jump”; jazz handing - “jazz”). </span></p>
 
 <p><strong>Once you’re done with Part 2, hand it in by running <code class="highlighter-rouge">handin vonne-git-2 part2/</code>.</strong></p>
 
 <h5 id="-git-parable-branching-"><span style="color: #32CD32"> Git Parable: Branching </span></h5>
 
-<p>Recall our “linear” commit chain.Time goes up; <code class="highlighter-rouge">juggle</code> is the latest.</p>
+<p>Recall our “linear” commit chain.  Time goes up; <code class="highlighter-rouge">juggle</code> is the latest.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   juggle
 
@@ -323,10 +295,9 @@ git commit -m "I've committed everything"
  jazz hands
 </code></pre></div></div>
 
-<p>Imagine this is going to be your stable release for a Tralfamadorian software (that jazz hands, jumpropes, then juggles.). You release the software at the point of <code class="highlighter-rouge">juggle</code>.</p>
+<p>Imagine this is going to be your stable release for a software (that jazz hands, jumpropes, then juggles.). You release the software at the point of <code class="highlighter-rouge">juggle</code>.</p>
 
-<p>A month passes by and you decide to add more snapshots.
-Time goes up; <code class="highlighter-rouge">unicycling</code> is the latest.</p>
+<p>A month passes by and you decide to add more snapshots.  Time goes up; <code class="highlighter-rouge">unicycling</code> is the latest.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   unicycling
 
@@ -372,14 +343,6 @@ Time goes up; <code class="highlighter-rouge">unicycling</code> is the latest.</
 
 <h4 id="part-3-tralfamadorian-trivia-night-">Part 3: Tralfamadorian Trivia Night 🌙</h4>
 
-<p>As our final part of this Tralfamadorian Odyssey, <span style="color: #00FF00"> qkfzca </span> has invited you to the sesquicentennial Tralfamadorian Trivia Night.</p>
-
-<p><span style="color: #00FF00"> qkfzca </span> seems a little animated, although it is hard to tell. She tells you it’s the favorite event of her lifetime.</p>
-
-<p><span style="color: #00FF00"> qkfzca </span>: “Absolutely everybody gets a little something.”</p>
-
-<p>She promises you that the abduction will come to an end once you complete the Trivia.</p>
-
 <p><em>Feel free to utilize Office Hours for any questions about this section. Although help will be provided through Piazza, it will help your intuition in understanding <code class="highlighter-rouge">git</code> if explained in person!</em></p>
 
 <h5 id="-git-parable-collaboration-"><span style="color: #32CD32"> Git Parable: Collaboration </span></h5>
@@ -392,13 +355,11 @@ Time goes up; <code class="highlighter-rouge">unicycling</code> is the latest.</
 
 <h5 id="task-1-another-earthling">Task 1: Another Earthling</h5>
 
-<p>You must find an Earthling partner (enrolled in CS 2043) for the Trivia. You may use Piazza’s partner finding functionality.</p>
-
-<p>Tralfamadorian partners also accepted, if found.</p>
+<p>You must find a partner (enrolled in CS 2043) for the Trivia. You may use Piazza’s partner finding functionality.</p>
 
 <h5 id="task-2-solve-your-trivia">Task 2: Solve Your Trivia</h5>
 
-<p>Solve the questions under the <code class="highlighter-rouge">part3</code> directory <em>on your own</em>. Correctness of your solutions does not matter for the Trivia (but is good for your soul).</p>
+<p>Solve the questions under the <code class="highlighter-rouge">part3</code> directory <em>on your own</em>. Correctness of your solutions does not matter for the Trivia (but is good for the soul).</p>
 
 <h5 id="task-3-merge-time">Task 3: Merge time!</h5>
 
@@ -408,8 +369,8 @@ Time goes up; <code class="highlighter-rouge">unicycling</code> is the latest.</
 
 <p>In order to complete the Trivia, you must succeed in the following things:</p>
 <ul>
-  <li>add your Earthling partner as a <code class="highlighter-rouge">collaborator</code> to the repository</li>
-  <li>both Earthlings must <code class="highlighter-rouge">commit</code> their questions and solutions to the repository. Earthlings may have different questions.</li>
+  <li>add your partner as a <code class="highlighter-rouge">collaborator</code> to the repository</li>
+  <li>both partners must <code class="highlighter-rouge">commit</code> their questions and solutions to the repository. Partners may have different questions.</li>
   <li>any <code class="highlighter-rouge">merge</code> conflicts must be resolved.</li>
   <li>the resulting solutions to the Trivia must be pushed onto the <code class="highlighter-rouge">master</code> branch of your repository.</li>
 </ul>
@@ -422,10 +383,6 @@ Time goes up; <code class="highlighter-rouge">unicycling</code> is the latest.</
 
 <p>Through <code class="highlighter-rouge">git</code>, you can merge two separate branches of development into a single snapshot. Once you complete a merge, and all partners fetch all the snapshots from the master branch (<code class="highlighter-rouge">git pull</code>), both of your histories (<code class="highlighter-rouge">git log</code>) should match exactly.</p>
 
-<p>As you’re preparing to leave, <span style="color: #00FF00"> qkfzca </span> has something to say.</p>
-
-<p><span style="color: #00FF00"> qkfzca </span>: “Everything was beautiful and nothing hurt.”</p>
-
 <p><strong>Once you’re done with Part 3, follow these instructions for submission</strong></p>
 
 <ol>
@@ -433,13 +390,7 @@ Time goes up; <code class="highlighter-rouge">unicycling</code> is the latest.</
   <li>run <code class="highlighter-rouge">handin vonne-git-3 &lt;git-repo-directory&gt;</code>. For instance, if your <code class="highlighter-rouge">git clone</code>-ing your GitHub repository created a directory <code class="highlighter-rouge">Trivia/</code>, run <code class="highlighter-rouge">handin vonne-git-3 Trivia/</code>.</li>
 </ol>
 
-<h5 id="poo-tee-weet">Poo-tee-weet?</h5>
-
-<p>Congratulations! You have successfully escaped Tralfamadore.</p>
-
-<p>Now that you’re back on Earth, you realize it’s springtime. Birds are talking.</p>
-
-<p>One bird says to you, ‘Poo-tee-weet?’</p>
+<p>Congratulations! You have successfully finished this assignment.</p>
 
 
       <div id="footer">
@@ -470,7 +421,7 @@ Time goes up; <code class="highlighter-rouge">unicycling</code> is the latest.</
 </script>
 <script type="text/javascript">
   var i = 0;
-  var txt = 'Assignment Information';
+  var txt = 'Dethemed Assignment Information';
   var speed = 60;
   let hasBlinker = true;
   document.getElementById("header").innerHTML = "|";
@@ -488,7 +439,7 @@ Time goes up; <code class="highlighter-rouge">unicycling</code> is the latest.</
   function blink() {
     let x = document.getElementById("header");
     let len = x.innerHTML.length;
-    if (x.innerHTML.includes('Assignment Information')) {
+    if (x.innerHTML.includes('Dethemed Assignment Information')) {
       if (hasBlinker) {
         x.innerHTML = x.innerHTML.substring(0, len - 1);
         hasBlinker = false;
