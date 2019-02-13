@@ -170,291 +170,529 @@
 	  <h1 id="header"></h1>
       <h2 id="older-assignments"><a href="/courses/cs2043/2019sp/old_assignments.html">Older assignments</a></h2>
 
-<h3 id="cs-2043-assignment-3-vonne-git">CS 2043 Assignment 3: vonne-git</h3>
-<h4 id="due-date-wednesday-february-13-1115-am">Due Date: Wednesday February 13 11:15 am</h4>
+<h3 id="cs-2043-assignment-4-the-fellowship-of-the-script">CS 2043 Assignment 4: The Fellowship of the Script</h3>
+<h4 id="due-date-friday-february-22-at-1115-am">Due Date: Friday February 22 at 11:15 AM</h4>
+<h4 id="assignment-captains-ashneel-das-chris-roman">Assignment Captains <a href="staff.html">Ashneel Das, Chris Roman</a></h4>
 
-<h4 id="assignment-captain-irene-yoon">Assignment Captain: <a href="staff.html">Irene Yoon</a></h4>
-
-<p>In this assignment, we will be learning the fundamentals of Git through a <a href="https://en.wikipedia.org/wiki/Kurt_Vonnegut">Kurt Vonnegut</a>-themed story.
+<p>In this assignment, we will be writing more advanced scripts through a Lord of the Rings themed story. 
 If you would like a de-themed version of the assignment, please go <a href="/courses/cs2043/2019sp/dethemed_assignments.html">here</a>.</p>
 
-<p>The <strong>Task</strong> sections complete parts of the assignment that must be completed for submission.
-The <strong>Git Parable</strong> sections will help you gain <em>intuition</em> about how <code class="highlighter-rouge">git</code> works. No part of the <strong>Git Parable</strong> sections require submission.</p>
-
-<p>Let’s git going!</p>
-
-<p><span style="color: #FF0000">If you would like to reset (get a fresh copy) of any part of the assignment, please run <code class="highlighter-rouge">./reset.sh &lt;part_name&gt;</code>. For instance, if you would like to reset <code class="highlighter-rouge">part1</code>, run <code class="highlighter-rouge">./reset.sh part1</code>, and you’ll get a fresh copy of <code class="highlighter-rouge">part1</code> under <code class="highlighter-rouge">part1_fresh/</code>. You MUST delete your old copy of <code class="highlighter-rouge">partX/</code> and rename <code class="highlighter-rouge">partX_fresh</code> to <code class="highlighter-rouge">partX</code> for submission.</span></p>
-
-<h4 id="part-1-its-tralfamadorian-time-">Part 1: It’s Tralfamadorian Time! ⏰</h4>
-
-<p><a href="https://en.wikipedia.org/wiki/Tralfamadore">Tralfamadorians</a> are back – your favorite green-eyed, time-bending, toilet plunger-like aliens! This time, they’ve chosen to abduct YOU for a lesson on time and the fourth dimension (<code class="highlighter-rouge">git</code>).</p>
-
-<p>Here: <span style="color: #00FF00"> qkfzca </span>, your Tralfamadorian abductress, will guide you through your enlightenment.</p>
-
-<h5 id="time-is-just-snapshots-">Time is just Snapshots 📸</h5>
-
-<p><span style="color: #00FF00"> qkfzca </span>: “All moments, past, present and future, always have existed, always will exist. Us Tralfamadorians can look at all the different moments just that way we can look at a stretch of the Rocky Mountains, for instance. We can see how permanent all the moments are, and we can look at any moment that interests them. It is just an illusion that for Earthlings one moment follows another one, like beads on a string, and that once a moment is gone it is gone forever.”</p>
-
-<p>Luckily, we are able to experience time just like the Tralfamadorians with our fourth-dimensional tool, <code class="highlighter-rouge">git</code>!</p>
-
-<h5 id="task-so-it-goes">Task: So it goes.</h5>
-
-<p>Find <code class="highlighter-rouge">part1/</code> under <code class="highlighter-rouge">tralfamadorian-git-gud/</code>. 
-(Don’t worry about <code class="highlighter-rouge">part1_dethemed/</code>. This is the dethemed version of <code class="highlighter-rouge">part1</code>, and you will get equal credit for submitting either version.)</p>
-
-<p>You’ll find the following file structure:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.git/
-billy.txt
-</code></pre></div></div>
-
-<p>If you happen to open up <code class="highlighter-rouge">billy.txt</code>, you will see that Billy is dead. You wish Billy were still alive. <span style="color: #00FF00"> qkfzca </span> is back again to spread more Tralfamadorian wisdom…</p>
-
-<p><span style="color: #00FF00"> qkfzca </span>: “That’s one thing Earthlings might learn to do, if they tried hard enough: Ignore the awful times and concentrate on the good ones.”</p>
-
-<p>Here’s your task: <strong>REVIVE BILLY</strong> (Tralfamadorians may disagree whether this is actual revival or not) using your time-travelling <code class="highlighter-rouge">git</code> powers! Billy’s entire life has been kept track by <code class="highlighter-rouge">git</code>, and you can revive Billy through exploring snapshots of his life.</p>
-
-<p>You can go back to <em>any</em> snapshot where Billy was alive.</p>
-
-<p>Hint: a couple of useful <code class="highlighter-rouge">git</code> commands that may help you. Feel free to use <code class="highlighter-rouge">man</code> generously.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log
-git checkout
-git reset
-</code></pre></div></div>
-
-<p><span style="color: #FF0000"> WARNING: you will receive no credit for using three-dimensional (plain file editing) powers. You <em>must</em> use <code class="highlighter-rouge">git</code> to “revive” Billy! </span></p>
-
-<p>Note:</p>
-
-<p>For this part of the assignment, you <em>do not need to make any extra snapshots</em>.</p>
-
-<p>If you run <code class="highlighter-rouge">git status</code> under part1/, you need to see this output on your terminal once you’ve completed this part.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>On branch master
-nothing to commit, working tree clean
-</code></pre></div></div>
-
-<p>Once you can see this and find that the most recent commit is where “Billy is alive”, you have successfully completed the assignment.</p>
-
-<h5 id="-git-parable-snapshots-"><span style="color: #32CD32"> Git Parable: Snapshots </span></h5>
-
-<p><a href="https://en.wikipedia.org/wiki/Version_control">Version control systems (VCS)</a> such as <code class="highlighter-rouge">git</code> take snapshots of your time. Think of them as save points in a video game. You can take snapshots of your codebase at anytime and resurrect that code on demand.</p>
-
-<p>To make it easy to remember what changes you made in each snapshot (usually called a <code class="highlighter-rouge">commit</code>), <code class="highlighter-rouge">git</code> requires you to tag your snapshot with a <em>commit message</em>.</p>
-
-<p><strong>Once you’re done with Part 1, hand it in by running <code class="highlighter-rouge">handin vonne-git-1 part1/</code>.</strong></p>
-
-<h4 id="part-2-a-tralfamadorian-stage-">Part 2: A Tralfamadorian Stage 🎤</h4>
-
-<p>This is (probably) Billy’s message of gratitude after his “revival”:</p>
-
-<p><span style="color: #0000FF"> Billy </span>: “It is (has been) time for me to be dead for a little while - and then live again. (Thanks.)”</p>
-
-<p><span style="color: #0000FF">Billy</span> is alive, but this doesn’t change the fact that you’re still abducted by our lovely <span style="color: #00FF00"> qkfzca </span>.</p>
-
-<p><span style="color: #00FF00"> qkfzca </span>: “Well, here we are, trapped in the amber of this moment. There is no why.”</p>
-
-<h5 id="-git-parable-staging-"><span style="color: #32CD32"> Git Parable: Staging </span></h5>
-
-<p>Snapshots can be represented as <code class="highlighter-rouge">commit</code>s. When you’re working on a project, you want to have explicit control over what is captured in each snapshot.</p>
-
-<p>A <em>staging directory</em> is a set of changes (i.e. modified files) that you wish to capture in the next snapshot. In order to add files to your current staging directory, you can use <code class="highlighter-rouge">git add</code> (refer to its <code class="highlighter-rouge">man</code> page for more details).</p>
-
-<h5 id="task-staging">Task: Staging</h5>
-
-<p>This exercise will have you stage and commit in a particular order, so you can have a better sense of control over your <code class="highlighter-rouge">git</code> workflow.</p>
-
-<p>Go to <code class="highlighter-rouge">part2/</code> to explore our upcoming Tralfamadorian Stage.</p>
-
-<p>Surprise, <span style="color: #00FF00"> qkfzca </span> has planned a stage for you! However, you find that you need to relay pieces of information in a <em>certain order</em>.</p>
-
-<p>In <code class="highlighter-rouge">part2/</code>, you should see the following files:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.git/
-juggle.txt
-jumprope.txt
-jazz-hands.txt
-</code></pre></div></div>
-
-<p>As Tralfamadorians can only see time through snapshots (commits), you MUST provide your performance in snapshots. It is crucial that the snapshots are given in an order that will amuse them.</p>
-
-<p>According to another Earthling waiting to perform, the trick is:</p>
-
-<p><span style="color: #0000FF"> ?? </span>: “Jazz hands, Jumprope, THEN Juggle. Nothing else is acceptable around here.”</p>
-
-<p>To survive this stage, <strong>provide snapshots that contain each of juggle, jumprope, and jazz hands in the order that is Tralfamadorian-approved.</strong> Do <em>not</em> provide a single snapshot with all three performances staged at once.</p>
-
-<p>Hint: try running <code class="highlighter-rouge">git status</code> and <code class="highlighter-rouge">git diff</code></p>
-
-<p>Hint 2: you can use <code class="highlighter-rouge">git commit -m "&lt;message&gt;"</code> to <code class="highlighter-rouge">commit</code> a snapshot with a message.</p>
-
-<p><span style="color: #00FF00"> qkfzca </span>: “Each clump of symbols is a brief, urgent message– describing a situation, a scene. We Tralfamadorians read them all at once.”</p>
-
-<p>When you’re done, you’ll have a <em>commit chain</em>, comprising of commit nodes that <em>point</em> to previous commits. Your commit chain should look “linear”, and each commit should be adding a single file to the snapshot:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   juggle
-
-     |
-     v
-
-  jumprope
-
-     |
-     v
-
-  jazz hands
-</code></pre></div></div>
-
-<p>Time goes up; <code class="highlighter-rouge">juggle</code> is the latest.</p>
-
-<p><span style="color: #FF0000"> Do <em>not</em> provide a single snapshot with all three performances staged at once. </span></p>
-
-<p>(For instance, running</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add .
-git commit -m "I've committed everything"
-</code></pre></div></div>
-<p>will be incorrect, as it provides exactly a single snapshot with all three performances staged at the same time.)</p>
-
-<p><span style="color: #FF0000">For credit, each commit message must contain <em>information about what is being committed</em> (i.e. if you’re juggling, your commit message should contain the word “juggle”; jumproping - “jump”; jazz handing - “jazz”). </span></p>
-
-<p><strong>Once you’re done with Part 2, hand it in by running <code class="highlighter-rouge">handin vonne-git-2 part2/</code>.</strong></p>
-
-<h5 id="-git-parable-branching-"><span style="color: #32CD32"> Git Parable: Branching </span></h5>
-
-<p>Recall our “linear” commit chain.Time goes up; <code class="highlighter-rouge">juggle</code> is the latest.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   juggle
-
-     |
-     v
-
-  jumprope
-
-     |
-     v
-
- jazz hands
-</code></pre></div></div>
-
-<p>Imagine this is going to be your stable release for a Tralfamadorian software (that jazz hands, jumpropes, then juggles.). You release the software at the point of <code class="highlighter-rouge">juggle</code>.</p>
-
-<p>A month passes by and you decide to add more snapshots.
-Time goes up; <code class="highlighter-rouge">unicycling</code> is the latest.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   unicycling
-
-     |
-     V
-
-   juggle (release)
-
-     |
-     V
-
-  jumprope
-
-     |
-     V
-  jazz hands
-
-</code></pre></div></div>
-
-<p>Unfortunately, bug reports start filing in and people start having problems with your juggling. You decide to fix the bug in a snapshot called <code class="highlighter-rouge">fixed-juggle</code> and re-release your code. However, you don’t want to release your <code class="highlighter-rouge">unicycling</code> snapshot.</p>
-
-<p>Here, we find a couple problems that cannot be solved by our linear workflow. First, we don’t know where our <code class="highlighter-rouge">fixed-juggle</code> snapshot will go. Second, we need a way for both <code class="highlighter-rouge">unicycling</code> and <code class="highlighter-rouge">fixed-juggle</code> have a reference to the original <code class="highlighter-rouge">juggle</code> snapshot, so that the snapshot history is not lost.</p>
-
-<p>As a solution, <code class="highlighter-rouge">git</code> introduces a <em>tree structure</em> to its workflow, where we can have <em>branches</em> to keep track of any non-linear workflow. Time goes up; both <code class="highlighter-rouge">unicycling</code> and <code class="highlighter-rouge">fixed-juggle</code> are the latest.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  unicycling    fixed-juggle (release)
-     |           /
-     V        /
-   juggle
-
-     |
-     V
-
-  jumprope
-
-     |
-     V
-
- jazz hands
-
-</code></pre></div></div>
-
-<h4 id="part-3-tralfamadorian-trivia-night-">Part 3: Tralfamadorian Trivia Night 🌙</h4>
-
-<p>As our final part of this Tralfamadorian Odyssey, <span style="color: #00FF00"> qkfzca </span> has invited you to the sesquicentennial Tralfamadorian Trivia Night.</p>
-
-<p><span style="color: #00FF00"> qkfzca </span> seems a little animated, although it is hard to tell. She tells you it’s the favorite event of her lifetime.</p>
-
-<p><span style="color: #00FF00"> qkfzca </span>: “Absolutely everybody gets a little something.”</p>
-
-<p>She promises you that the abduction will come to an end once you complete the Trivia.</p>
-
-<p><em>Feel free to utilize Office Hours for any questions about this section. Although help will be provided through Piazza, it will help your intuition in understanding <code class="highlighter-rouge">git</code> if explained in person!</em></p>
-
-<h5 id="-git-parable-collaboration-"><span style="color: #32CD32"> Git Parable: Collaboration </span></h5>
-
-<p>One of the benefits of using <code class="highlighter-rouge">git</code> is the ability to collaborate. So far, we’ve been using your local <code class="highlighter-rouge">git</code> repository to keep track of your workflow.</p>
-
-<p>By having a remote shared repository, you can share your snapshots with others.</p>
-
-<p>In this next exercise, you will have a chance to create a GitHub repository and solve some Trivia with a partner.</p>
-
-<h5 id="task-1-another-earthling">Task 1: Another Earthling</h5>
-
-<p>You must find an Earthling partner (enrolled in CS 2043) for the Trivia. You may use Piazza’s partner finding functionality.</p>
-
-<p>Tralfamadorian partners also accepted, if found.</p>
-
-<h5 id="task-2-solve-your-trivia">Task 2: Solve Your Trivia</h5>
-
-<p>Solve the questions under the <code class="highlighter-rouge">part3</code> directory <em>on your own</em>. Correctness of your solutions does not matter for the Trivia (but is good for your soul).</p>
-
-<h5 id="task-3-merge-time">Task 3: Merge time!</h5>
-
-<p>Create a new GitHub repository through the <a href="https://github.coecis.cornell.edu/">CornellCIS GitHub</a>.</p>
-
-<p>Place the created <code class="highlighter-rouge">git</code> repository under your <code class="highlighter-rouge">part3</code> directory (<code class="highlighter-rouge">git clone &lt;git-repository-url&gt;</code> may help).</p>
-
-<p>In order to complete the Trivia, you must succeed in the following things:</p>
-<ul>
-  <li>add your Earthling partner as a <code class="highlighter-rouge">collaborator</code> to the repository</li>
-  <li>both Earthlings must <code class="highlighter-rouge">commit</code> their questions and solutions to the repository. Earthlings may have different questions.</li>
-  <li>any <code class="highlighter-rouge">merge</code> conflicts must be resolved.</li>
-  <li>the resulting solutions to the Trivia must be pushed onto the <code class="highlighter-rouge">master</code> branch of your repository.</li>
-</ul>
-
-<p>Note: In order to successfully follow these steps, <em>exactly one</em> person should initialize the GitHub repository and push a commit to it, <em>then</em> the next person should clone the repository and push a commit.</p>
-
-<p><span style="color: #FF0000"> WARNING: do <strong>not</strong> use <code class="highlighter-rouge">git rebase</code> for the purposes of this assignment. <span></span></span></p>
-
-<h5 id="-git-parable-collaboration-and-merging-"><span style="color: #32CD32"> Git Parable: Collaboration and Merging </span></h5>
-
-<p>At the end of this assignment, you should have a complete snapshot (your partner and yours) of your Trivia (check <code class="highlighter-rouge">git log</code>).</p>
-
-<p>Through <code class="highlighter-rouge">git</code>, you can merge two separate branches of development into a single snapshot. Once you complete a merge, and all partners fetch all the snapshots from the master branch (<code class="highlighter-rouge">git pull</code>), both of your histories (<code class="highlighter-rouge">git log</code>) should match exactly.</p>
-
-<p>As you’re preparing to leave, <span style="color: #00FF00"> qkfzca </span> has something to say.</p>
-
-<p><span style="color: #00FF00"> qkfzca </span>: “Everything was beautiful and nothing hurt.”</p>
-
-<p><strong>Once you’re done with Part 3, follow these instructions for submission</strong></p>
+<blockquote>
+  <p>Frodo sits quietly reading a book in the forest, dreaming of the day when Gandalf will
+return with some more fireworks.  More importantly, though, he grows weary of looking
+after the increasingly frustrating senility of Bilbo.  Unbeknownst to Bilbo, Frodo,
+and even Gandalf, though, treachery is afoot.  As it turns out, the great Base Master
+of Treachery (Sauron) really engineered the rings of power to siphon intellect from
+the wearer of the ring.  He wanted to live forever, but was well versed in the
+unfortunate truth of how the brain ages and realized he could steal the ring-bearer’s
+marbles for himself.</p>
+</blockquote>
+
+<h4 id="task-1">Task 1</h4>
+
+<p>Note: You will be appending to two files, <code class="highlighter-rouge">MARBLES.txt</code> and <code class="highlighter-rouge">FAILED.log</code>, in this task.</p>
+
+<blockquote>
+  <p>Frodo’s least favorite task of the day is helping Bilbo find his marbles.  All the old
+fool does day in and day out is shut himself in his study and re-read is various maps
+and journals, muttering on about how if he could only find his marbles then he could
+return to live with the Elves.  The only thing that Frodo hates more than “helping”
+Bilbo find his marbles is playing the “What’s in my Pocket game”, because the answer
+is always the same.</p>
+
+  <p>Each day between Elevenses and Lunch Bilbo demands that Frodo assist in the age-old
+task of the marble search.  Having been traumatized by this search everyday since the
+time he could walk, Frodo has finally decided that he should automate the process.
+According to Bilbo, he has encoded the secret location of the marbles in different
+maps and journals throughout his study.  However, these maps and journals were
+actually given to him by the Elves (who stole them from Dwarves), and it is futile to
+search for marbles on the wrong day of the year.</p>
+
+  <p>Each day Bilbo recites a list of maps and journals that are valid to search on that
+day from memory, and Frodo must collect them all and search for the marbles.  Bilbo
+also informs Frodo that there is a minimum and maximum line-length (specific to that
+day) that would potentially contain the location of a given marble.  That is, as Frodo
+reads through every line of the journals and maps, if a given line of prose contains
+fewer words than the dictated minimum, or more words than the dictated maximum, then
+no marbles have been described by that line and Frodo should move on.</p>
+</blockquote>
+
+<p>Create a script named <code class="highlighter-rouge">collect_marbles.sh</code> in the <strong>TASK_1</strong> directory that performs the
+following:</p>
 
 <ol>
-  <li><code class="highlighter-rouge">git clone</code> your repo onto <code class="highlighter-rouge">wash</code>, onto your <code class="highlighter-rouge">~/Desktop</code>. This must be a fresh clone.</li>
-  <li>run <code class="highlighter-rouge">handin vonne-git-3 &lt;git-repo-directory&gt;</code>. For instance, if your <code class="highlighter-rouge">git clone</code>-ing your GitHub repository created a directory <code class="highlighter-rouge">Trivia/</code>, run <code class="highlighter-rouge">handin vonne-git-3 Trivia/</code>.</li>
+  <li>The script will be called with arguments as follows:
+    <ul>
+      <li>The “length” of a line is defined as <strong>the number of words on the line</strong>.</li>
+      <li>The first argument is the <em>minimum</em> length of a line.</li>
+      <li>The second argument is the <em>maximum</em> length of a line.</li>
+      <li>All remaining arguments are the names of the journals and maps that are to be
+searched (filenames).  There is no limit to the number of additional arguments.</li>
+    </ul>
+  </li>
+  <li>
+    <p>If your script receives <strong>fewer than 3</strong> arguments, it should print the exact message to STDERR:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Ye shall not search for marbles if ye cannot find the key.
+</code></pre></div>    </div>
+
+    <p>and produce an <code class="highlighter-rouge">exit</code> code of <strong><code class="highlighter-rouge">64</code></strong>, without doing any further processing. AKA
+ check for this at the beginning before doing anything else…
+ In order to redirect to STDERR, you can type <code class="highlighter-rouge">&gt;&amp;2 echo "error"</code>. This means you are redirecting the output of echo (in this case, “error”) to file descriptor 2. In the world of UNIX, file descriptor 2 represents STDERR, whereas file descriptor 1 represents STDOUT.</p>
+  </li>
+  <li>You may assume that arguments one and two, <em>if supplied</em>, are positive integers where:
+    <ul>
+      <li>The <strong>minimum</strong> length is greater than or equal to 1.</li>
+      <li>The <strong>maximum</strong> length is greater than or equal to the <strong>minimum</strong> length (never
+less than).</li>
+    </ul>
+  </li>
+  <li>You may <strong>not</strong> assume that the third and higher arguments are <strong>valid</strong>.  That is,
+you must verify that the argument given <em>is a file you can <strong>r</strong>ead</em> first before
+trying to process it.
+    <ul>
+      <li>If an argument given is not a real file, <strong>append</strong> the name that was given to
+<code class="highlighter-rouge">FAILED.log</code> in the current directory.</li>
+    </ul>
+  </li>
+  <li>For every valid file path specified, loop over every line in the file:
+    <ul>
+      <li>Count the number of words on that line. A word is defined as anything separated by a space.</li>
+      <li>If the number of words is between the <strong>minimum</strong> and <strong>maximum</strong> that Bilbo
+specified, <strong>append</strong> it to the end of <code class="highlighter-rouge">MARBLES.txt</code> in the current directory.</li>
+      <li>Otherwise, just move on to the next line.</li>
+    </ul>
+  </li>
 </ol>
 
-<h5 id="poo-tee-weet">Poo-tee-weet?</h5>
+<p><strong>Warning</strong>: for full credit, <code class="highlighter-rouge">TASK_1/collect_marbles.sh</code> must be executable.</p>
 
-<p>Congratulations! You have successfully escaped Tralfamadore.</p>
+<p>Once you are done, hand in the assignment using <code class="highlighter-rouge">handin fellowship-1 collect_marbles.sh</code></p>
 
-<p>Now that you’re back on Earth, you realize it’s springtime. Birds are talking.</p>
+<h4 id="sample-inputs-and-output">Sample Inputs and Output</h4>
 
-<p>One bird says to you, ‘Poo-tee-weet?’</p>
+<p>Refer to TASK_1/TASK_1_EXAMPLE.md.</p>
+
+<h4 id="task-2">Task 2</h4>
+
+<blockquote>
+  <p>Frodo can at long last enjoy a little bit of “me-time”, as Bilbo refuses to allow
+Frodo to be involved in the decryption phase.  Somewhat agitated by the fact that
+Bilbo will not allow him to partake in this task after all these years, Frodo decides
+to return to the forest to catch up on some reading.  After all, he doesn’t really
+even want to be involved in that part…Bilbo claims that marble decryption must be
+done whilst wearing a tea cosy on your head and nothing else.</p>
+
+  <p>As Frodo tries to forget that mental image, he is knocked over by Pippin and Merry who
+seem to have come out of nowhere.  It becomes quite apparent that not only have they
+been stealing crops from Farmer Maggot, but they have been stealing his marbles too!
+They realized that the more marbles they steal from Farmer Maggot, the easier it is to
+steal crops (since they are effectively degrading his consciousness).</p>
+
+  <p>Intrigued by the idea, and appalled by the act, Frodo is now entrenched in an awkward
+situation.  Pippin and Merry somehow already found out that Frodo is a total Unix
+scripting pro, and have asked him to help them create a tool that would enable them to
+analyze their potential profits from both the crops and the marbles.</p>
+
+  <p>Frodo realizes that they are too foolish to connect the dots that if they would only
+eat the marbles they could write their own, and strikes a deal: he will create this
+tool for them if they pay him with the marbles they have stolen.  He convinces them
+that once removed they are useless, and that they can only make a profit from the
+crops anyway.</p>
+
+  <p>They are suspicious, but Frodo explains that he is going to try and use them to
+satiate Bilbo’s ludicrous marble search.  Having grown up with Frodo, they accept this
+as a plausible application.</p>
+</blockquote>
+
+<hr />
+
+<p>You are to create a script <code class="highlighter-rouge">merry_math.sh</code> in the <code class="highlighter-rouge">TASK_2</code> directory that can analyze
+specific columns of a <code class="highlighter-rouge">csv</code> file.  A <code class="highlighter-rouge">csv</code> file is a “Comma Separated Value” sheet often
+used for storing data such as the number of carrots or potatoes stolen on a given day.
+Ordinarily <code class="highlighter-rouge">csv</code> files are supposed to have the first row be the “Header”, that
+describes what each column is.  For this task, there will be no header to simplify your
+work. There will also be no quotes or other strange characters you need to worry about. Just assume it will be plain text separated by commas.</p>
+
+<hr />
+
+<p>Your script must support the following <strong>integer arithmetic</strong> operations:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">add</code>: add the specified columns together.</li>
+  <li><code class="highlighter-rouge">sub</code>: subtract the specified columns.</li>
+  <li><code class="highlighter-rouge">mul</code>: multiply the specified columns.</li>
+  <li><code class="highlighter-rouge">div</code>: divide the specified columns.
+    <ul>
+      <li>Do not be concerned about division by 0, you can assume it will not happen.</li>
+    </ul>
+  </li>
+  <li>You do not need to be concerned with {over,under}flow.  For the interested,
+<code class="highlighter-rouge">bash</code> 3.0+ uses signed 64 bit integers (regardless of the architecture).</li>
+</ul>
+
+<hr />
+
+<p>Your script will receive input arguments in the following form:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">"$1"</code>: the name of the <code class="highlighter-rouge">csv</code> file.  This file is not guaranteed to exist.
+    <ul>
+      <li>If the file does <strong>not</strong> exist, simply <code class="highlighter-rouge">exit</code> with code <code class="highlighter-rouge">66</code>.</li>
+      <li>This error code takes precedence over an invalid operation code (next bullet.)</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">"$2"</code>: the operation you are to perform, one of <code class="highlighter-rouge">add</code>, <code class="highlighter-rouge">sub</code>, <code class="highlighter-rouge">mul</code>, or <code class="highlighter-rouge">div</code>.
+    <ul>
+      <li>If the operation is not one of these four strings, you should <code class="highlighter-rouge">exit</code> with code <code class="highlighter-rouge">69</code>.</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">"$3"</code>..<code class="highlighter-rouge">"$n"</code>: an integer specifying the columns to perform the operation on.
+    <ul>
+      <li>These are not guaranteed to exist.</li>
+      <li>This has no effect on the code you write, but these do not have to be specified in
+order of the actual <code class="highlighter-rouge">csv</code> file.  For example, <code class="highlighter-rouge">"$3"</code> could be column <code class="highlighter-rouge">12</code>, and
+<code class="highlighter-rouge">"$4"</code> could be column <code class="highlighter-rouge">3</code>.</li>
+      <li>You may assume that <code class="highlighter-rouge">"$3"</code>..<code class="highlighter-rouge">"$n"</code> contain valid column numbers: they are positive
+integers, and the <code class="highlighter-rouge">csv</code> specified by <code class="highlighter-rouge">"$1"</code> has at least as many columns as these
+arguments (aka don’t worry about validating if there are that many columns).</li>
+    </ul>
+  </li>
+  <li>If fewer than four arguments <strong>total</strong> are given, <code class="highlighter-rouge">exit</code> with code <code class="highlighter-rouge">64</code>.  This error
+should take precedence over the error codes for <code class="highlighter-rouge">"$1"</code> and <code class="highlighter-rouge">"$2"</code>.
+    <ul>
+      <li>This is easier for you!  Just check <code class="highlighter-rouge">"$#"</code> first and make sure it is &gt;= 4…</li>
+    </ul>
+  </li>
+</ul>
+
+<p>To be extra clear, you should check errors in the following order to provide the correct
+error code priorities:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if too few arguments, then
+    exit with an error code of 64
+else if the provided filename is not a file, then
+    exit with an error code of 66
+else if the operation code provided is not supported, then
+    exit with an error code of 69
+</code></pre></div></div>
+
+<p>So if four arguments were provided, but both the filename and operation code were
+invalid, then the <code class="highlighter-rouge">exit</code> code should be <strong><code class="highlighter-rouge">66</code></strong>, not <code class="highlighter-rouge">69</code>.</p>
+
+<hr />
+
+<p>Your script is to strip the columns requested and perform the mathematical operation
+requested.</p>
+
+<ul>
+  <li>The computation is to be written to the file <code class="highlighter-rouge">RESULTS.txt</code>.</li>
+  <li>If the file <code class="highlighter-rouge">RESULTS.txt</code> already exists, overwrite it (in order to do this, write <code class="highlighter-rouge">&gt; RESULTS.txt</code> before doing any other parsing).</li>
+  <li>
+    <p>The computation you should perform is the <em>operation</em> on the columns, in order.
+For example:</p>
+
+    <ul>
+      <li>
+        <p>With operation <code class="highlighter-rouge">add</code> and arguments <code class="highlighter-rouge">"$3"</code>, <code class="highlighter-rouge">"$4"</code> supplied, compute:</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span> <span class="nv">$3</span> + <span class="nv">$4</span> <span class="o">)</span>
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>With operation <code class="highlighter-rouge">div</code> and arguments <code class="highlighter-rouge">"$3"</code>, <code class="highlighter-rouge">"$4"</code>, <code class="highlighter-rouge">"$5"</code>, and <code class="highlighter-rouge">"$6"</code> supplied,
+compute:</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(((</span> <span class="nv">$3</span> / <span class="nv">$4</span> <span class="o">)</span> / <span class="nv">$5</span> <span class="o">)</span> / <span class="nv">$6</span> <span class="o">)</span>
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Parentheses were added for clarity, but you will need to execute this task in a
+loop and will not really need to worry about grouping expressions like this.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Warning</strong>: for full credit, <code class="highlighter-rouge">TASK_2/merry_math.sh</code> must be executable.</p>
+
+<p>Once you are done, hand in the assignment using <code class="highlighter-rouge">handin fellowship-2 merry_math.sh</code></p>
+
+<h4 id="sample-inputs-and-output-1">Sample Inputs and Output</h4>
+
+<p>Refer to TASK_2/TASK_2_EXAMPLE.md.</p>
+
+<h4 id="task-3">Task 3</h4>
+
+<blockquote>
+  <p>Enthralled by the superb automation he is now able to perform, Frodo ponders what
+could possibly be next.  As Pippin and Merry go skipping away contented with their new
+calculator, Frodo hears a faint but familiar song being hummed off in the distance.
+Taken aback by the comforting melody, he decides to go track down who could possibly
+be such a talented songster.  For not only is there humming, but a unique form of
+whistling that he suspects would summon even the most regal and renowned of horses.</p>
+
+  <p>Frolicking through the forest, he comes to a road just as Gandalf the Omnipotently
+Nonchalant rides his carriage toward the Shire.  Unable to contain his joy (because
+this almost certainly means there will be fireworks), he leaps from the side of the
+road onto Gandalf’s cart.  Gandalf laughs in a manner that makes Frodo think there may
+be some marbles missing from Gandalf as well, but dares not to ask.</p>
+
+  <p>As they ride in to town, Gandalf turns to Frodo and inquires whether he might be
+interested in helping him con Sauron.  For too many years Gandalf has been
+overshadowed by him, and seeks the title of Great Deceiver, but he is far too old to
+learn how to use computers and needs help designing a website.  Gandalf was able to
+convince Sam to create a Markdown document for the website in exchange for some
+potatoes, but despite great efforts Sam was simply just too simple to be able to
+create anything more interesting.</p>
+
+  <p>Gandalf is confident that he will need a colorful website in order to pull off this
+scandal, and turns to Frodo.  Having learned of his recent super-pro-allstar status as
+a Unix guru, Gandalf is confident that Frodo will be able to provide a tool that can
+take any one of the the Markdown documents Sam completes and generate a colorful HTML
+page.</p>
+
+  <p>Gandalf scurries away claiming that there are questions, questions that need answering,
+and Frodo is left to himself to complete the task alone (once again).  Intimidated by
+<code class="highlighter-rouge">sed</code>, Frodo gobbles down his newly acquired Maggot-Marbles and instantly feels ready
+to complete his next task.</p>
+</blockquote>
+
+<p>You are to <em>modify</em> the script <code class="highlighter-rouge">gandalfify.sh</code> in the <code class="highlighter-rouge">TASK_3</code> directory to be a
+relatively basic Markdown to HTML parser.  You will need to utilize <code class="highlighter-rouge">sed</code> to complete
+this task.  You do not need to understand the syntax of <code class="highlighter-rouge">Markdown</code> or <code class="highlighter-rouge">HTML</code> in order to
+complete this task – just follow the directions and it will work.  I have chosen to
+give you this assignment because it gives you visual confirmation that you have been
+successful.</p>
+
+<p>Before enumerating the tasks explicitly, I must describe some <code class="highlighter-rouge">BSD</code> vs <code class="highlighter-rouge">GNU</code>
+compatibility issues.</p>
+
+<hr />
+
+<h4 id="forbidden-behavior">Forbidden Behavior:</h4>
+
+<p>Under no circumstances are you allowed to use the <code class="highlighter-rouge">-i</code> flag for <code class="highlighter-rouge">sed</code>.  If you use it,
+you will receive 0 points.  It is not portable, and you should have no reason to use it.</p>
+
+<hr />
+
+<h4 id="required-behavior">Required Behavior:</h4>
+
+<p>You will likely want to to use <em>extended</em> regular expressions for this task.  The <code class="highlighter-rouge">+</code>
+operator (which means find one or more of the expression it modifies), for example, is
+part of the <em>extended</em> regular expressions.  For example, the regex <code class="highlighter-rouge">[a-z]+</code> simply
+denotes “one or more lowercase letter”.  Strings that are in this set would be things
+like <code class="highlighter-rouge">a</code>, <code class="highlighter-rouge">asdf</code>, <code class="highlighter-rouge">fdsa</code>, etc.</p>
+
+<p>GNU <code class="highlighter-rouge">sed</code> uses the <code class="highlighter-rouge">-r</code> flag to indicate that <em>extended</em> regular expressions are
+permitted, whereas the BSD (and therefore OSX) <code class="highlighter-rouge">sed</code> uses the <code class="highlighter-rouge">-E</code> (capital, not lower
+case!) flag to enable these.  However, as it turns out, even though the <code class="highlighter-rouge">-E</code> flag is not
+present in the GNU <code class="highlighter-rouge">man sed</code> page, it is supported and is exactly the same as <code class="highlighter-rouge">-r</code>.</p>
+
+<hr />
+
+<h4 id="task-31-generate-the-paragraphs-p-tags-for-html">Task 3.1: Generate the Paragraphs (<code class="highlighter-rouge">&lt;p&gt;</code> tags) for HTML</h4>
+
+<p>You should assume that <strong>any</strong> line that has text, but does <strong>not</strong> start with a <code class="highlighter-rouge">#</code>
+sign will turn into a paragraph.  In Markdown, you can create headers (title sections)
+by starting the line with a <code class="highlighter-rouge">#</code> and writing the title afterward.  For example, these are
+all valid Markdown headers:</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># This is an H1 header</span>
+
+This is a regular paragraph.
+
+<span class="gu">##          This is an H2 header</span>
+
+This is another regular paragraph.
+
+<span class="gu">###    This is an H3 header.</span>
+
+This is yet another regular paragraph.
+</code></pre></div></div>
+
+<p>Note that there is an arbitrary amount of whitespace (that is <em>not</em> a newline) before
+the headers.  We will account for this in task 3.2. A friendly reminder of some things that
+might be useful:</p>
+
+<p>As in class, we discussed how to only do replacements with <code class="highlighter-rouge">sed</code> if the line starts with
+a certain regex. This command only checks lines <em>beginning</em> with “The”:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sed '/^The/s/john/John/g' file
+</code></pre></div></div>
+
+<p>What we haven’t discussed is how to check lines that <em>don’t begin</em> with “The”, which is done
+as follows:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sed '/^The/!s/john/John/g' file
+</code></pre></div></div>
+
+<p>For this task, you need to surround the regular paragraphs with the HTML paragraph tag. 
+In HTML, you start a tag with <code class="highlighter-rouge">&lt;tag&gt;</code>, and end it with <code class="highlighter-rouge">&lt;/tag&gt;</code> (where the ending has a <code class="highlighter-rouge">/</code>).  The
+paragraph tag is <code class="highlighter-rouge">p</code>.  So for example, you would take the line</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   This is a regular paragraph.
+</code></pre></div></div>
+
+<p>and turn it into</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nt">&lt;p&gt;</span>This is a regular paragraph.<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<p>For simplicity, you can assume that there will not be any preceding whitespace before
+the text you are to turn into a paragraph.  So you will not have to account for
+something like</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       This is a weird paragraph with preceding whitespace.
+</code></pre></div></div>
+
+<p>Go ahead and get started!  You should write your solutions <code class="highlighter-rouge">TASK_3/gandalfify.sh</code> in the appropriate
+section.  Read the comments, you will see it.</p>
+
+<h4 id="task-32-generate-the-headers-for-html">Task 3.2: Generate the Headers for HTML</h4>
+
+<p>At this point we now have all of our paragraphs accounted for, and can start turning the
+various levels of <code class="highlighter-rouge">#</code> into the appropriate header.  You will need to account for only the 
+cases in which you have 1, 2, or 3 #s, corresponding to <code class="highlighter-rouge">&lt;h1&gt;, &lt;h2&gt;, and &lt;h3&gt;</code> respectively.</p>
+
+<p>Working with the example we started above, our text now looks something like this:</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># This is an H1 header</span>
+
+<span class="nt">&lt;p&gt;</span>This is a regular paragraph.<span class="nt">&lt;/p&gt;</span>
+
+<span class="gu">##          This is an H2 header</span>
+
+<span class="nt">&lt;p&gt;</span>This is another regular paragraph.<span class="nt">&lt;/p&gt;</span>
+
+<span class="gu">###    This is an H3 header.</span>
+
+<span class="nt">&lt;p&gt;</span>This is yet another regular paragraph.<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<p>You need to produce</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h1&gt;This is an H1 header&lt;/h1&gt;
+
+&lt;p&gt;This is a regular paragraph.&lt;/p&gt;
+
+&lt;h2&gt;This is an H2 header&lt;/h2&gt;
+
+&lt;p&gt;This is another regular paragraph.&lt;/p&gt;
+
+&lt;h3&gt;This is an H3 header.&lt;/h3&gt;
+
+&lt;p&gt;This is yet another regular paragraph.&lt;/p&gt;
+</code></pre></div></div>
+
+<p><strong>Warning</strong>:</p>
+
+<ol>
+  <li>
+    <p>Note that I have removed the whitespace between the <code class="highlighter-rouge">#</code> and the text.  You must do
+the same.</p>
+  </li>
+  <li>The whitespace in <code class="highlighter-rouge">MARBLE_SHOPPE.md</code> has a mixture of spaces and tabs in some cases.
+You must catch these.
+    <ul>
+      <li>Use the <code class="highlighter-rouge">POSIX</code> sets.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Note: Lines with no whitespace between the “#” and text should still be converted to headers.</p>
+
+    <div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gu">##Header 2 with no whitespace must be parsed correctly</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>should be</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   &lt;h2&gt;Header 2 with no whitespace must be parsed correctly&lt;/h2&gt;
+</code></pre></div></div>
+
+<h4 id="using-the-script">Using the Script</h4>
+
+<p>The <code class="highlighter-rouge">gandalfify.sh</code> script expects exactly one argument: the name of the Markdown
+document file to be parsed / turned into an HTML document.  Simply specify the name of
+the file you want to parse.  For example, assuming you were in the <code class="highlighter-rouge">a4/TASK_3</code> directory:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> ./gandalfify.sh MARBLE_SHOPPE.md
+<span class="go">Converted MARBLE_SHOPPE.md into index.html!
+</span></code></pre></div></div>
+
+<p>From there, you can “visually debug” by simply opening <code class="highlighter-rouge">index.html</code> in your browser.
+The cool thing is you can keep it open in the browser, and re-run the script and then
+just refresh your browser to see the updated version :)</p>
+
+<p>From there, if you would like to “visually debug”, you may use SCP to transfer the HTML file to 
+your local computer and open <code class="highlighter-rouge">index.html</code> in your browser.</p>
+
+<p>Once you are done, hand in the assignment using <code class="highlighter-rouge">handin fellowship-3 gandalfify.sh</code></p>
+
+<h4 id="sample-input-and-output">Sample Input and Output</h4>
+
+<p>Refer to TASK_3/TASK_3_EXAMPLE.md.</p>
+
+<h4 id="challenge-questions-optional---we-will-not-grade-this-but-you-might-find-it-fun">Challenge Questions (optional - we will not grade this, but you might find it fun!)</h4>
+
+<ol>
+  <li>
+    <p>Produce proper indentation automatically using <code class="highlighter-rouge">sed</code>.  I have left the indentation
+variables defined at the top of <code class="highlighter-rouge">gandalfify.sh</code> for you.  This should actually be
+rather simple once you have finished the rest of the task.  Just a proof of concept.</p>
+  </li>
+  <li>
+    <p>There is an un-ordered list in <code class="highlighter-rouge">MARBLE_SHOPPE.md</code>, but each element will get parsed
+into a separate paragraph.  Turn them into HTML unordered lists.</p>
+
+    <p>Unordered lists in Markdown come in a variety of forms:</p>
+
+    <div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">+</span> one format uses plus signs
+<span class="p">+</span> to indicate new bullets
+<span class="p">+</span> in the list
+<span class="p">
+-</span> one format uses hyphens
+<span class="p">-</span> to indicate new bullets
+<span class="p">-</span> in the list
+<span class="p">
+*</span> one format uses plus asterisks
+<span class="p">*</span> to indicate new bullets
+<span class="p">*</span> in the list
+</code></pre></div>    </div>
+
+    <p>They are all equivalent, and you can assume that I will not mix them (<code class="highlighter-rouge">+</code> and <code class="highlighter-rouge">-</code> for
+example, will not be used in the same list).</p>
+
+    <p>The HTML unordered list is as follows:</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;</span>This is an item.<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>This is another item.<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>This is the last item.<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div>    </div>
+
+    <p>So you will not only need to surround each bullet from Markdown in an <code class="highlighter-rouge">li</code> tag, but
+you will have to be able to find the beginning and end of the list and put the <code class="highlighter-rouge">ul</code>
+tag.  You should assume that there will not be any newlines between bullet points.
+For example:</p>
+
+    <div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">-</span> This list is acceptable
+<span class="p">-</span> Because it is
+<span class="p">-</span> Formatted correctly
+<span class="p">-</span> Yay!
+</code></pre></div>    </div>
+
+    <p>whereas</p>
+
+    <div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">-</span> This list will end up as two separate lists
+<span class="p">-</span> Because there is an empty line between them
+<span class="p">
+-</span> And your regex will see this as the end of the list
+<span class="p">-</span> ...most likely.
+</code></pre></div>    </div>
+  </li>
+</ol>
 
 
       <div id="footer">
@@ -464,7 +702,7 @@ Time goes up; <code class="highlighter-rouge">unicycling</code> is the latest.</
     (<a href="mailto:cs2043-ta@cornell.edu?subject=[CS 2043]">cs2043-ta@cornell.edu</a>).
   </div>
   <div class="pull-right">
-    Last compiled Wed, 13 Feb 2019 11:15:49 -0500.
+    Last compiled Wed, 13 Feb 2019 12:08:12 -0500.
   </div>
 </div>
 
