@@ -155,6 +155,7 @@ on how something works / what commands you learned when.</p>
       <option class="text-dark" style="text-transform: none" data-tokens="emacs An editor, also from 1976." data-target="#The_Find_command__editing__and_scripting_cmd_emacs" data-content="(&lt;kbd&gt;emacs&lt;/kbd&gt;) An editor, also from 1976.">(<kbd>emacs</kbd>) An editor, also from 1976.</option>
       <option class="text-dark" style="text-transform: none" data-tokens="fg Foreground" data-target="#Your_shell__jobs__and_proc_cmd_fg" data-content="(&lt;kbd&gt;fg&lt;/kbd&gt;) &lt;kbd&gt;F&lt;/kbd&gt;ore&lt;kbd&gt;g&lt;/kbd&gt;round">(<kbd>fg</kbd>) <kbd>F</kbd>ore<kbd>g</kbd>round</option>
       <option class="text-dark" style="text-transform: none" data-tokens="find Search for Files in a Directory Hierarchy" data-target="#The_Find_command__editing__and_scripting_cmd_find" data-content="(&lt;kbd&gt;find&lt;/kbd&gt;) Search for Files in a Directory Hierarchy">(<kbd>find</kbd>) Search for Files in a Directory Hierarchy</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="function declare a new function bash builtin" data-target="#Advanced_Bash_Scripting_cmd_function" data-content="(&lt;kbd&gt;function&lt;/kbd&gt;) declare a new &lt;kbd&gt;function&lt;/kbd&gt; (bash builtin)">(<kbd>function</kbd>) declare a new <kbd>function</kbd> (bash builtin)</option>
       <option class="text-dark" style="text-transform: none" data-tokens="git push Send repo contents to bare remote" data-target="#Your_shell_and_working_remotely_cmd_git_push" data-content="(&lt;kbd&gt;git push&lt;/kbd&gt;) Send repo contents to bare remote">(<kbd>git push</kbd>) Send repo contents to bare remote</option>
       <option class="text-dark" style="text-transform: none" data-tokens="git The Stupid Content Tracker" data-target="#The_Find_command__editing__and_scripting_cmd_git" data-content="(&lt;kbd&gt;git&lt;/kbd&gt;) The Stupid Content Tracker">(<kbd>git</kbd>) The Stupid Content Tracker</option>
       <option class="text-dark" style="text-transform: none" data-tokens="grep Globally Search a Regular Expression and Print" data-target="#Expansions_and_Regular_Expressions_cmd_grep" data-content="(&lt;kbd&gt;grep&lt;/kbd&gt;) &lt;kbd&gt;G&lt;/kbd&gt;lobally Search a &lt;kbd&gt;R&lt;/kbd&gt;egular &lt;kbd&gt;E&lt;/kbd&gt;xpression and &lt;kbd&gt;P&lt;/kbd&gt;rint">(<kbd>grep</kbd>) <kbd>G</kbd>lobally Search a <kbd>R</kbd>egular <kbd>E</kbd>xpression and <kbd>P</kbd>rint</option>
@@ -260,6 +261,11 @@ on how something works / what commands you learned when.</p>
       <option class="text-dark" style="text-transform: none" data-tokens="paste Examples" data-target="#Sed__cut__and_paste_info_paste_Examples" data-content="&lt;kbd&gt;paste&lt;/kbd&gt; Examples"><kbd>paste</kbd> Examples</option>
       <option class="text-dark" style="text-transform: none" data-tokens="split Examples" data-target="#Sed__cut__and_paste_info_split_Examples" data-content="&lt;kbd&gt;split&lt;/kbd&gt; Examples"><kbd>split</kbd> Examples</option>
       <option class="text-dark" style="text-transform: none" data-tokens="join Examples" data-target="#Sed__cut__and_paste_info_join_Examples" data-content="&lt;kbd&gt;join&lt;/kbd&gt; Examples"><kbd>join</kbd> Examples</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="Bash Case Statement" data-target="#Advanced_Bash_Scripting_info_Bash_Case_Statement" data-content="Bash Case Statement">Bash Case Statement</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="Bash Case vs If Comparison" data-target="#Advanced_Bash_Scripting_info_Bash_Case_vs_If_Comparison" data-content="Bash Case vs If Comparison">Bash Case vs If Comparison</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="Using Sets with Case" data-target="#Advanced_Bash_Scripting_info_Using_Sets_with_Case" data-content="Using Sets with Case">Using Sets with Case</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="Uisng Sets with If" data-target="#Advanced_Bash_Scripting_info_Uisng_Sets_with_If" data-content="Uisng Sets with If">Uisng Sets with If</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="Bash Arrays an Overview" data-target="#Advanced_Bash_Scripting_info_Bash_Arrays_L_PAREN_an_Overview_R_PAREN" data-content="Bash Arrays (an Overview)">Bash Arrays (an Overview)</option>
 
       </select><!-- end info selections -->
     </div><!-- col-xs-12 col-sm-6 -->
@@ -12467,6 +12473,990 @@ Candy 12 120,000</code></pre>
   <!-- div wrapper _body -->
  </div>
  <!-- card -->
+ <div class="card">
+  <div class="card-header" id="Advanced_Bash_Scripting_header">
+   <h5 class="mb-0">
+    <button aria-controls="Advanced_Bash_Scripting_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Advanced_Bash_Scripting_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+     11 – Advanced Bash Scripting
+    </button>
+   </h5>
+  </div>
+  <div aria-labelledby="Advanced_Bash_Scripting_header" class="collapse accordion" data-parent="#lectures" data-toggle="collapse" id="Advanced_Bash_Scripting_body">
+   <div class="card-body">
+    <!-- (function) declare a new function (bash builtin) ~~ (function) declare a new function (bash builtin) ~~ (function) declare a new function (bash builtin) -->
+    <div class="card">
+     <div class="card-header" id="Advanced_Bash_Scripting_cmd_function_header">
+      <h5 class="mb-0">
+       <button aria-controls="Advanced_Bash_Scripting_cmd_function_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Advanced_Bash_Scripting_cmd_function_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>function</kbd>
+        ) declare a new
+        <kbd>function</kbd>
+        (bash builtin)
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Advanced_Bash_Scripting_cmd_function_header" class="collapse" data-parent="#Advanced_Bash_Scripting_body" data-toggle="collapse" id="Advanced_Bash_Scripting_cmd_function_body">
+      <div class="card-body">
+       <pre class="bash"><code>function &lt;name&gt; {
+body...
+}</code></pre>
+       <p class="card-text">
+        line breaks are essential!
+       </p>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- Bash Case Statement ~~ Bash Case Statement ~~ Bash Case Statement -->
+    <div class="card">
+     <div class="card-header" id="Advanced_Bash_Scripting_info_Bash_Case_Statement_header">
+      <h5 class="mb-0">
+       <button aria-controls="Advanced_Bash_Scripting_info_Bash_Case_Statement_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Advanced_Bash_Scripting_info_Bash_Case_Statement_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        Bash Case Statement
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Advanced_Bash_Scripting_info_Bash_Case_Statement_header" class="collapse" data-parent="#Advanced_Bash_Scripting_body" data-toggle="collapse" id="Advanced_Bash_Scripting_info_Bash_Case_Statement_body">
+      <div class="card-body">
+       <ul>
+        <li>
+         Just like a switch statement in other languages, only better.
+        </li>
+        <li>
+         <p class="card-text">
+          Does not carry on to all cases if you forget that
+          <code class="c">
+           break
+          </code>
+          keyword.
+         </p>
+         <pre class="bash"><code>case "$var" in
+  "A" )
+      cmds to execute for case "A"
+      ;;
+  "B" )
+      cmds to execute for case "B"
+      ;;
+  * )
+      cmds for DEFAULT (not matched) case
+      ;;</code></pre>
+        </li>
+        <li>
+         Sort of like shorthand for
+         <code class="bash">
+          if
+         </code>
+         <code class="bash">
+          -
+         </code>
+         <code class="bash">
+          elif
+         </code>
+         <code class="bash">
+          -
+         </code>
+         <code class="bash">
+          else
+         </code>
+         statements…
+        </li>
+        <li>
+         <p class="card-text">
+          …only not quite the same!
+         </p>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- Bash Case vs If Comparison ~~ Bash Case vs If Comparison ~~ Bash Case vs If Comparison -->
+    <div class="card">
+     <div class="card-header" id="Advanced_Bash_Scripting_info_Bash_Case_vs_If_Comparison_header">
+      <h5 class="mb-0">
+       <button aria-controls="Advanced_Bash_Scripting_info_Bash_Case_vs_If_Comparison_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Advanced_Bash_Scripting_info_Bash_Case_vs_If_Comparison_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        Bash Case vs If Comparison
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Advanced_Bash_Scripting_info_Bash_Case_vs_If_Comparison_header" class="collapse" data-parent="#Advanced_Bash_Scripting_body" data-toggle="collapse" id="Advanced_Bash_Scripting_info_Bash_Case_vs_If_Comparison_body">
+      <div class="card-body">
+       <h2 id="simple-if-and-case-examples">
+        Simple If and Case Examples
+       </h2>
+       <ul>
+        <li>
+         Make a simple program to print between 0 and 2
+         <code>blargh</code>
+         s
+        </li>
+        <li>
+         Input is
+         <code>$1</code>
+         , explicit check not necessary (
+         <code class="bash">
+          else
+         </code>
+         or
+         <code class="bash">
+          *)
+         </code>
+         case)
+        </li>
+       </ul>
+       <div class="table-static">
+        <table class="table table-bordered" id="columns_simple_if_vs_case">
+         <colgroup>
+          <col width="48.0%" />
+          
+          <col width="48.0%" />
+          
+         </colgroup>
+         <tbody>
+          <tr>
+           <td>
+            <pre class="bash"><code>#! /usr/bin/env bash
+#
+# (empty to fill space in minted)
+# (empty to fill space in minted)
+# (empty to fill space in minted)
+#
+if [[ "$1" == "0" ]]; then
+    echo "0 blargh echoes..."
+elif [[ "$1" == "1" ]]; then
+    echo "1 blargh echoes..."
+    echo " [1] blargh"
+# number or string
+elif [[ "$1" -eq 2 ]]; then
+    echo "2 blargh echoes..."
+    echo " [1] blargh"
+    echo " [2] blargh"
+else
+    echo "Blarghs come in [0-2]."
+    exit 1
+fi</code></pre>
+            <p class="card-text">
+             <mark><a href="https://github.com/cs2043-sp17/lecture-demos/blob/master/lec12/case_and_if/simple/if.sh">
+               Demo file
+               <code>simple/if.sh</code></a></mark>
+             .
+            </p>
+           </td>
+           <td>
+            <pre class="bash"><code>#! /usr/bin/env bash
+case "$1" in
+    "0" )
+        echo "0 blargh echoes..."
+        ;;
+    "1" )
+        echo "1 blargh echoes..."
+        echo " [1] blargh"
+        ;;
+    # number or string
+    2 )
+        echo "2 blargh echoes..."
+        echo " [1] blargh"
+        echo " [2] blargh"
+        ;;
+    * )
+        echo "Blarghs come in [0-2]."
+        exit 1
+        ;;
+esac</code></pre>
+            <p class="card-text">
+             <mark><a href="https://github.com/cs2043-sp17/lecture-demos/blob/master/lec12/case_and_if/simple/case.sh">
+               Demo file
+               <code>simple/case.sh</code></a></mark>
+             .
+            </p>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+        <!-- table table-bordered -->
+       </div>
+       <!-- table-static -->
+       <h2 id="difference-between-case-and-if-comparisons">
+        Difference Between Case and If Comparisons
+       </h2>
+       <ul>
+        <li>
+         The matching strategy is different for
+         <code class="bash">
+          case
+         </code>
+         than
+         <code class="bash">
+          if
+         </code>
+         .
+        </li>
+        <li>
+         By default,
+         <code class="bash">
+          case
+         </code>
+         statements are comparing
+         <em>
+          patterns
+         </em>
+         .
+         <ul>
+          <li>
+           Note that a single value e.g.,
+           <code class="bash">
+            "A"
+           </code>
+           is just an explicit
+           <em>
+            pattern
+           </em>
+           .
+          </li>
+          <li>
+           Patterns are
+           <strong>
+            NOT
+           </strong>
+           regular expressions! Refer to
+           <span class="citation" data-cites="patterns">
+            [Bash Reference Manual
+            <a href="#ref-patterns">
+             2017
+            </a>
+            <a href="#ref-patterns">
+             a
+            </a>
+            ]
+           </span>
+           .
+          </li>
+         </ul>
+        </li>
+        <li>
+         By default,
+         <code class="bash">
+          if
+         </code>
+         statements are comparing values.
+         <ul>
+          <li>
+           To use
+           <em>
+            extended regular expresions
+           </em>
+           in
+           <code class="bash">
+            if
+           </code>
+           statements, you need to use the
+           <code class="bash">
+            =~
+           </code>
+           operator.
+          </li>
+          <li>
+           Use
+           <code class="bash">
+            [[ double bracket expressions ]]
+           </code>
+           for extended regular expressions in
+           <code class="bash">
+            if
+           </code>
+          </li>
+          <li>
+           The
+           <code class="bash">
+            =~
+           </code>
+           operator not available for
+           <em>
+            all
+           </em>
+           <code>bash &lt; 4.0</code>
+           . Check
+           <code>man bash</code>
+           and search for
+           <code>=~</code>
+           .
+           <ul>
+            <li>
+             Recall: after
+             <code>man bash</code>
+             , type
+             <code>/expr</code>
+             and hit
+             <code>&lt;enter&gt;</code>
+             to search. So type
+             <code>/=~</code>
+             and hit
+             <code>&lt;enter&gt;</code>
+             .
+            </li>
+            <li>
+             Cycle through results with
+             <code>n</code>
+             for next search result.
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- Using Sets with Case ~~ Using Sets with Case ~~ Using Sets with Case -->
+    <div class="card">
+     <div class="card-header" id="Advanced_Bash_Scripting_info_Using_Sets_with_Case_header">
+      <h5 class="mb-0">
+       <button aria-controls="Advanced_Bash_Scripting_info_Using_Sets_with_Case_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Advanced_Bash_Scripting_info_Using_Sets_with_Case_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        Using Sets with Case
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Advanced_Bash_Scripting_info_Using_Sets_with_Case_header" class="collapse" data-parent="#Advanced_Bash_Scripting_body" data-toggle="collapse" id="Advanced_Bash_Scripting_info_Using_Sets_with_Case_body">
+      <div class="card-body">
+       <ul>
+        <li>
+         <p class="card-text">
+          See
+          <mark><a href="https://github.com/cs2043-sp17/lecture-demos/blob/master/lec12/case_and_if/sets/case.sh">
+            demo file
+            <code>sets/case.sh</code></a></mark>
+          .
+         </p>
+         <pre class="bash"><code>#!/usr/bin/env bash
+case "$1" in
+    [[:digit:]] )
+        echo "$1 blargh echoes..."
+        for (( i = 1; i &lt;= $1; i++ )); do
+            echo " [$i] blargh"
+        done
+        ;;
+    * )
+        echo "Blarghs only come in [0-9]."
+        exit 1
+        ;;
+esac</code></pre>
+        </li>
+       </ul>
+       <ul>
+        <li>
+         Works on inputs
+         <code>0-9</code>
+         , as well as exit for everything else.
+        </li>
+        <li>
+         Will
+         <strong>
+          not
+         </strong>
+         match
+         <code>11</code>
+         (sets only match one character, see
+         <span class="citation" data-cites="patterns">
+          [Bash Reference Manual
+          <a href="#ref-patterns">
+           2017
+          </a>
+          <a href="#ref-patterns">
+           a
+          </a>
+          ]
+         </span>
+         ).
+        </li>
+        <li>
+         So
+         <code class="bash">
+          *)
+         </code>
+         being
+         <strong>
+          last
+         </strong>
+         is
+         <em>
+          equivalent
+         </em>
+         to
+         <code class="c">
+          default
+         </code>
+         in other languages
+         <ul>
+          <li>
+           But only if
+           <code class="bash">
+            * )
+           </code>
+           is
+           <em>
+            actually
+           </em>
+           last!
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- Uisng Sets with If ~~ Uisng Sets with If ~~ Uisng Sets with If -->
+    <div class="card">
+     <div class="card-header" id="Advanced_Bash_Scripting_info_Uisng_Sets_with_If_header">
+      <h5 class="mb-0">
+       <button aria-controls="Advanced_Bash_Scripting_info_Uisng_Sets_with_If_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Advanced_Bash_Scripting_info_Uisng_Sets_with_If_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        Uisng Sets with If
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Advanced_Bash_Scripting_info_Uisng_Sets_with_If_header" class="collapse" data-parent="#Advanced_Bash_Scripting_body" data-toggle="collapse" id="Advanced_Bash_Scripting_info_Uisng_Sets_with_If_body">
+      <div class="card-body">
+       <h2 id="using-sets-with-if-part-1">
+        Using Sets with If Part 1
+       </h2>
+       <ul>
+        <li>
+         <p class="card-text">
+          See
+          <mark><a href="https://github.com/cs2043-sp17/lecture-demos/blob/master/lec12/case_and_if/sets/if.sh">
+            demo file
+            <code>sets/if.sh</code></a></mark>
+          .
+         </p>
+         <pre class="bash"><code>#!/usr/bin/env bash
+if [[ "$1" =~ [[:digit:]] ]]; then
+    echo "$1 blargh echoes..."
+    for (( i = 1; i &lt;= $1; i++ )); do
+        echo " [$i] blargh"
+    done
+else
+    echo "Blarghs only come in [0-9]."
+    exit 1
+fi</code></pre>
+        </li>
+        <li>
+         Works on
+         <code class="bash">
+          [0-9]
+         </code>
+         .
+        </li>
+        <li>
+         Cool! Works on
+         <code class="bash">
+          99
+         </code>
+         .
+        </li>
+        <li>
+         <p class="card-text">
+          Whoops! Works on
+          <code class="bash">
+           208a
+          </code>
+          – the
+          <code class="bash">
+           for
+          </code>
+          loop crashes!
+         </p>
+        </li>
+       </ul>
+       <h2 id="using-sets-with-if-part-2">
+        Using Sets with If Part 2
+       </h2>
+       <ul>
+        <li>
+         <p class="card-text">
+          Option 1: negate a negation (read:
+          <em>
+           if not “not a number”
+          </em>
+          ):
+         </p>
+         <pre class="bash"><code># +-----------+  +-----------------+
+# | Negate if |  | Negate (invert) |
+# | match     |  | set             |
+# +-----------+  +-----------------+
+#     |          |
+if [[ ! "$1" =~ [^[:digit:]] ]]; then</code></pre>
+        </li>
+        <li>
+         <p class="card-text">
+          Option 2: use a complete
+          <em>
+           extended regular expression pattern
+          </em>
+          :
+         </p>
+         <pre class="bash"><code>#   +----------------------+
+#   | ^: beginning of line |
+#   +----------------------+
+#             |
+if [[ "$1" =~ ^[[:digit:]]+$ ]]; then
+# +--------------------+  ||  +-----------------------+
+# | +: 1 or more digit |--++--| $ matches end of line |
+# +--------------------+      +-----------------------+</code></pre>
+        </li>
+       </ul>
+       <h2 id="using-sets-with-if-part-3-were-finsihed-right">
+        Using Sets with If Part 3 (We’re Finsihed, Right?!)
+       </h2>
+       <ul>
+        <li>
+         The last example felt pretty bullet-proof, what can go wrong?
+        </li>
+        <li>
+         <p class="card-text">
+          Using
+          <mark><a href="https://github.com/cs2043-sp17/lecture-demos/blob/master/lec12/case_and_if/eregex/if.sh">
+            demo file
+            <code>eregex/if.sh</code></a></mark>
+          :
+         </p>
+         <pre class="bash"><code>$ ./if.sh 08
+./if.sh: line 4: ((: i &lt;= 08: value too great for base
+    (error token is "08")</code></pre>
+        </li>
+        <li>
+         <p class="card-text">
+          This is because of the leading
+          <code class="bash">
+           0
+          </code>
+          —
+          <code>bash</code>
+          treats this as
+          <em>
+           octal
+          </em>
+          :
+         </p>
+         <pre class="bash"><code>$ ./if.sh 0111
+0111 blargh echos...
+  [1] blargh
+  [2] blargh
+  ...
+  [72] blargh
+  [73] blargh</code></pre>
+        </li>
+        <li>
+         <p class="card-text">
+          For now, we’ll happily ignore this.
+         </p>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- Bash Arrays (an Overview) ~~ Bash Arrays (an Overview) ~~ Bash Arrays (an Overview) -->
+    <div class="card">
+     <div class="card-header" id="Advanced_Bash_Scripting_info_Bash_Arrays_L_PAREN_an_Overview_R_PAREN_header">
+      <h5 class="mb-0">
+       <button aria-controls="Advanced_Bash_Scripting_info_Bash_Arrays_L_PAREN_an_Overview_R_PAREN_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Advanced_Bash_Scripting_info_Bash_Arrays_L_PAREN_an_Overview_R_PAREN_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        Bash Arrays (an Overview)
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Advanced_Bash_Scripting_info_Bash_Arrays_L_PAREN_an_Overview_R_PAREN_header" class="collapse" data-parent="#Advanced_Bash_Scripting_body" data-toggle="collapse" id="Advanced_Bash_Scripting_info_Bash_Arrays_L_PAREN_an_Overview_R_PAREN_body">
+      <div class="card-body">
+       <ul>
+        <li>
+         Arrays in
+         <code>bash</code>
+         are extraordinarily flexible in some senses…
+        </li>
+        <li>
+         …and particularly fickle in other senses.
+        </li>
+        <li>
+         <p class="card-text">
+          Short version:
+         </p>
+         <pre class="bash"><code>arr=( use parentheses and separate items by spaces )</code></pre>
+        </li>
+        <li>
+         Mixed “types”:
+         <code class="bash">
+          my_arr=( "a string" 1 twelve "33" )
+         </code>
+        </li>
+        <li>
+         Question: what are the types of
+         <code class="bash">
+          twelve
+         </code>
+         and
+         <code class="bash">
+          "33"
+         </code>
+         <ul>
+          <li>
+           <code class="bash">
+            twelve
+           </code>
+           would be interpreted as a
+           <code>string</code>
+           .
+          </li>
+          <li>
+           <code class="bash">
+            "33"
+           </code>
+           can be either a
+           <code>string</code>
+           or a number!
+          </li>
+          <li>
+           <p class="card-text">
+            <code>bash</code>
+            doesn’t really have a “type system”.
+           </p>
+           <pre class="bash"><code>my_arr=( "a string" 1 twelve "33" )
+echo "Index '3' with '44' added: $(( ${my_arr[3]} + 44 ))"
+# Prints:
+# Index '3' with '44' added: 77</code></pre>
+          </li>
+         </ul>
+        </li>
+       </ul>
+       <h2 id="citation-matters">
+        Citation Matters!
+       </h2>
+       <ul>
+        <li>
+         The majority of the remaining examples are either copied or modified from
+         <span class="citation" data-cites="arrays">
+          [Bash Reference Manual
+          <a href="#ref-arrays">
+           2017
+          </a>
+          <a href="#ref-arrays">
+           b
+          </a>
+          ]
+         </span>
+         .
+         <ul>
+          <li>
+           A truly excellent resource, worth reading on your own!
+          </li>
+          <li>
+           We do not have time to cover all of the cool and obscure things you can do with arrays.
+          </li>
+         </ul>
+        </li>
+        <li>
+         We’ll be going through chunks of
+         <mark><a href="https://github.com/cs2043-sp17/lecture-demos/tree/master/lec13/slide_arrays.sh">
+           demo file
+           <code>slide_arrays.sh</code></a></mark>
+         .
+        </li>
+       </ul>
+       <h2 id="alternative-initialization">
+        Alternative Initialization
+       </h2>
+       <ul>
+        <li>
+         <code class="bash">
+          arr=( parentheses enumerations )
+         </code>
+         gives indices in range
+         <code class="bash">
+          0
+         </code>
+         , up to
+         <em>
+          but not including
+         </em>
+         <code>length</code>
+         of array.
+        </li>
+        <li>
+         <p class="card-text">
+          Custom indices are allowed!
+         </p>
+         <pre class="bash"><code>arr[11]=11
+arr[22]=22
+arr[33]=33
+arr[51]="a string value"
+arr[52]="different string value"</code></pre>
+        </li>
+        <li>
+         <p class="card-text">
+          Indices do
+          <strong>
+           not
+          </strong>
+          need to be integers:
+         </p>
+         <pre class="bash"><code>some_array=( zero one two ) # Indices: 0, 1, 2
+some_array[11]=11           # Indices: 0, 1, 2, 11
+some_array["hi"]="there"    # Indices: 0, 1, 2, 11, "hi"</code></pre>
+        </li>
+        <li>
+         <p class="card-text">
+          You
+          <strong>
+           cannot
+          </strong>
+          have an
+          <code>array</code>
+          of
+          <code>array</code>
+          s.
+         </p>
+        </li>
+       </ul>
+       <h2 id="array-functions">
+        Array Functions
+       </h2>
+       <ul>
+        <li>
+         You perform an
+         <code>array</code>
+         operation with
+         <code class="bash">
+          ${expr}
+         </code>
+         <ul>
+          <li>
+           Works on non-arrays too; mandatory for arrays
+          </li>
+         </ul>
+        </li>
+        <li>
+         <p class="card-text">
+          You use the name of the variable followed by the operation:
+         </p>
+         <pre class="bash"><code>echo "Index 11: ${arr[11]}" # prints: Index 11: 11
+echo "Index 51: ${arr[51]}" # prints: Index 51: a string value
+echo "Index 0: ${arr[0]}"   # DOES NOT EXIST! (aka nothing)</code></pre>
+        </li>
+        <li>
+         <p class="card-text">
+          Like loops,
+          <code>@</code>
+          and
+          <code>*</code>
+          expand differently:
+         </p>
+         <pre class="bash"><code>echo "Individual: ${arr[@]}"
+# Individual: 11 22 33 a string value different string value
+echo "Joined::::: ${arr[*]}"
+# Joined::::: 11 22 33 a string value different string value</code></pre>
+        </li>
+        <li>
+         <p class="card-text">
+          Differently how?
+         </p>
+         <pre class="bash"><code>echo "Length of Individual: ${#arr[@]}"
+# Length of Individual: 5
+echo "Length of Joined::::: ${#arr[*]}"
+# Length of Joined::::: 5</code></pre>
+        </li>
+       </ul>
+       <h2 id="differently-how">
+        Differently HOW?!!!
+       </h2>
+       <ul>
+        <li>
+         Easier to compare with loops
+         <ul>
+          <li>
+           Remember that
+           <code>;</code>
+           allows you to continue on the same line.
+          </li>
+         </ul>
+        </li>
+        <li>
+         <p class="card-text">
+          Individual expansion (
+          <code>@</code>
+          ):
+         </p>
+         <pre class="bash"><code>for x in "${arr[@]}"; do echo "$x"; done
+# 11
+# 22
+# 33
+# a string value
+# different string value</code></pre>
+        </li>
+        <li>
+         <p class="card-text">
+          Joined expansion (
+          <code>*</code>
+          ):
+         </p>
+         <pre class="bash"><code>for x in "${arr[*]}"; do echo "$x"; done
+# 11 22 33 a string value different string value</code></pre>
+        </li>
+        <li>
+         The
+         <code>*</code>
+         loop only executes once (everything is
+         <em>
+          globbed
+         </em>
+         together).
+        </li>
+        <li>
+         <p class="card-text">
+          The
+          <code>@</code>
+          loop iterates over each element in the array.
+         </p>
+        </li>
+       </ul>
+       <h2 id="even-more-initialization-options">
+        Even More Initialization Options
+       </h2>
+       <ul>
+        <li>
+         <p class="card-text">
+          Evaluate expressions and initialize at once:
+         </p>
+         <pre class="bash"><code>arr[44]=$((arr[11] + arr[33]))
+echo "Index 44: ${arr[44]}"    # Index 44: 44
+arr[55]=$((arr[11] + arr[44]))
+echo "Index 55: ${arr[55]}"    # Index 55: 55</code></pre>
+        </li>
+        <li>
+         <p class="card-text">
+          Alternative index specifications:
+         </p>
+         <pre class="bash"><code>new_arr=([17]="seventeen" [24]="twenty-four")
+new_arr[99]="ninety nine" # may as well, not new
+for x in "${new_arr[@]}"; do echo "$x"; done
+# seventeen
+# twenty-four
+# ninety nine</code></pre>
+        </li>
+       </ul>
+       <ul>
+        <li>
+         <p class="card-text">
+          Get the list of indices:
+         </p>
+         <pre class="bash"><code>for idx in "${!new_arr[@]}"; do echo "$idx"; done
+# 17
+# 24
+# 99</code></pre>
+        </li>
+       </ul>
+       <h2 id="array-slicing">
+        Array Slicing
+       </h2>
+       <ul>
+        <li>
+         You can just as easily
+         <em>
+          slice
+         </em>
+         your arrays.
+        </li>
+        <li>
+         Use
+         <code>@</code>
+         to get whole array, then specify indices to
+         <em>
+          slice
+         </em>
+         <ul>
+          <li>
+           Syntax:
+           <code class="bash">
+            ${array_var[@]:start_index:slice_size}
+           </code>
+          </li>
+          <li>
+           If
+           <code>end_index</code>
+           is not specified, takes until last index
+          </li>
+         </ul>
+        </li>
+       </ul>
+       <pre class="bash"><code>zed=( zero one two three four )
+echo "From start: ${zed[@]:0}"
+# From start: zero one two three four
+echo "From 2: ${zed[@]:2}"
+# From 2: two three four
+echo "Indices [2-4]: ${zed[@]:2:3}"
+# Indices [2-4]: two three four
+for x in "${zed[@]:2:3}"; do echo "$x"; done
+# two
+# three
+# four
+for x in "${zed[*]:2:3}"; do echo "$x"; done
+# two three four</code></pre>
+       <h2 id="more">
+        More…
+       </h2>
+       <ul>
+        <li>
+         This was a
+         <em>
+          small subset
+         </em>
+         of what can be done with
+         <code>bash</code>
+         arrays.
+        </li>
+        <li>
+         I highly suggest you go through the examples listed in
+         <span class="citation" data-cites="arrays">
+          [Bash Reference Manual
+          <a href="#ref-arrays">
+           2017
+          </a>
+          <a href="#ref-arrays">
+           b
+          </a>
+          ]
+         </span>
+         in.
+         <ul>
+          <li>
+           Search for
+           <code>Substring Removal</code>
+           for some insanely cool tricks!
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+   </div>
+   <!-- card-body -->
+  </div>
+  <!-- div wrapper _body -->
+ </div>
+ <!-- card -->
 </div>
 <!-- END lectures -->
 <!-- WARNING: make sure there is an empty line at the BEGINNING and END of this file. -->
@@ -12490,6 +13480,30 @@ Candy 12 120,000</code></pre>
     . 2010. ASCII character codes and html, octal, hex, and decimal chart conversion.
     <a class="btn" href="http://www.asciitable.com/" role="button">
      http://www.asciitable.com/
+    </a>
+    .
+   </p>
+  </div>
+  <div class="list-group-item" id="ref-patterns">
+   <p>
+    <span class="smallcaps">
+     Bash Reference Manual
+    </span>
+    . 2017a. Bash reference manual: Pattern matching.
+    <a class="btn" href="http://www.gnu.org/software/bash/manual/bashref.html#Pattern-Matching" role="button">
+     http://www.gnu.org/software/bash/manual/bashref.html#Pattern-Matching
+    </a>
+    .
+   </p>
+  </div>
+  <div class="list-group-item" id="ref-arrays">
+   <p>
+    <span class="smallcaps">
+     Bash Reference Manual
+    </span>
+    . 2017b. Bash reference manual: Shell parameter expansion.
+    <a class="btn" href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html" role="button">
+     https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
     </a>
     .
    </p>
@@ -12590,7 +13604,7 @@ Candy 12 120,000</code></pre>
     (<a href="mailto:cs2043-ta@cornell.edu?subject=[CS 2043]">cs2043-ta@cornell.edu</a>).
   </div>
   <div class="pull-right">
-    Last compiled Fri, 15 Feb 2019 11:00:48 -0500.
+    Last compiled Fri, 15 Feb 2019 11:10:21 -0500.
   </div>
 </div>
 
