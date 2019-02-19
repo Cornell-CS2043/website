@@ -170,6 +170,8 @@ on how something works / what commands you learned when.</p>
       <option class="text-dark" style="text-transform: none" data-tokens="kill Kill or Signal a Process" data-target="#Your_shell__jobs__and_proc_cmd_kill" data-content="(&lt;kbd&gt;kill&lt;/kbd&gt;) &lt;kbd&gt;Kill&lt;/kbd&gt; or Signal a Process">(<kbd>kill</kbd>) <kbd>Kill</kbd> or Signal a Process</option>
       <option class="text-dark" style="text-transform: none" data-tokens="killall Kill all Processes by Name" data-target="#Your_shell__jobs__and_proc_cmd_killall" data-content="(&lt;kbd&gt;killall&lt;/kbd&gt;) &lt;kbd&gt;Kill&lt;/kbd&gt; &lt;kbd&gt;all&lt;/kbd&gt; Processes by Name">(<kbd>killall</kbd>) <kbd>Kill</kbd> <kbd>all</kbd> Processes by Name</option>
       <option class="text-dark" style="text-transform: none" data-tokens="less As the saying goes…" data-target="#UNIX_Permissions_and_find_cmd_less" data-content="(&lt;kbd&gt;less&lt;/kbd&gt;) As the saying goes…">(<kbd>less</kbd>) As the saying goes…</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="ln -s symlink a filesystem obejct into the directory tree" data-target="#Awk___Gawk_cmd_ln__s" data-content="(&lt;kbd&gt;ln -s&lt;/kbd&gt;) sym&lt;kbd&gt;l&lt;/kbd&gt;in&lt;kbd&gt;k&lt;/kbd&gt; a filesystem obejct into the directory tree">(<kbd>ln -s</kbd>) sym<kbd>l</kbd>in<kbd>k</kbd> a filesystem obejct into the directory tree</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="ln link a filesystem obejct into the directory tree" data-target="#Awk___Gawk_cmd_ln" data-content="(&lt;kbd&gt;ln&lt;/kbd&gt;) &lt;kbd&gt;l&lt;/kbd&gt;in&lt;kbd&gt;k&lt;/kbd&gt; a filesystem obejct into the directory tree">(<kbd>ln</kbd>) <kbd>l</kbd>in<kbd>k</kbd> a filesystem obejct into the directory tree</option>
       <option class="text-dark" style="text-transform: none" data-tokens="ls List Directory Contents" data-target="#Navigating_the_Unix_File_System_cmd_ls" data-content="(&lt;kbd&gt;ls&lt;/kbd&gt;) &lt;kbd&gt;L&lt;/kbd&gt;i&lt;kbd&gt;s&lt;/kbd&gt;t Directory Contents">(<kbd>ls</kbd>) <kbd>L</kbd>i<kbd>s</kbd>t Directory Contents</option>
       <option class="text-dark" style="text-transform: none" data-tokens="lsof List of Open Files" data-target="#Extra_commands_and_details_cmd_lsof" data-content="(&lt;kbd&gt;lsof&lt;/kbd&gt;) &lt;kbd&gt;L&lt;/kbd&gt;i&lt;kbd&gt;s&lt;/kbd&gt;t of &lt;kbd&gt;O&lt;/kbd&gt;pen &lt;kbd&gt;F&lt;/kbd&gt;iles">(<kbd>lsof</kbd>) <kbd>L</kbd>i<kbd>s</kbd>t of <kbd>O</kbd>pen <kbd>F</kbd>iles</option>
       <option class="text-dark" style="text-transform: none" data-tokens="man The Manual Command" data-target="#More_on_Commands_cmd_man" data-content="(&lt;kbd&gt;man&lt;/kbd&gt;) The &lt;kbd&gt;Man&lt;/kbd&gt;ual Command">(<kbd>man</kbd>) The <kbd>Man</kbd>ual Command</option>
@@ -266,6 +268,12 @@ on how something works / what commands you learned when.</p>
       <option class="text-dark" style="text-transform: none" data-tokens="Using Sets with Case" data-target="#Advanced_Bash_Scripting_info_Using_Sets_with_Case" data-content="Using Sets with Case">Using Sets with Case</option>
       <option class="text-dark" style="text-transform: none" data-tokens="Uisng Sets with If" data-target="#Advanced_Bash_Scripting_info_Uisng_Sets_with_If" data-content="Uisng Sets with If">Uisng Sets with If</option>
       <option class="text-dark" style="text-transform: none" data-tokens="Bash Arrays an Overview" data-target="#Advanced_Bash_Scripting_info_Bash_Arrays_L_PAREN_an_Overview_R_PAREN" data-content="Bash Arrays (an Overview)">Bash Arrays (an Overview)</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="awk and gawk Introduction" data-target="#Awk___Gawk_info_awk_and_gawk_Introduction" data-content="&lt;kbd&gt;awk&lt;/kbd&gt; and &lt;kbd&gt;gawk&lt;/kbd&gt; Introduction"><kbd>awk</kbd> and <kbd>gawk</kbd> Introduction</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="awk Simple Examples" data-target="#Awk___Gawk_info_awk_Simple_Examples" data-content="&lt;kbd&gt;awk&lt;/kbd&gt; Simple Examples"><kbd>awk</kbd> Simple Examples</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="awk Shebang and BEGIN / END" data-target="#Awk___Gawk_info_awk_Shebang_and_BEGIN___END" data-content="&lt;kbd&gt;awk&lt;/kbd&gt; Shebang and &lt;kbd&gt;BEGIN&lt;/kbd&gt; / &lt;kbd&gt;END&lt;/kbd&gt;"><kbd>awk</kbd> Shebang and <kbd>BEGIN</kbd> / <kbd>END</kbd></option>
+      <option class="text-dark" style="text-transform: none" data-tokens="awk Important Variables" data-target="#Awk___Gawk_info_awk_Important_Variables" data-content="&lt;kbd&gt;awk&lt;/kbd&gt; Important Variables"><kbd>awk</kbd> Important Variables</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="awk Pattern Matching" data-target="#Awk___Gawk_info_awk_Pattern_Matching" data-content="&lt;kbd&gt;awk&lt;/kbd&gt; Pattern Matching"><kbd>awk</kbd> Pattern Matching</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="awk Additional Resources" data-target="#Awk___Gawk_info_awk_Additional_Resources" data-content="&lt;kbd&gt;awk&lt;/kbd&gt; Additional Resources"><kbd>awk</kbd> Additional Resources</option>
 
       </select><!-- end info selections -->
     </div><!-- col-xs-12 col-sm-6 -->
@@ -13457,6 +13465,762 @@ for x in "${zed[*]:2:3}"; do echo "$x"; done
   <!-- div wrapper _body -->
  </div>
  <!-- card -->
+ <div class="card">
+  <div class="card-header" id="Awk___Gawk_header">
+   <h5 class="mb-0">
+    <button aria-controls="Awk___Gawk_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Awk___Gawk_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+     15 – Awk / Gawk
+    </button>
+   </h5>
+  </div>
+  <div aria-labelledby="Awk___Gawk_header" class="collapse accordion" data-parent="#lectures" data-toggle="collapse" id="Awk___Gawk_body">
+   <div class="card-body">
+    <!-- (ln) link a filesystem obejct into the directory tree ~~ (ln) link a filesystem obejct into the directory tree ~~ (ln) link a filesystem obejct into the directory tree -->
+    <div class="card">
+     <div class="card-header" id="Awk___Gawk_cmd_ln_header">
+      <h5 class="mb-0">
+       <button aria-controls="Awk___Gawk_cmd_ln_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Awk___Gawk_cmd_ln_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>ln</kbd>
+        )
+        <kbd>l</kbd>
+        in
+        <kbd>k</kbd>
+        a filesystem obejct into the directory tree
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Awk___Gawk_cmd_ln_header" class="collapse" data-parent="#Awk___Gawk_body" data-toggle="collapse" id="Awk___Gawk_cmd_ln_body">
+      <div class="card-body">
+       <p class="card-text">
+        <code class="bash">
+         ln [flags] &lt;source&gt; &lt;target&gt;
+        </code>
+       </p>
+       <ul>
+        <li>
+         works like
+         <code>cp</code>
+         ; from
+         <code>src</code>
+         to
+         <code>dst</code>
+        </li>
+        <li>
+         creates a
+         <em>
+          peer
+         </em>
+         link; no notion of “original”
+        </li>
+        <li>
+         only works on files
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- (ln -s) symlink a filesystem obejct into the directory tree ~~ (ln -s) symlink a filesystem obejct into the directory tree ~~ (ln -s) symlink a filesystem obejct into the directory tree -->
+    <div class="card">
+     <div class="card-header" id="Awk___Gawk_cmd_ln__s_header">
+      <h5 class="mb-0">
+       <button aria-controls="Awk___Gawk_cmd_ln__s_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Awk___Gawk_cmd_ln__s_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>ln -s</kbd>
+        ) sym
+        <kbd>l</kbd>
+        in
+        <kbd>k</kbd>
+        a filesystem obejct into the directory tree
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Awk___Gawk_cmd_ln__s_header" class="collapse" data-parent="#Awk___Gawk_body" data-toggle="collapse" id="Awk___Gawk_cmd_ln__s_body">
+      <div class="card-body">
+       <p class="card-text">
+        <code class="bash">
+         ln -s [flags] &lt;source&gt; &lt;target&gt;
+        </code>
+       </p>
+       <ul>
+        <li>
+         technically the same command as
+         <code>ln</code>
+         , but used very differently with the -s flag!
+        </li>
+        <li>
+         creates a
+         <em>
+          subordinate
+         </em>
+         link; refers to the
+         <source />
+          path.
+         &lt;/source&gt;
+        </li>
+        <li>
+         doesn’t check to see if the source path was sensible first!
+        </li>
+        <li>
+         works on files or directories.
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- awk and gawk Introduction ~~ awk and gawk Introduction ~~ awk and gawk Introduction -->
+    <div class="card">
+     <div class="card-header" id="Awk___Gawk_info_awk_and_gawk_Introduction_header">
+      <h5 class="mb-0">
+       <button aria-controls="Awk___Gawk_info_awk_and_gawk_Introduction_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Awk___Gawk_info_awk_and_gawk_Introduction_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        <kbd>awk</kbd>
+        and
+        <kbd>gawk</kbd>
+        Introduction
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Awk___Gawk_info_awk_and_gawk_Introduction_header" class="collapse" data-parent="#Awk___Gawk_body" data-toggle="collapse" id="Awk___Gawk_info_awk_and_gawk_Introduction_body">
+      <div class="card-body">
+       <ul>
+        <li>
+         <code>awk</code>
+         is a programming language designed for processing text-based data.
+         <ul>
+          <li>
+           Allows easy operation on fields rather than full lines.
+          </li>
+          <li>
+           Works in a
+           <em>
+            pattern-action
+           </em>
+           manner, like
+           <code>sed</code>
+           .
+          </li>
+          <li>
+           Supports numerical types (and operations).
+          </li>
+          <li>
+           Supports control-flow (e.g.,
+           <code class="bash">
+            if
+           </code>
+           -
+           <code class="bash">
+            else
+           </code>
+           statements).
+          </li>
+         </ul>
+        </li>
+        <li>
+         Created at Bell Labs in the 1970s.
+         <ul>
+          <li>
+           Alfred
+           <strong>
+            A
+           </strong>
+           ho, Peter
+           <strong>
+            W
+           </strong>
+           einberger, and Brian
+           <strong>
+            K
+           </strong>
+           ernighan
+          </li>
+          <li>
+           An ancestor of
+           <code>perl</code>
+           , a
+           <em>
+            cousin
+           </em>
+           of
+           <code>sed</code>
+           .
+          </li>
+          <li>
+           <strong>
+            K
+           </strong>
+           ernighan and
+           <strong>
+            R
+           </strong>
+           itchie also invent C
+          </li>
+         </ul>
+        </li>
+        <li>
+         <strong>
+          Very
+         </strong>
+         powerful.
+         <ul>
+          <li>
+           It’s
+           <em>
+            Turing Complete
+           </em>
+           !
+          </li>
+          <li>
+           … a lot of things are.
+          </li>
+         </ul>
+        </li>
+       </ul>
+       <h2 id="gawk">
+        <code>gawk</code>
+       </h2>
+       <ul>
+        <li>
+         <code>gawk</code>
+         is the GNU implementation of the
+         <code>awk</code>
+         programming language.
+        </li>
+        <li>
+         On BSD/OSX, it is just called
+         <code>awk</code>
+         .
+        </li>
+        <li>
+         On GNU, it is technically
+         <code>gawk</code>
+         , but should reliably be
+         <em>
+          symlinked
+         </em>
+         as
+         <code>awk</code>
+         .
+        </li>
+        <li>
+         There are many different implementations of the AWK programming language.
+         <ul>
+          <li>
+           If you use C or C++, this is similar to how there are different compilers. The compiler is an “implementation” of the language (big quotes on that…).
+          </li>
+          <li>
+           If you use Python, it’s like the difference between CPython, PyPy, Jython, etc.
+          </li>
+          <li>
+           Different implementations of the same programming language.
+          </li>
+         </ul>
+        </li>
+       </ul>
+       <h2 id="basic-structure">
+        Basic Structure
+       </h2>
+       <ul>
+        <li>
+         <code>awk</code>
+         allows filters to handle text easily.
+        </li>
+        <li>
+         <p class="card-text">
+          The basic structure of an
+          <code>awk</code>
+          program is:
+         </p>
+         <pre class="awk"><code>pattern1 { commands1 }
+pattern2 { commands2 }
+# ...</code></pre>
+        </li>
+        <li>
+         Patterns can be regular expressions!
+         <ul>
+          <li>
+           Proceeds line by line, checking each pattern one by one.
+          </li>
+          <li>
+           If the pattern is found, the
+           <code class="awk">
+            { commands }
+           </code>
+           are executed.
+          </li>
+          <li>
+           So for the above:
+           <ul>
+            <li>
+             First line of input grabbed.
+            </li>
+            <li>
+             <code class="awk">
+              pattern1
+             </code>
+             checked, if match
+             <code class="awk">
+              { commands1 }
+             </code>
+             executed.
+            </li>
+            <li>
+             <code class="awk">
+              pattern2
+             </code>
+             checked, if match
+             <code class="awk">
+              { commands2 }
+             </code>
+             executed.
+            </li>
+            <li>
+             Next line of input grabbed.
+            </li>
+            <li>
+             Check
+             <code class="awk">
+              pattern1
+             </code>
+             , then
+             <code class="awk">
+              pattern2
+             </code>
+             , so on and so forth…
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- awk Simple Examples ~~ awk Simple Examples ~~ awk Simple Examples -->
+    <div class="card">
+     <div class="card-header" id="Awk___Gawk_info_awk_Simple_Examples_header">
+      <h5 class="mb-0">
+       <button aria-controls="Awk___Gawk_info_awk_Simple_Examples_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Awk___Gawk_info_awk_Simple_Examples_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        <kbd>awk</kbd>
+        Simple Examples
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Awk___Gawk_info_awk_Simple_Examples_header" class="collapse" data-parent="#Awk___Gawk_body" data-toggle="collapse" id="Awk___Gawk_info_awk_Simple_Examples_body">
+      <div class="card-body">
+       <ul>
+        <li>
+         <p class="card-text">
+          Print all lines containing Monster or monster.
+         </p>
+         <pre class="bash"><code>awk '/[Mm]onster/ {print}' frankenstein.txt</code></pre>
+        </li>
+        <li>
+         <p class="card-text">
+          If no action specified, default is to print the whole line.
+         </p>
+         <pre class="bash"><code>awk '/[Mm]onster/' frankenstein.txt</code></pre>
+        </li>
+        <li>
+         <p class="card-text">
+          The
+          <code class="awk">
+           $0
+          </code>
+          variable in
+          <code>awk</code>
+          refers to the whole line.
+         </p>
+         <pre class="bash"><code>awk '/[Mm]onster/ {print $0}' frankenstein.txt</code></pre>
+        </li>
+        <li>
+         <p class="card-text">
+          First field (delimited by whitespace, or change
+          <em>
+           field separator
+          </em>
+          ).
+         </p>
+         <pre class="bash"><code>awk '/[Mm]onster/ {print $1}' frankenstein.txt</code></pre>
+        </li>
+        <li>
+         <code>awk</code>
+         understands extended regular expressions by default :)
+         <ul>
+          <li>
+           We don’t need to escape
+           <code>+</code>
+           ,
+           <code>?</code>
+           , etc!
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- awk Shebang and BEGIN / END ~~ awk Shebang and BEGIN / END ~~ awk Shebang and BEGIN / END -->
+    <div class="card">
+     <div class="card-header" id="Awk___Gawk_info_awk_Shebang_and_BEGIN___END_header">
+      <h5 class="mb-0">
+       <button aria-controls="Awk___Gawk_info_awk_Shebang_and_BEGIN___END_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Awk___Gawk_info_awk_Shebang_and_BEGIN___END_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        <kbd>awk</kbd>
+        Shebang and
+        <kbd>BEGIN</kbd>
+        /
+        <kbd>END</kbd>
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Awk___Gawk_info_awk_Shebang_and_BEGIN___END_header" class="collapse" data-parent="#Awk___Gawk_body" data-toggle="collapse" id="Awk___Gawk_info_awk_Shebang_and_BEGIN___END_body">
+      <div class="card-body">
+       <ul>
+        <li>
+         <code>awk</code>
+         allows us blocks of code to be executed only once, at the beginning / end.
+        </li>
+        <li>
+         <p class="card-text">
+          With demo file
+          <code>monstrosity.awk</code>
+          and data file
+          <code>frankenstein.txt</code>
+          in current directory:
+         </p>
+         <pre class="awk"><code>#!/usr/bin/awk -f
+BEGIN { print "Starting search for monster..." }
+/[Mm]onster/{ count++ } # Increment if [Mm]onster found
+END { print "Found " count " monsters in the book." }</code></pre>
+        </li>
+        <li>
+         <p class="card-text">
+          Use the
+          <code>-f</code>
+          in the shebang to tell
+          <code>awk</code>
+          it expects a script.
+         </p>
+         <pre class="console"><code>$ ./monstrosity.awk  # hangs... no input file
+$ ./monstrosity.awk frankenstein.txt # yay!
+# shebang '#!/usr/bin/awk -f' makes same as ...
+$ awk -f monstrosity.awk frankenstein.txt</code></pre>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- awk Important Variables ~~ awk Important Variables ~~ awk Important Variables -->
+    <div class="card">
+     <div class="card-header" id="Awk___Gawk_info_awk_Important_Variables_header">
+      <h5 class="mb-0">
+       <button aria-controls="Awk___Gawk_info_awk_Important_Variables_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Awk___Gawk_info_awk_Important_Variables_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        <kbd>awk</kbd>
+        Important Variables
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Awk___Gawk_info_awk_Important_Variables_header" class="collapse" data-parent="#Awk___Gawk_body" data-toggle="collapse" id="Awk___Gawk_info_awk_Important_Variables_body">
+      <div class="card-body">
+       <ul>
+        <li>
+         <code class="awk">
+          NF
+         </code>
+         : the number of fields in the current line.
+        </li>
+        <li>
+         <code class="awk">
+          NR
+         </code>
+         : the number of lines read so far.
+         <ul>
+          <li>
+           You cannot change
+           <code class="awk">
+            NF
+           </code>
+           or
+           <code class="awk">
+            NR
+           </code>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <code class="awk">
+          FILENAME
+         </code>
+         : the name of the input file.
+        </li>
+        <li>
+         <code>FS</code>
+         : the
+         <em>
+          field separator
+         </em>
+         .
+         <ul>
+          <li>
+           Example: change
+           <code class="awk">
+            FS=","
+           </code>
+           for processing a comma-separated-value sheet.
+          </li>
+          <li>
+           Can also specify
+           <code>-F</code>
+           flag (capital!) to set the
+           <code class="awk">
+            FS
+           </code>
+           .
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- awk Pattern Matching ~~ awk Pattern Matching ~~ awk Pattern Matching -->
+    <div class="card">
+     <div class="card-header" id="Awk___Gawk_info_awk_Pattern_Matching_header">
+      <h5 class="mb-0">
+       <button aria-controls="Awk___Gawk_info_awk_Pattern_Matching_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Awk___Gawk_info_awk_Pattern_Matching_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        <kbd>awk</kbd>
+        Pattern Matching
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Awk___Gawk_info_awk_Pattern_Matching_header" class="collapse" data-parent="#Awk___Gawk_body" data-toggle="collapse" id="Awk___Gawk_info_awk_Pattern_Matching_body">
+      <div class="card-body">
+       <ul>
+        <li>
+         <code>awk</code>
+         can match any of the following pattern types:
+         <ul>
+          <li>
+           <code class="awk">
+            /regular expression/
+           </code>
+          </li>
+          <li>
+           <code class="awk">
+            relational expression
+           </code>
+          </li>
+          <li>
+           <code class="awk">
+            pattern1 &amp;&amp; pattern2
+           </code>
+          </li>
+          <li>
+           <code class="awk">
+            pattern1 || pattern2
+           </code>
+          </li>
+          <li>
+           <code class="c">
+            pattern1 ? pattern2: pattern3
+           </code>
+           <ul>
+            <li>
+             If
+             <code class="awk">
+              pattern1
+             </code>
+             , then match
+             <code class="awk">
+              pattern2
+             </code>
+             . Otherwise, match
+             <code class="awk">
+              pattern3
+             </code>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <code class="awk">
+            (pattern)
+           </code>
+           : parenthesis to group / change order of operations.
+          </li>
+          <li>
+           <code class="awk">
+            ! pattern
+           </code>
+           to invert
+           <code class="awk">
+            pattern
+           </code>
+          </li>
+          <li>
+           <code class="awk">
+            pattern1, pattern2
+           </code>
+           : match
+           <code class="awk">
+            pattern1
+           </code>
+           , work on every line until matches
+           <code class="awk">
+            pattern2
+           </code>
+           <ul>
+            <li>
+             So you cannot combine this…
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- awk Additional Resources ~~ awk Additional Resources ~~ awk Additional Resources -->
+    <div class="card">
+     <div class="card-header" id="Awk___Gawk_info_awk_Additional_Resources_header">
+      <h5 class="mb-0">
+       <button aria-controls="Awk___Gawk_info_awk_Additional_Resources_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Awk___Gawk_info_awk_Additional_Resources_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        <kbd>awk</kbd>
+        Additional Resources
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Awk___Gawk_info_awk_Additional_Resources_header" class="collapse" data-parent="#Awk___Gawk_body" data-toggle="collapse" id="Awk___Gawk_info_awk_Additional_Resources_body">
+      <div class="card-body">
+       <ul>
+        <li>
+         Regular expression usage / comparison
+         <a href="https://www.gnu.org/software/gawk/manual/html_node/Regexp-Usage.html#index-_0021-_0028exclamation-point_0029_002c-_0021_007e-operator">
+          available here
+         </a>
+         .
+        </li>
+        <li>
+         Many more comparison operations
+         <a href="https://www.gnu.org/software/gawk/manual/html_node/Comparison-Operators.html#Comparison-Operators">
+          detailed here
+         </a>
+         .
+        </li>
+        <li>
+         A wealth of useful / powerful built-in functions:
+         <ul>
+          <li>
+           <code class="awk">
+            toupper(x)
+           </code>
+           : make string upper case
+          </li>
+          <li>
+           <code class="awk">
+            tolower(x)
+           </code>
+           : make string lower case
+          </li>
+          <li>
+           <code class="awk">
+            exp(x)
+           </code>
+           : exponential of
+           <code>x</code>
+          </li>
+          <li>
+           <code class="awk">
+            rand()
+           </code>
+           : random number between
+           <code class="awk">
+            0
+           </code>
+           and
+           <code class="awk">
+            1
+           </code>
+          </li>
+          <li>
+           <code class="awk">
+            length(x)
+           </code>
+           : the length of
+           <code>x</code>
+          </li>
+          <li>
+           <code class="awk">
+            log(x)
+           </code>
+           : returns the log of
+           <code>x</code>
+          </li>
+          <li>
+           <code class="awk">
+            sin(x)
+           </code>
+           : returns the sine of
+           <code>x</code>
+          </li>
+          <li>
+           <code class="awk">
+            cos(x)
+           </code>
+           : returns the cosine of
+           <code>x</code>
+          </li>
+          <li>
+           <code class="awk">
+            int(x)
+           </code>
+           : convert
+          </li>
+          <li>
+           etc.
+          </li>
+         </ul>
+        </li>
+        <li>
+         Much more information
+         <a href="http://www.grymoire.com/Unix/Awk.html">
+          available here
+         </a>
+         .
+        </li>
+       </ul>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+   </div>
+   <!-- card-body -->
+  </div>
+  <!-- div wrapper _body -->
+ </div>
+ <!-- card -->
 </div>
 <!-- END lectures -->
 <!-- WARNING: make sure there is an empty line at the BEGINNING and END of this file. -->
@@ -13604,7 +14368,7 @@ for x in "${zed[*]:2:3}"; do echo "$x"; done
     (<a href="mailto:cs2043-ta@cornell.edu?subject=[CS 2043]">cs2043-ta@cornell.edu</a>).
   </div>
   <div class="pull-right">
-    Last compiled Tue, 19 Feb 2019 02:15:51 -0500.
+    Last compiled Tue, 19 Feb 2019 02:21:41 -0500.
   </div>
 </div>
 
