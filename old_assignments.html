@@ -643,6 +643,526 @@ Time goes up; <code class="highlighter-rouge">unicycling</code> is the latest.</
 
 <p>One bird says to you, ‘Poo-tee-weet?’</p>
 
+<h3 id="cs-2043-assignment-4-the-fellowship-of-the-script">CS 2043 Assignment 4: The Fellowship of the Script</h3>
+<h4 id="due-date-friday-february-22-at-1115-am">Due Date: Friday February 22 at 11:15 AM</h4>
+<h4 id="assignment-captains-ashneel-das-chris-roman">Assignment Captains <a href="staff.html">Ashneel Das, Chris Roman</a></h4>
+
+<p>In this assignment, we will be writing more advanced scripts through a Lord of the Rings themed story. 
+If you would like a de-themed version of the assignment, please go <a href="/courses/cs2043/2019sp/dethemed_assignments.html">here</a>.</p>
+
+<blockquote>
+  <p>Frodo sits quietly reading a book in the forest, dreaming of the day when Gandalf will
+return with some more fireworks.  More importantly, though, he grows weary of looking
+after the increasingly frustrating senility of Bilbo.  Unbeknownst to Bilbo, Frodo,
+and even Gandalf, though, treachery is afoot.  As it turns out, the great Base Master
+of Treachery (Sauron) really engineered the rings of power to siphon intellect from
+the wearer of the ring.  He wanted to live forever, but was well versed in the
+unfortunate truth of how the brain ages and realized he could steal the ring-bearer’s
+marbles for himself.</p>
+</blockquote>
+
+<h4 id="task-1">Task 1</h4>
+
+<p>Note: You will be appending to two files, <code class="highlighter-rouge">MARBLES.txt</code> and <code class="highlighter-rouge">FAILED.log</code>, in this task.</p>
+
+<blockquote>
+  <p>Frodo’s least favorite task of the day is helping Bilbo find his marbles.  All the old
+fool does day in and day out is shut himself in his study and re-read is various maps
+and journals, muttering on about how if he could only find his marbles then he could
+return to live with the Elves.  The only thing that Frodo hates more than “helping”
+Bilbo find his marbles is playing the “What’s in my Pocket game”, because the answer
+is always the same.</p>
+
+  <p>Each day between Elevenses and Lunch Bilbo demands that Frodo assist in the age-old
+task of the marble search.  Having been traumatized by this search everyday since the
+time he could walk, Frodo has finally decided that he should automate the process.
+According to Bilbo, he has encoded the secret location of the marbles in different
+maps and journals throughout his study.  However, these maps and journals were
+actually given to him by the Elves (who stole them from Dwarves), and it is futile to
+search for marbles on the wrong day of the year.</p>
+
+  <p>Each day Bilbo recites a list of maps and journals that are valid to search on that
+day from memory, and Frodo must collect them all and search for the marbles.  Bilbo
+also informs Frodo that there is a minimum and maximum line-length (specific to that
+day) that would potentially contain the location of a given marble.  That is, as Frodo
+reads through every line of the journals and maps, if a given line of prose contains
+fewer words than the dictated minimum, or more words than the dictated maximum, then
+no marbles have been described by that line and Frodo should move on.</p>
+</blockquote>
+
+<p>Create a script named <code class="highlighter-rouge">collect_marbles.sh</code> in the <strong>TASK_1</strong> directory that performs the
+following:</p>
+
+<ol>
+  <li>The script will be called with arguments as follows:
+    <ul>
+      <li>The “length” of a line is defined as <strong>the number of words on the line</strong>.</li>
+      <li>The first argument is the <em>minimum</em> length of a line.</li>
+      <li>The second argument is the <em>maximum</em> length of a line.</li>
+      <li>All remaining arguments are the names of the journals and maps that are to be
+searched (filenames).  There is no limit to the number of additional arguments.</li>
+    </ul>
+  </li>
+  <li>
+    <p>If your script receives <strong>fewer than 3</strong> arguments, it should print the exact message to STDERR:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Ye shall not search for marbles if ye cannot find the key.
+</code></pre></div>    </div>
+
+    <p>and produce an <code class="highlighter-rouge">exit</code> code of <strong><code class="highlighter-rouge">64</code></strong>, without doing any further processing. AKA
+ check for this at the beginning before doing anything else…
+ In order to redirect to STDERR, you can type <code class="highlighter-rouge">&gt;&amp;2 echo "error"</code>. This means you are redirecting the output of echo (in this case, “error”) to file descriptor 2. In the world of UNIX, file descriptor 2 represents STDERR, whereas file descriptor 1 represents STDOUT.</p>
+  </li>
+  <li>You may assume that arguments one and two, <em>if supplied</em>, are positive integers where:
+    <ul>
+      <li>The <strong>minimum</strong> length is greater than or equal to 1.</li>
+      <li>The <strong>maximum</strong> length is greater than or equal to the <strong>minimum</strong> length (never
+less than).</li>
+    </ul>
+  </li>
+  <li>You may <strong>not</strong> assume that the third and higher arguments are <strong>valid</strong>.  That is,
+you must verify that the argument given <em>is a file you can <strong>r</strong>ead</em> first before
+trying to process it.
+    <ul>
+      <li>If an argument given is not a real file, <strong>append</strong> the name that was given to
+<code class="highlighter-rouge">FAILED.log</code> in the current directory.</li>
+    </ul>
+  </li>
+  <li>For every valid file path specified, loop over every line in the file:
+    <ul>
+      <li>Count the number of words on that line. A word is defined as anything separated by a space.</li>
+      <li>If the number of words is between the <strong>minimum</strong> and <strong>maximum</strong> that Bilbo
+specified, <strong>append</strong> it to the end of <code class="highlighter-rouge">MARBLES.txt</code> in the current directory.</li>
+      <li>Otherwise, just move on to the next line.</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Warning</strong>: for full credit, <code class="highlighter-rouge">TASK_1/collect_marbles.sh</code> must be executable.</p>
+
+<p>Once you are done, hand in the assignment using <code class="highlighter-rouge">handin fellowship-1 collect_marbles.sh</code></p>
+
+<h4 id="sample-inputs-and-output">Sample Inputs and Output</h4>
+
+<p>Refer to TASK_1/TASK_1_EXAMPLE.md.</p>
+
+<h4 id="task-2">Task 2</h4>
+
+<blockquote>
+  <p>Frodo can at long last enjoy a little bit of “me-time”, as Bilbo refuses to allow
+Frodo to be involved in the decryption phase.  Somewhat agitated by the fact that
+Bilbo will not allow him to partake in this task after all these years, Frodo decides
+to return to the forest to catch up on some reading.  After all, he doesn’t really
+even want to be involved in that part…Bilbo claims that marble decryption must be
+done whilst wearing a tea cosy on your head and nothing else.</p>
+
+  <p>As Frodo tries to forget that mental image, he is knocked over by Pippin and Merry who
+seem to have come out of nowhere.  It becomes quite apparent that not only have they
+been stealing crops from Farmer Maggot, but they have been stealing his marbles too!
+They realized that the more marbles they steal from Farmer Maggot, the easier it is to
+steal crops (since they are effectively degrading his consciousness).</p>
+
+  <p>Intrigued by the idea, and appalled by the act, Frodo is now entrenched in an awkward
+situation.  Pippin and Merry somehow already found out that Frodo is a total Unix
+scripting pro, and have asked him to help them create a tool that would enable them to
+analyze their potential profits from both the crops and the marbles.</p>
+
+  <p>Frodo realizes that they are too foolish to connect the dots that if they would only
+eat the marbles they could write their own, and strikes a deal: he will create this
+tool for them if they pay him with the marbles they have stolen.  He convinces them
+that once removed they are useless, and that they can only make a profit from the
+crops anyway.</p>
+
+  <p>They are suspicious, but Frodo explains that he is going to try and use them to
+satiate Bilbo’s ludicrous marble search.  Having grown up with Frodo, they accept this
+as a plausible application.</p>
+</blockquote>
+
+<hr />
+
+<p>You are to create a script <code class="highlighter-rouge">merry_math.sh</code> in the <code class="highlighter-rouge">TASK_2</code> directory that can analyze
+specific columns of a <code class="highlighter-rouge">csv</code> file.  A <code class="highlighter-rouge">csv</code> file is a “Comma Separated Value” sheet often
+used for storing data such as the number of carrots or potatoes stolen on a given day.
+Ordinarily <code class="highlighter-rouge">csv</code> files are supposed to have the first row be the “Header”, that
+describes what each column is.  For this task, there will be no header to simplify your
+work. There will also be no quotes or other strange characters you need to worry about. Just assume it will be plain text separated by commas.</p>
+
+<hr />
+
+<p>Your script must support the following <strong>integer arithmetic</strong> operations:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">add</code>: add the specified columns together.</li>
+  <li><code class="highlighter-rouge">sub</code>: subtract the specified columns.</li>
+  <li><code class="highlighter-rouge">mul</code>: multiply the specified columns.</li>
+  <li><code class="highlighter-rouge">div</code>: divide the specified columns.
+    <ul>
+      <li>Do not be concerned about division by 0, you can assume it will not happen.</li>
+    </ul>
+  </li>
+  <li>You do not need to be concerned with {over,under}flow.  For the interested,
+<code class="highlighter-rouge">bash</code> 3.0+ uses signed 64 bit integers (regardless of the architecture).</li>
+</ul>
+
+<hr />
+
+<p>Your script will receive input arguments in the following form:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">"$1"</code>: the name of the <code class="highlighter-rouge">csv</code> file.  This file is not guaranteed to exist.
+    <ul>
+      <li>If the file does <strong>not</strong> exist, simply <code class="highlighter-rouge">exit</code> with code <code class="highlighter-rouge">66</code>.</li>
+      <li>This error code takes precedence over an invalid operation code (next bullet.)</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">"$2"</code>: the operation you are to perform, one of <code class="highlighter-rouge">add</code>, <code class="highlighter-rouge">sub</code>, <code class="highlighter-rouge">mul</code>, or <code class="highlighter-rouge">div</code>.
+    <ul>
+      <li>If the operation is not one of these four strings, you should <code class="highlighter-rouge">exit</code> with code <code class="highlighter-rouge">69</code>.</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">"$3"</code>..<code class="highlighter-rouge">"$n"</code>: an integer specifying the columns to perform the operation on.
+    <ul>
+      <li>These are not guaranteed to exist.</li>
+      <li>This has no effect on the code you write, but these do not have to be specified in
+order of the actual <code class="highlighter-rouge">csv</code> file.  For example, <code class="highlighter-rouge">"$3"</code> could be column <code class="highlighter-rouge">12</code>, and
+<code class="highlighter-rouge">"$4"</code> could be column <code class="highlighter-rouge">3</code>.</li>
+      <li>You may assume that <code class="highlighter-rouge">"$3"</code>..<code class="highlighter-rouge">"$n"</code> contain valid column numbers: they are positive
+integers, and the <code class="highlighter-rouge">csv</code> specified by <code class="highlighter-rouge">"$1"</code> has at least as many columns as these
+arguments (aka don’t worry about validating if there are that many columns).</li>
+    </ul>
+  </li>
+  <li>If fewer than four arguments <strong>total</strong> are given, <code class="highlighter-rouge">exit</code> with code <code class="highlighter-rouge">64</code>.  This error
+should take precedence over the error codes for <code class="highlighter-rouge">"$1"</code> and <code class="highlighter-rouge">"$2"</code>.
+    <ul>
+      <li>This is easier for you!  Just check <code class="highlighter-rouge">"$#"</code> first and make sure it is &gt;= 4…</li>
+    </ul>
+  </li>
+</ul>
+
+<p>To be extra clear, you should check errors in the following order to provide the correct
+error code priorities:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if too few arguments, then
+    exit with an error code of 64
+else if the provided filename is not a file, then
+    exit with an error code of 66
+else if the operation code provided is not supported, then
+    exit with an error code of 69
+</code></pre></div></div>
+
+<p>So if four arguments were provided, but both the filename and operation code were
+invalid, then the <code class="highlighter-rouge">exit</code> code should be <strong><code class="highlighter-rouge">66</code></strong>, not <code class="highlighter-rouge">69</code>.</p>
+
+<hr />
+
+<p>Your script is to strip the columns requested and perform the mathematical operation
+requested.</p>
+
+<ul>
+  <li>The computation is to be written to the file <code class="highlighter-rouge">RESULTS.txt</code>.</li>
+  <li>If the file <code class="highlighter-rouge">RESULTS.txt</code> already exists, overwrite it (in order to do this, write <code class="highlighter-rouge">&gt; RESULTS.txt</code> before doing any other parsing).</li>
+  <li>
+    <p>The computation you should perform is the <em>operation</em> on the columns, in order.
+For example:</p>
+
+    <ul>
+      <li>
+        <p>With operation <code class="highlighter-rouge">add</code> and arguments <code class="highlighter-rouge">"$3"</code>, <code class="highlighter-rouge">"$4"</code> supplied, compute:</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span> <span class="nv">$3</span> + <span class="nv">$4</span> <span class="o">)</span>
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>With operation <code class="highlighter-rouge">div</code> and arguments <code class="highlighter-rouge">"$3"</code>, <code class="highlighter-rouge">"$4"</code>, <code class="highlighter-rouge">"$5"</code>, and <code class="highlighter-rouge">"$6"</code> supplied,
+compute:</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(((</span> <span class="nv">$3</span> / <span class="nv">$4</span> <span class="o">)</span> / <span class="nv">$5</span> <span class="o">)</span> / <span class="nv">$6</span> <span class="o">)</span>
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Parentheses were added for clarity, but you will need to execute this task in a
+loop and will not really need to worry about grouping expressions like this.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Warning</strong>: for full credit, <code class="highlighter-rouge">TASK_2/merry_math.sh</code> must be executable.</p>
+
+<p>Once you are done, hand in the assignment using <code class="highlighter-rouge">handin fellowship-2 merry_math.sh</code></p>
+
+<h4 id="sample-inputs-and-output-1">Sample Inputs and Output</h4>
+
+<p>Refer to TASK_2/TASK_2_EXAMPLE.md.</p>
+
+<h4 id="task-3">Task 3</h4>
+
+<blockquote>
+  <p>Enthralled by the superb automation he is now able to perform, Frodo ponders what
+could possibly be next.  As Pippin and Merry go skipping away contented with their new
+calculator, Frodo hears a faint but familiar song being hummed off in the distance.
+Taken aback by the comforting melody, he decides to go track down who could possibly
+be such a talented songster.  For not only is there humming, but a unique form of
+whistling that he suspects would summon even the most regal and renowned of horses.</p>
+
+  <p>Frolicking through the forest, he comes to a road just as Gandalf the Omnipotently
+Nonchalant rides his carriage toward the Shire.  Unable to contain his joy (because
+this almost certainly means there will be fireworks), he leaps from the side of the
+road onto Gandalf’s cart.  Gandalf laughs in a manner that makes Frodo think there may
+be some marbles missing from Gandalf as well, but dares not to ask.</p>
+
+  <p>As they ride in to town, Gandalf turns to Frodo and inquires whether he might be
+interested in helping him con Sauron.  For too many years Gandalf has been
+overshadowed by him, and seeks the title of Great Deceiver, but he is far too old to
+learn how to use computers and needs help designing a website.  Gandalf was able to
+convince Sam to create a Markdown document for the website in exchange for some
+potatoes, but despite great efforts Sam was simply just too simple to be able to
+create anything more interesting.</p>
+
+  <p>Gandalf is confident that he will need a colorful website in order to pull off this
+scandal, and turns to Frodo.  Having learned of his recent super-pro-allstar status as
+a Unix guru, Gandalf is confident that Frodo will be able to provide a tool that can
+take any one of the the Markdown documents Sam completes and generate a colorful HTML
+page.</p>
+
+  <p>Gandalf scurries away claiming that there are questions, questions that need answering,
+and Frodo is left to himself to complete the task alone (once again).  Intimidated by
+<code class="highlighter-rouge">sed</code>, Frodo gobbles down his newly acquired Maggot-Marbles and instantly feels ready
+to complete his next task.</p>
+</blockquote>
+
+<p>You are to write the script <code class="highlighter-rouge">gandalfify.sh</code> in the <code class="highlighter-rouge">TASK_3</code> directory to 
+be a
+relatively basic Markdown to HTML parser.  You will need to utilize <code class="highlighter-rouge">sed</code> to complete
+this task.  You do not need to understand the syntax of <code class="highlighter-rouge">Markdown</code> or <code class="highlighter-rouge">HTML</code> in order to
+complete this task – just follow the directions and it will work.  I have chosen to
+give you this assignment because it gives you visual confirmation that you have been
+successful.</p>
+
+<p>Before enumerating the tasks explicitly, I must describe some <code class="highlighter-rouge">BSD</code> vs <code class="highlighter-rouge">GNU</code>
+compatibility issues.</p>
+
+<hr />
+
+<h4 id="forbidden-behavior">Forbidden Behavior:</h4>
+
+<p>Under no circumstances are you allowed to use the <code class="highlighter-rouge">-i</code> flag for <code class="highlighter-rouge">sed</code>.  If you use it,
+you will receive 0 points.  It is not portable, and you should have no reason to use it.</p>
+
+<hr />
+
+<h4 id="required-behavior">Required Behavior:</h4>
+
+<p>You will likely want to to use <em>extended</em> regular expressions for this task.  The <code class="highlighter-rouge">+</code>
+operator (which means find one or more of the expression it modifies), for example, is
+part of the <em>extended</em> regular expressions.  For example, the regex <code class="highlighter-rouge">[a-z]+</code> simply
+denotes “one or more lowercase letter”.  Strings that are in this set would be things
+like <code class="highlighter-rouge">a</code>, <code class="highlighter-rouge">asdf</code>, <code class="highlighter-rouge">fdsa</code>, etc.</p>
+
+<p>GNU <code class="highlighter-rouge">sed</code> uses the <code class="highlighter-rouge">-r</code> flag to indicate that <em>extended</em> regular expressions are
+permitted, whereas the BSD (and therefore OSX) <code class="highlighter-rouge">sed</code> uses the <code class="highlighter-rouge">-E</code> (capital, not lower
+case!) flag to enable these.  However, as it turns out, even though the <code class="highlighter-rouge">-E</code> flag is not
+present in the GNU <code class="highlighter-rouge">man sed</code> page, it is supported and is exactly the same as <code class="highlighter-rouge">-r</code>.</p>
+
+<hr />
+
+<h4 id="task-31-generate-the-paragraphs-p-tags-for-html">Task 3.1: Generate the Paragraphs (<code class="highlighter-rouge">&lt;p&gt;</code> tags) for HTML</h4>
+
+<p>You should assume that <strong>any</strong> line that has text, but does <strong>not</strong> start with a <code class="highlighter-rouge">#</code>
+sign will turn into a paragraph.  In Markdown, you can create headers (title sections)
+by starting the line with a <code class="highlighter-rouge">#</code> and writing the title afterward.  For example, these are
+all valid Markdown headers:</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># This is an H1 header</span>
+
+This is a regular paragraph.
+
+<span class="gu">##          This is an H2 header</span>
+
+This is another regular paragraph.
+
+<span class="gu">###    This is an H3 header.</span>
+
+This is yet another regular paragraph.
+</code></pre></div></div>
+
+<p>Note that there is an arbitrary amount of whitespace (that is <em>not</em> a newline) before
+the headers.  We will account for this in task 3.2. A friendly reminder of some things that
+might be useful:</p>
+
+<p>As in class, we discussed how to only do replacements with <code class="highlighter-rouge">sed</code> if the line starts with
+a certain regex. This command only checks lines <em>beginning</em> with “The”:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sed '/^The/s/john/John/g' file
+</code></pre></div></div>
+
+<p>What we haven’t discussed is how to check lines that <em>don’t begin</em> with “The”, which is done
+as follows:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sed '/^The/!s/john/John/g' file
+</code></pre></div></div>
+
+<p>For this task, you need to surround the regular paragraphs with the HTML paragraph tag. 
+In HTML, you start a tag with <code class="highlighter-rouge">&lt;tag&gt;</code>, and end it with <code class="highlighter-rouge">&lt;/tag&gt;</code> (where the ending has a <code class="highlighter-rouge">/</code>).  The
+paragraph tag is <code class="highlighter-rouge">p</code>.  So for example, you would take the line</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   This is a regular paragraph.
+</code></pre></div></div>
+
+<p>and turn it into</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nt">&lt;p&gt;</span>This is a regular paragraph.<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<p>For simplicity, you can assume that there will not be any preceding whitespace before
+the text you are to turn into a paragraph.  So you will not have to account for
+something like</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       This is a weird paragraph with preceding whitespace.
+</code></pre></div></div>
+
+<p>Go ahead and get started!</p>
+
+<h4 id="task-32-generate-the-headers-for-html">Task 3.2: Generate the Headers for HTML</h4>
+
+<p>At this point we now have all of our paragraphs accounted for, and can start turning the
+various levels of <code class="highlighter-rouge">#</code> into the appropriate header.  You will need to account for only the 
+cases in which you have 1, 2, or 3 #s, corresponding to <code class="highlighter-rouge">&lt;h1&gt;, &lt;h2&gt;, and &lt;h3&gt;</code> respectively.</p>
+
+<p>Working with the example we started above, our text now looks something like this:</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># This is an H1 header</span>
+
+<span class="nt">&lt;p&gt;</span>This is a regular paragraph.<span class="nt">&lt;/p&gt;</span>
+
+<span class="gu">##          This is an H2 header</span>
+
+<span class="nt">&lt;p&gt;</span>This is another regular paragraph.<span class="nt">&lt;/p&gt;</span>
+
+<span class="gu">###    This is an H3 header.</span>
+
+<span class="nt">&lt;p&gt;</span>This is yet another regular paragraph.<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<p>You need to produce</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h1&gt;This is an H1 header&lt;/h1&gt;
+
+&lt;p&gt;This is a regular paragraph.&lt;/p&gt;
+
+&lt;h2&gt;This is an H2 header&lt;/h2&gt;
+
+&lt;p&gt;This is another regular paragraph.&lt;/p&gt;
+
+&lt;h3&gt;This is an H3 header.&lt;/h3&gt;
+
+&lt;p&gt;This is yet another regular paragraph.&lt;/p&gt;
+</code></pre></div></div>
+
+<p><strong>Warning</strong>:</p>
+
+<ol>
+  <li>
+    <p>Note that I have removed the whitespace between the <code class="highlighter-rouge">#</code> and the text.  You must do
+the same.</p>
+  </li>
+  <li>The whitespace in <code class="highlighter-rouge">MARBLE_SHOPPE.md</code> has a mixture of spaces and tabs in some cases.
+You must catch these.
+    <ul>
+      <li>Use the <code class="highlighter-rouge">POSIX</code> sets.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Note: Lines with no whitespace between the “#” and text should still be converted to headers.</p>
+
+    <div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gu">##Header 2 with no whitespace must be parsed correctly</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>should be</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   &lt;h2&gt;Header 2 with no whitespace must be parsed correctly&lt;/h2&gt;
+</code></pre></div></div>
+
+<h4 id="using-the-script">Using the Script</h4>
+
+<p>The <code class="highlighter-rouge">gandalfify.sh</code> script expects exactly one argument: the name of the Markdown
+document file to be parsed / turned into an HTML document.  Simply specify the name of
+the file you want to parse.  For example, assuming you were in the <code class="highlighter-rouge">a4/TASK_3</code> directory:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> ./gandalfify.sh MARBLE_SHOPPE.md
+<span class="go">Converted MARBLE_SHOPPE.md into index.html!
+</span></code></pre></div></div>
+
+<p>From there, you can “visually debug” by simply opening <code class="highlighter-rouge">index.html</code> in your browser.
+The cool thing is you can keep it open in the browser, and re-run the script and then
+just refresh your browser to see the updated version :)</p>
+
+<p>From there, if you would like to “visually debug”, you may use SCP to transfer the HTML file to 
+your local computer and open <code class="highlighter-rouge">index.html</code> in your browser.</p>
+
+<p>Once you are done, hand in the assignment using <code class="highlighter-rouge">handin fellowship-3 gandalfify.sh</code></p>
+
+<h4 id="sample-input-and-output">Sample Input and Output</h4>
+
+<p>Refer to TASK_3/TASK_3_EXAMPLE.md.</p>
+
+<h4 id="challenge-questions-optional---we-will-not-grade-this-but-you-might-find-it-fun">Challenge Questions (optional - we will not grade this, but you might find it fun!)</h4>
+
+<ol>
+  <li>Produce proper indentation automatically using <code class="highlighter-rouge">sed</code>.</li>
+  <li>
+    <p>There is an un-ordered list in <code class="highlighter-rouge">MARBLE_SHOPPE.md</code>, but each element will get parsed
+into a separate paragraph.  Turn them into HTML unordered lists.</p>
+
+    <p>Unordered lists in Markdown come in a variety of forms:</p>
+
+    <div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">+</span> one format uses plus signs
+<span class="p">+</span> to indicate new bullets
+<span class="p">+</span> in the list
+<span class="p">
+-</span> one format uses hyphens
+<span class="p">-</span> to indicate new bullets
+<span class="p">-</span> in the list
+<span class="p">
+*</span> one format uses plus asterisks
+<span class="p">*</span> to indicate new bullets
+<span class="p">*</span> in the list
+</code></pre></div>    </div>
+
+    <p>They are all equivalent, and you can assume that I will not mix them (<code class="highlighter-rouge">+</code> and <code class="highlighter-rouge">-</code> for
+example, will not be used in the same list).</p>
+
+    <p>The HTML unordered list is as follows:</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;</span>This is an item.<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>This is another item.<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>This is the last item.<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div>    </div>
+
+    <p>So you will not only need to surround each bullet from Markdown in an <code class="highlighter-rouge">li</code> tag, but
+you will have to be able to find the beginning and end of the list and put the <code class="highlighter-rouge">ul</code>
+tag.  You should assume that there will not be any newlines between bullet points.
+For example:</p>
+
+    <div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">-</span> This list is acceptable
+<span class="p">-</span> Because it is
+<span class="p">-</span> Formatted correctly
+<span class="p">-</span> Yay!
+</code></pre></div>    </div>
+
+    <p>whereas</p>
+
+    <div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">-</span> This list will end up as two separate lists
+<span class="p">-</span> Because there is an empty line between them
+<span class="p">
+-</span> And your regex will see this as the end of the list
+<span class="p">-</span> ...most likely.
+</code></pre></div>    </div>
+  </li>
+</ol>
+
 
       <div id="footer">
   <hr>
@@ -651,7 +1171,7 @@ Time goes up; <code class="highlighter-rouge">unicycling</code> is the latest.</
     (<a href="mailto:cs2043-ta@cornell.edu?subject=[CS 2043]">cs2043-ta@cornell.edu</a>).
   </div>
   <div class="pull-right">
-    Last compiled Fri, 01 Mar 2019 15:16:05 -0500.
+    Last compiled Fri, 01 Mar 2019 15:31:05 -0500.
   </div>
 </div>
 
