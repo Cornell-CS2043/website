@@ -153,6 +153,10 @@ on how something works / what commands you learned when.</p>
       <option class="text-dark" style="text-transform: none" data-tokens="cut cut out sections of input filtering" data-target="#Sed__cut__and_paste_cmd_cut" data-content="(&lt;kbd&gt;cut&lt;/kbd&gt;) &lt;kbd&gt;cut&lt;/kbd&gt; out sections of input (filtering)">(<kbd>cut</kbd>) <kbd>cut</kbd> out sections of input (filtering)</option>
       <option class="text-dark" style="text-transform: none" data-tokens="dig domain information groper" data-target="#Networking_cmd_dig" data-content="(&lt;kbd&gt;dig&lt;/kbd&gt;) &lt;kbd&gt;d&lt;/kbd&gt;omain &lt;kbd&gt;i&lt;/kbd&gt;nformation &lt;kbd&gt;g&lt;/kbd&gt;roper">(<kbd>dig</kbd>) <kbd>d</kbd>omain <kbd>i</kbd>nformation <kbd>g</kbd>roper</option>
       <option class="text-dark" style="text-transform: none" data-tokens="disown Disown a job" data-target="#Your_shell__jobs__and_proc_cmd_disown" data-content="(&lt;kbd&gt;disown&lt;/kbd&gt;) &lt;kbd&gt;Disown&lt;/kbd&gt; a job">(<kbd>disown</kbd>) <kbd>Disown</kbd> a job</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="docker build -t build a specified image in the current directory" data-target="#Docker_cmd_docker_build__t" data-content="(&lt;kbd&gt;docker build -t&lt;/kbd&gt;) &lt;kbd&gt;build&lt;/kbd&gt; a specified image in the current directory">(<kbd>docker build -t</kbd>) <kbd>build</kbd> a specified image in the current directory</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="docker image ls list your current images" data-target="#Docker_cmd_docker_image_ls" data-content="(&lt;kbd&gt;docker image ls&lt;/kbd&gt;) &lt;kbd&gt;list&lt;/kbd&gt; your current &lt;kbd&gt;images&lt;/kbd&gt;">(<kbd>docker image ls</kbd>) <kbd>list</kbd> your current <kbd>images</kbd></option>
+      <option class="text-dark" style="text-transform: none" data-tokens="docker image rm remove a specified image" data-target="#Docker_cmd_docker_image_rm" data-content="(&lt;kbd&gt;docker image rm&lt;/kbd&gt;) &lt;kbd&gt;remove&lt;/kbd&gt; a specified &lt;kbd&gt;image&lt;/kbd&gt;">(<kbd>docker image rm</kbd>) <kbd>remove</kbd> a specified <kbd>image</kbd></option>
+      <option class="text-dark" style="text-transform: none" data-tokens="docker info general info" data-target="#Docker_cmd_docker_info" data-content="(&lt;kbd&gt;docker info&lt;/kbd&gt;) general &lt;kbd&gt;info&lt;/kbd&gt;">(<kbd>docker info</kbd>) general <kbd>info</kbd></option>
       <option class="text-dark" style="text-transform: none" data-tokens="echo Display a Line of Text" data-target="#UNIX_Permissions_and_find_cmd_echo" data-content="(&lt;kbd&gt;echo&lt;/kbd&gt;) Display a Line of Text">(<kbd>echo</kbd>) Display a Line of Text</option>
       <option class="text-dark" style="text-transform: none" data-tokens="emacs An editor, also from 1976." data-target="#The_Find_command__editing__and_scripting_cmd_emacs" data-content="(&lt;kbd&gt;emacs&lt;/kbd&gt;) An editor, also from 1976.">(<kbd>emacs</kbd>) An editor, also from 1976.</option>
       <option class="text-dark" style="text-transform: none" data-tokens="fg Foreground" data-target="#Your_shell__jobs__and_proc_cmd_fg" data-content="(&lt;kbd&gt;fg&lt;/kbd&gt;) &lt;kbd&gt;F&lt;/kbd&gt;ore&lt;kbd&gt;g&lt;/kbd&gt;round">(<kbd>fg</kbd>) <kbd>F</kbd>ore<kbd>g</kbd>round</option>
@@ -14377,6 +14381,113 @@ wlp3s0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
  </div>
  <!-- card -->
  <div class="card">
+  <div class="card-header" id="Docker_header">
+   <h5 class="mb-0">
+    <button aria-controls="Docker_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Docker_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+     14 – Docker
+    </button>
+   </h5>
+  </div>
+  <div aria-labelledby="Docker_header" class="collapse accordion" data-parent="#lectures" data-toggle="collapse" id="Docker_body">
+   <div class="card-body">
+    <!-- (docker info) general info ~~ (docker info) general info ~~ (docker info) general info -->
+    <div class="card">
+     <div class="card-header" id="Docker_cmd_docker_info_header">
+      <h5 class="mb-0">
+       <button aria-controls="Docker_cmd_docker_info_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Docker_cmd_docker_info_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>docker info</kbd>
+        ) general
+        <kbd>info</kbd>
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Docker_cmd_docker_info_header" class="collapse" data-parent="#Docker_body" data-toggle="collapse" id="Docker_cmd_docker_info_body">
+      <div class="card-body">
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- (docker image ls) list your current images ~~ (docker image ls) list your current images ~~ (docker image ls) list your current images -->
+    <div class="card">
+     <div class="card-header" id="Docker_cmd_docker_image_ls_header">
+      <h5 class="mb-0">
+       <button aria-controls="Docker_cmd_docker_image_ls_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Docker_cmd_docker_image_ls_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>docker image ls</kbd>
+        )
+        <kbd>list</kbd>
+        your current
+        <kbd>images</kbd>
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Docker_cmd_docker_image_ls_header" class="collapse" data-parent="#Docker_body" data-toggle="collapse" id="Docker_cmd_docker_image_ls_body">
+      <div class="card-body">
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- (docker image rm) remove a specified image ~~ (docker image rm) remove a specified image ~~ (docker image rm) remove a specified image -->
+    <div class="card">
+     <div class="card-header" id="Docker_cmd_docker_image_rm_header">
+      <h5 class="mb-0">
+       <button aria-controls="Docker_cmd_docker_image_rm_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Docker_cmd_docker_image_rm_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>docker image rm</kbd>
+        )
+        <kbd>remove</kbd>
+        a specified
+        <kbd>image</kbd>
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Docker_cmd_docker_image_rm_header" class="collapse" data-parent="#Docker_body" data-toggle="collapse" id="Docker_cmd_docker_image_rm_body">
+      <div class="card-body">
+       <p class="card-text">
+        <code>docker image rm [IMAGE ID]</code>
+       </p>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+    <!-- (docker build -t) build a specified image in the current directory ~~ (docker build -t) build a specified image in the current directory ~~ (docker build -t) build a specified image in the current directory -->
+    <div class="card">
+     <div class="card-header" id="Docker_cmd_docker_build__t_header">
+      <h5 class="mb-0">
+       <button aria-controls="Docker_cmd_docker_build__t_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Docker_cmd_docker_build__t_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+        (
+        <kbd>docker build -t</kbd>
+        )
+        <kbd>build</kbd>
+        a specified image in the current directory
+       </button>
+      </h5>
+     </div>
+     <div aria-labelledby="Docker_cmd_docker_build__t_header" class="collapse" data-parent="#Docker_body" data-toggle="collapse" id="Docker_cmd_docker_build__t_body">
+      <div class="card-body">
+       <p class="card-text">
+        <code>docker build -t [IMAGE NAME]</code>
+       </p>
+      </div>
+      <!-- card-body -->
+     </div>
+     <!-- div wrapper _body -->
+    </div>
+    <!-- card -->
+   </div>
+   <!-- card-body -->
+  </div>
+  <!-- div wrapper _body -->
+ </div>
+ <!-- card -->
+ <div class="card">
   <div class="card-header" id="Networking_and_Package_Management_header">
    <h5 class="mb-0">
     <button aria-controls="Networking_and_Package_Management_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Networking_and_Package_Management_body" data-toggle="collapse" style="text-align: left; text-transform: none">
@@ -15391,7 +15502,7 @@ wlp3s0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
     (<a href="mailto:cs2043-ta@cornell.edu?subject=[CS 2043]">cs2043-ta@cornell.edu</a>).
   </div>
   <div class="pull-right">
-    Last compiled Sat, 02 Mar 2019 02:16:05 -0500.
+    Last compiled Sat, 02 Mar 2019 02:31:22 -0500.
   </div>
 </div>
 
