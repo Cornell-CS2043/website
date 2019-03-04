@@ -288,7 +288,7 @@ on how something works / what commands you learned when.</p>
       <option class="text-dark" style="text-transform: none" data-tokens="yum and dnf RHEL / Fedora Package Managers" data-target="#Networking_and_Package_Management_cmd_yum_and_dnf" data-content="(&lt;kbd&gt;yum&lt;/kbd&gt; and &lt;kbd&gt;dnf&lt;/kbd&gt;) RHEL / Fedora Package Managers">(<kbd>yum</kbd> and <kbd>dnf</kbd>) RHEL / Fedora Package Managers</option>
       <option class="text-dark" style="text-transform: none" data-tokens="brew OSX Package Management" data-target="#Networking_and_Package_Management_cmd_brew" data-content="(&lt;kbd&gt;brew&lt;/kbd&gt;) OSX Package Management">(<kbd>brew</kbd>) OSX Package Management</option>
       <option class="text-dark" style="text-transform: none" data-tokens="Other Package Managers" data-target="#Networking_and_Package_Management_info_Other_Package_Managers" data-content="Other Package Managers">Other Package Managers</option>
-      <option class="text-dark" style="text-transform: none" data-tokens="apt-get Debian / Ubuntu Package Management" data-target="#Package_Management__for_real_this_time_cmd_apt_get" data-content="(&lt;kbd&gt;apt-get&lt;/kbd&gt;) Debian / Ubuntu Package Management">(<kbd>apt-get</kbd>) Debian / Ubuntu Package Management</option>
+      <option class="text-dark" style="text-transform: none" data-tokens="apt Debian / Ubuntu Package Management" data-target="#Package_Management__for_real_this_time_cmd_apt" data-content="(&lt;kbd&gt;apt&lt;/kbd&gt;) Debian / Ubuntu Package Management">(<kbd>apt</kbd>) Debian / Ubuntu Package Management</option>
       <option class="text-dark" style="text-transform: none" data-tokens="yum and dnf RHEL / Fedora Package Managers" data-target="#Package_Management__for_real_this_time_cmd_yum_and_dnf" data-content="(&lt;kbd&gt;yum&lt;/kbd&gt; and &lt;kbd&gt;dnf&lt;/kbd&gt;) RHEL / Fedora Package Managers">(<kbd>yum</kbd> and <kbd>dnf</kbd>) RHEL / Fedora Package Managers</option>
       <option class="text-dark" style="text-transform: none" data-tokens="brew OSX Package Management" data-target="#Package_Management__for_real_this_time_cmd_brew" data-content="(&lt;kbd&gt;brew&lt;/kbd&gt;) OSX Package Management">(<kbd>brew</kbd>) OSX Package Management</option>
       <option class="text-dark" style="text-transform: none" data-tokens="Other Package Managers" data-target="#Package_Management__for_real_this_time_info_Other_Package_Managers" data-content="Other Package Managers">Other Package Managers</option>
@@ -15011,18 +15011,18 @@ wlp3s0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
   </div>
   <div aria-labelledby="Package_Management__for_real_this_time_header" class="collapse accordion" data-parent="#lectures" data-toggle="collapse" id="Package_Management__for_real_this_time_body">
    <div class="card-body">
-    <!-- (apt-get) Debian / Ubuntu Package Management ~~ (apt-get) Debian / Ubuntu Package Management ~~ (apt-get) Debian / Ubuntu Package Management -->
+    <!-- (apt) Debian / Ubuntu Package Management ~~ (apt) Debian / Ubuntu Package Management ~~ (apt) Debian / Ubuntu Package Management -->
     <div class="card">
-     <div class="card-header" id="Package_Management__for_real_this_time_cmd_apt_get_header">
+     <div class="card-header" id="Package_Management__for_real_this_time_cmd_apt_header">
       <h5 class="mb-0">
-       <button aria-controls="Package_Management__for_real_this_time_cmd_apt_get_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Package_Management__for_real_this_time_cmd_apt_get_body" data-toggle="collapse" style="text-align: left; text-transform: none">
+       <button aria-controls="Package_Management__for_real_this_time_cmd_apt_body" aria-expanded="false" class="btn btn-link btn-block text-light bg-dark" data-target="#Package_Management__for_real_this_time_cmd_apt_body" data-toggle="collapse" style="text-align: left; text-transform: none">
         (
-        <kbd>apt-get</kbd>
+        <kbd>apt</kbd>
         ) Debian / Ubuntu Package Management
        </button>
       </h5>
      </div>
-     <div aria-labelledby="Package_Management__for_real_this_time_cmd_apt_get_header" class="collapse" data-parent="#Package_Management__for_real_this_time_body" data-toggle="collapse" id="Package_Management__for_real_this_time_cmd_apt_get_body">
+     <div aria-labelledby="Package_Management__for_real_this_time_cmd_apt_header" class="collapse" data-parent="#Package_Management__for_real_this_time_body" data-toggle="collapse" id="Package_Management__for_real_this_time_cmd_apt_body">
       <div class="card-body">
        <ul>
         <li>
@@ -15030,11 +15030,11 @@ wlp3s0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
          <ul>
           <li>
            Install a package:
-           <code>apt-get install &lt;pkg1&gt; &lt;pkg2&gt; ... &lt;pkgN&gt;</code>
+           <code>apt install &lt;pkg1&gt; &lt;pkg2&gt; ... &lt;pkgN&gt;</code>
           </li>
           <li>
            Remove a package:
-           <code>apt-get remove &lt;pkg1&gt; &lt;pkg2&gt; ... &lt;pkgN&gt;</code>
+           <code>apt remove &lt;pkg1&gt; &lt;pkg2&gt; ... &lt;pkgN&gt;</code>
           </li>
           <li>
            Only one
@@ -15051,7 +15051,7 @@ wlp3s0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
          <ul>
           <li>
            Update lists of packages available:
-           <code>apt-get update</code>
+           <code>apt update</code>
            .
            <ul>
             <li>
@@ -15061,7 +15061,7 @@ wlp3s0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
           </li>
           <li>
            Updating currently installed packages:
-           <code>apt-get upgrade</code>
+           <code>apt upgrade</code>
            .
            <ul>
             <li>
@@ -15073,7 +15073,7 @@ wlp3s0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
           </li>
           <li>
            Update core (incl. kernel):
-           <code>apt-get dist-upgrade</code>
+           <code>apt dist-upgrade</code>
            .
           </li>
          </ul>
@@ -15518,7 +15518,7 @@ wlp3s0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
     (<a href="mailto:cs2043-ta@cornell.edu?subject=[CS 2043]">cs2043-ta@cornell.edu</a>).
   </div>
   <div class="pull-right">
-    Last compiled Mon, 04 Mar 2019 11:01:07 -0500.
+    Last compiled Mon, 04 Mar 2019 11:17:39 -0500.
   </div>
 </div>
 
