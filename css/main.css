@@ -12,6 +12,10 @@ body {
 	padding: 1px 3px 1px 3px;
 }
 
+.btn {
+  white-space: pre-wrap !important; 
+}
+
 nav {
   min-width: 100% !important; 
 }
@@ -148,6 +152,8 @@ pre[class^="highlight"] {
   h1 {
     font-size: 9vw; 
   }
+
+
 }
 
 .card-header {

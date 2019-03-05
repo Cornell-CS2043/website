@@ -250,6 +250,98 @@
 
 <p>Don’t forget: after you finish the assignment after this one (i.e. after you finish A6), cancel your free trial so you don’t get billed!</p>
 
+<h3 id="cs-2043--assignment-6-deploying-benjis-artisanal-soda-web-app-on-the-cloud">CS 2043  Assignment 6: Deploying Benji’s Artisanal Soda Web App on the Cloud</h3>
+
+<h4 id="due-date-friday-march-8-at-1115-am-1">Due Date: Friday March 8 at 11:15 am</h4>
+
+<h4 id="assignment-captain-pakin-wirojwatanakul">Assignment Captain: <a href="staff.html">Pakin Wirojwatanakul</a></h4>
+
+<p>Introduction: Benji is an entrepreneur in NYC who specializes in making Artisanal Soda. He currently has a locally deployed web app, but his servers keep on crashing. He knows that you are a specialist in Google Cloud and Docker so he decides to come to you for help.</p>
+
+<p>Note: Knowledge of how web apps work is not required.</p>
+
+<h4 id="part-1-dockerization">Part 1: Dockerization</h4>
+
+<p>Before you start:</p>
+<ul>
+  <li>Create an account for docker hub if you have not done so already.</li>
+  <li>Review the lecture slides.</li>
+  <li>Try this tutorial, https://docs.docker.com/get-started/part2/</li>
+</ul>
+
+<p>Good to know:</p>
+<ul>
+  <li>An image is an executable package that includes everything needed to run a container: the code, a runtime, libraries, environment variables, and configuration files.</li>
+  <li>A Dockerfile is what docker uses to build images. Each instruction in a Dockerfile creates a layer in the image. You can build new images based on top of existing images by using the <code class="highlighter-rouge">From</code> command. You can also use other Dockerfile commands to install packages, expose container ports, and copy files from your local directory. For more information please refer to the lecture slides.</li>
+</ul>
+
+<h5 id="step-1">Step 1</h5>
+
+<p>Code up the Dockerfile by following the directions provided by the comments in the Dockerfile.</p>
+
+<h5 id="step-2">Step 2</h5>
+
+<p>Build an image in the current directory using the Dockerfile. <code class="highlighter-rouge">docker build -t &lt;&lt;Your app Name&gt;&gt; .</code></p>
+
+<p>Good to know:</p>
+<ul>
+  <li>A container is a runnable instance of an image. You can create, start, stop, move, or delete a container using the Docker API or CLI. For more information please refer to the lecture slides.</li>
+  <li>Definition of localhost: the default name describing the local computer address also known as the loopback address. You can access your localhost by using any web browser.</li>
+  <li>A port is a specific number associated with a particular application running on your computer.  If we imagine that an IP address works kind of like a street address, then a port number would correspond to an apartment number.  Port numbers allow packets destined for your computer to target a specific application directly; this means multiple internet-facing services can exist on your computer simultaneously without worry.</li>
+  <li>p flag of command <code class="highlighter-rouge">docker container run</code>:  The p flag takes in two arguments <code class="highlighter-rouge">-p &lt;local port number&gt;:&lt;container port number&gt;</code>. This flag redirects network traffic from localhost port <code class="highlighter-rouge">&lt;local port number&gt;</code> to container port <code class="highlighter-rouge">&lt;container port number&gt;</code>.</li>
+</ul>
+
+<h5 id="step-3">Step 3</h5>
+
+<p>Run the image, and direct traffic from your localhost port 80 to port 8080 of the container. <code class="highlighter-rouge">docker container run -p 80:8080 &lt;&lt;Your Dockerhub Username&gt;&gt;/&lt;&lt;Your app Name&gt;&gt;</code></p>
+
+<h5 id="step-4">Step 4</h5>
+
+<p>Check localhost on your web browser (Chrome or Safari) to see if the web app is rendering properly. Do so by typing <code class="highlighter-rouge">localhost</code> in your web browser. You should see Benji’s website. If not, please check for mistakes in steps 1-3. This sanity check is for your own good.</p>
+
+<p>Good to know:</p>
+
+<p>A docker registry such as Docker Hub stores docker images. Docker images can be pulled from or pushed to Docker Hub in a similar fashion to pushing or pulling from Github.</p>
+
+<h5 id="step-5">Step 5</h5>
+
+<p>Login to Docker on your server using <code class="highlighter-rouge">docker login</code>.</p>
+
+<h5 id="step-6">Step 6</h5>
+
+<p>Push Benji’s web app to Docker Hub.</p>
+<ol>
+  <li><code class="highlighter-rouge">docker tag &lt;&lt;Your app Name&gt;&gt; &lt;&lt;Your Dockerhub Username&gt;&gt;/&lt;&lt;Your app Name&gt;&gt;</code></li>
+  <li><code class="highlighter-rouge">docker push &lt;&lt;Your Dockerhub Username&gt;&gt;/&lt;&lt;Your app Name&gt;&gt;</code></li>
+</ol>
+
+<h4 id="part-2-google-cloud">Part 2: Google Cloud</h4>
+
+<h5 id="step-1-1">Step 1</h5>
+
+<p>SHH into your Debian GNU/Linux 9 (stretch) Instance that you have previously created in assignment 5.</p>
+
+<h5 id="step-2-1">Step 2</h5>
+
+<p>Follow the instructions in the link to install Docker on your cloud instance.
+https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/debian/#upgrade-docker-ce-1</p>
+
+<h5 id="step-3-1">Step 3</h5>
+
+<p>On the cloud, run the image and direct traffic from your localhost port 80 to port 8080 of the container. <code class="highlighter-rouge">sudo docker container run -p 80:8080 &lt;&lt;Your Dockerhub Username&gt;&gt;/&lt;&lt;Your app Name&gt;&gt;</code></p>
+
+<h5 id="step-4-1">Step 4</h5>
+
+<p>Use your web browser to access your Instance’s External IP. (Note use HTTP instead of HTTPS)</p>
+
+<h5 id="step-5-1">Step 5</h5>
+
+<p>Hand in your assignment using the command <code class="highlighter-rouge">a6_handin &lt;&lt;Your External IP&gt;&gt;</code>. If you get “success” as a response you will get full credit. Otherwise, please try again.</p>
+
+<h5 id="step-6-1">Step 6</h5>
+
+<p>Once you receive the message “success”, feel free to shut down your cloud instance to save money. Benji is very grateful for your help!</p>
+
 
       <div id="footer">
   <hr>
@@ -258,7 +350,7 @@
     (<a href="mailto:cs2043-ta@cornell.edu?subject=[CS 2043]">cs2043-ta@cornell.edu</a>).
   </div>
   <div class="pull-right">
-    Last compiled Tue, 05 Mar 2019 16:31:08 -0500.
+    Last compiled Tue, 05 Mar 2019 16:46:07 -0500.
   </div>
 </div>
 
