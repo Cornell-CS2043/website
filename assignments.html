@@ -256,7 +256,7 @@
 
 <h4 id="assignment-captain-pakin-wirojwatanakul">Assignment Captain: <a href="staff.html">Pakin Wirojwatanakul</a></h4>
 
-<p><code class="highlighter-rouge">Assignment 6 is contained within the /course/cs2043/assignments/a6/ directory.</code></p>
+<p><code class="highlighter-rouge">Assignment 6 is contained within the /course/cs2043/assignments/a6/ directory.</code>  <strong>If you can run docker on your laptop</strong>, then please <code class="highlighter-rouge">scp -r /course/cs2043/assignments/a6/</code> onto your laptop.  Please continue on your laptop, not wash, whenever possible.</p>
 
 <p>Introduction: Benji is an entrepreneur in NYC who specializes in making Artisanal Soda. He currently has a locally deployed web app, but his servers keep on crashing. He knows that you are a specialist in Google Cloud and Docker so he decides to come to you for help.</p>
 
@@ -279,11 +279,11 @@
 
 <h5 id="step-1">Step 1</h5>
 
-<p>Code up the Dockerfile by following the directions provided by the comments in the Dockerfile.</p>
+<p>Code up the Dockerfile by following the directions provided by the comments in the Dockerfile.  Please do this <strong>on your laptop</strong> if at all possible.</p>
 
 <h5 id="step-2">Step 2</h5>
 
-<p>Build an image in the current directory using the Dockerfile.</p>
+<p>Build an image in the current directory using the Dockerfile.  Please do this <strong>on your laptop</strong> if at all possible.</p>
 
 <p>Good to know:</p>
 <ul>
@@ -295,11 +295,11 @@
 
 <h5 id="step-3">Step 3</h5>
 
-<p>Run the image, and direct traffic from your localhost port 80 to port 8080 of the container.</p>
+<p>Run the image, and direct traffic from your localhost port 8081 to port 8080 of the container.  Please do this <strong>on your laptop</strong> if at all possible.  This requires binding to an external port; only one application can do this at a time.  If you run this command on <code class="highlighter-rouge">wash</code>, you will probably conflict with a classmate doing the same.  If you must run this on wash, then please change <code class="highlighter-rouge">8081</code> to some other random number above <code class="highlighter-rouge">1024</code>.</p>
 
 <h5 id="step-4">Step 4</h5>
 
-<p>Check localhost on your web browser (Chrome or Safari) to see if the web app is rendering properly. Do so by typing <code class="highlighter-rouge">localhost</code> in your web browser. You should see Benji’s website. If not, please check for mistakes in steps 1-3. This sanity check is for your own good.</p>
+<p>Check localhost on your web browser (Chrome or Safari) to see if the web app is rendering properly. Do so by typing <code class="highlighter-rouge">localhost:8081</code> in your web browser. You should see Benji’s website. If not, please check for mistakes in steps 1-3. This sanity check is for your own good.  (If you are doing this on wash and you changed the <code class="highlighter-rouge">8081</code> in the previous step to some other port, then you must replace the <code class="highlighter-rouge">8081</code> in this step with the other port as well).</p>
 
 <p>Good to know:</p>
 
@@ -326,7 +326,7 @@ https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/debian/#upgra
 
 <h5 id="step-3-1">Step 3</h5>
 
-<p>On the cloud, run the image and direct traffic from your localhost port 80 to port 8080 of the container.</p>
+<p>On the cloud, run the image and direct traffic from your localhost port 80 to port 8080 of the container.  This may require root!</p>
 
 <h5 id="step-4-1">Step 4</h5>
 
@@ -348,7 +348,7 @@ https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/debian/#upgra
     (<a href="mailto:cs2043-ta@cornell.edu?subject=[CS 2043]">cs2043-ta@cornell.edu</a>).
   </div>
   <div class="pull-right">
-    Last compiled Wed, 06 Mar 2019 12:16:09 -0500.
+    Last compiled Wed, 06 Mar 2019 12:46:09 -0500.
   </div>
 </div>
 
